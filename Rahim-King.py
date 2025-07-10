@@ -180,7 +180,6 @@ logo()
 t(f'\033[1;97m[\033[10;92m+\033[1;97m]\033[10;92m Fast Follow Me My Github')
 os.system('xdg-https://t.me/rahimking2034')
 time.sleep(1)
-NameX =input('\033[1;97m[\033[10;92m+\033[1;97m]\033[10;92m WHAT IS YOUR NAME \033[10;91m:\33[10;32m ')
 def Main():
 	logo()
 	print(f'\033[10;92m┏━\033[10;97m=============================================')
