@@ -176,8 +176,6 @@ def logo():
 \033[10;93m╠══[VERSION                  • 18.3.1 ]          ║ \033[10;92m
 \033[10;92m╠══[Key\033[10;97m:\33[32;45m{MY_KEY}\033[0;92m\033[10;92m║
 \033[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\033[1;31m""")
-logo()
-	logo()
 	if "1" in rcd:print(f"{BDX}");line()
 	if "2" in rcd:print(f"{PAKX}");line()
 	if "3" in rcd:print(f"{INDX}");line()
