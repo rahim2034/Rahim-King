@@ -153,7 +153,7 @@ os.system('clear')
 ############------[ LOGO ]------#########
 #os.system('espeak -a 300 " Your,   Real,  Name,"')
 #os.system('espeak -a 300 "well,come to,Rahim, King tools"')
-#os.system('xdg-open https://www.facebook.com/profile.php?id=100088772568972.Ok.Bro')
+#os.system('xdg-open https://t.me/rahimking2034')
 def logo():
 	os.system('clear');print(f"""\r\r
 \033[0;92m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
@@ -178,10 +178,9 @@ def logo():
 \033[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\033[1;31m""")
 logo()
 t(f'\033[1;97m[\033[10;92m+\033[1;97m]\033[10;92m Fast Follow Me My Github')
-os.system('xdg-open https://github.com/Rahim-King')
+os.system('xdg-https://t.me/rahimking2034')
 time.sleep(1)
 NameX =input('\033[1;97m[\033[10;92m+\033[1;97m]\033[10;92m WHAT IS YOUR NAME \033[10;91m:\33[10;32m ')
-os.system('xdg-open https://www.facebook.com/Tutul143k')
 def Main():
 	logo()
 	print(f'\033[10;92m┏━\033[10;97m=============================================')
@@ -205,8 +204,8 @@ def rmenu1():
 	if "1" in rcd:print(f"{BDX}");line()
 	if "2" in rcd:print(f"{PAKX}");line()
 	if "3" in rcd:print(f"{INDX}");line()
-	if "4" in rcd:os.system('xdg-open https://t.me/Tutul143k');exit()
-	if "5" in rcd:os.system('xdg-open https://www.facebook.com/Tutul143k');exit()
+	if "4" in rcd:os.system('xdg-open https://t.me/rahimking2034');exit()
+	if "5" in rcd:os.system('xdg-open https://t.me/rahimking2034');exit()
 	if "0" in rcd:exit()
 	code=input(f'{chc}');print(f"\033[10;97m{47*'='}")
 	print(f'{LIMITX}');line()
