@@ -59,6 +59,6 @@ if __name__ == '__main__':
     fd = ImageDownloader(oauth_access_token)
     fd.scrap_user('me')
     # fd.scrap_friends()            # this takes a long time - you would need better token
-    print 'Downloading images'
+    print ('Downloading images')
     fd.start_pool()
  
