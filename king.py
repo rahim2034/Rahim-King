@@ -1,277 +1,64 @@
+#!/usr/bin/env python
+import os
+import urllib
+from multiprocessing.dummy import Pool as ThreadPool
  
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>TEAM-SB</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      .column {
-        float: left;
-        width: 100%;
-        padding: 10px;
-      }
-      @media screen and (min-width: 600px) {
-        .column {
-          width: 50%;
-        }
-      }
-    </style>
-    <style>
-		body {
-			background-color: black;
-			height: 100vh;
-		}
+import facebook
+from slugify import slugify
  
-		.star {
-			position: absolute;
-			top: 0;
-			width: 2px;
-			height: 2px;
-			background-color: rgba(255,255,255,0.5);
-			border-radius: 50%;
-			opacity: 0;
-			animation: star 0.5s linear infinite;
-		}
  
-		@keyframes star {
-			from {
-				transform: translate(0, -50px);
-				opacity: 1;
-			}
-			to {
-				transform: translate(0, calc(100vh + 50px));
-				opacity: 0;
-			}
-		}
-	</style>
-	<div class="stars-container">
-	    <!-- Create 1000 stars using JavaScript -->
-	</div>
-	<script>
-		// Create 1000 stars and append them to the stars-container div
-		const starsContainer = document.querySelector('.stars-container');
-		for (let i = 0; i < 1000; i++) {
-			const star = document.createElement('div');
-			star.classList.add('star');
-			star.style.left = `${Math.random() * 100}%`;
-			star.style.animationDelay = `${Math.random()}s`;
-			starsContainer.appendChild(star);
-		}
-	</script>
-  <style>
-    #profile {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 50px;
-      }
-      
-      h1 {
-        font-size: 25px;
-        margin-bottom: 25px;
-        text-align: center;
-        color: #FF10F0;
-      }
-      
-      p {
-        margin-bottom: 20px;
-        line-height: 1.5;
-      }
-      
-      #typing {
-        display: inline-block;
-        color: #FFFFFF;
-      }
-      
-      #cursor {
-        display: inline-block;
-        margin-left: 5px;
-        animation: blink .7s infinite;
-      }
-      
-      @keyframes blink {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      
-      .profile-pic {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-      }
-      
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      
-      img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-      }
-  </style>
-</head>
-<body>
-  <div style="text-align:center;"><img src="https://telegra.ph/file/1930b2b65911efbb25b0c.jpg" alt="Head profile picture" width="180" height="180"></div>
-  <div id="profile">
-    <h1>Hi! I'm BAIJID <br>
-    <span id="typing"></span><span>_</span></h1>
-  </div>
-  <script defer>
-    const words = ["|BAIJID ", "|Student", "|Developer", "|one said lover", "|anime lover"];
-    const typing = document.getElementById("typing");
-    let currentWordIndex = 0;
-    let currentLetterIndex = 0;
-    let isDeleting = false;
+class ImageDownloader:
+    def __init__(self, token, data_folder='data', pool_size=10):
+        self.graph_api = facebook.GraphAPI(token)
+        self.data_folder = data_folder
+        self.pool_size = pool_size
  
-    function type() {
-        const currentWord = words[currentWordIndex];
+        self.image_pool = []
  
-        if (!isDeleting) {
-            typing.innerHTML = currentWord.substring(0, currentLetterIndex + 1);
-            currentLetterIndex++;
+    def process_pages(self, root_url, after=None):
+        data = self.graph_api.get_object(root_url, after=after) if after else self.graph_api.get_object(root_url)
+        albums = data['data']
+        if 'paging' in data and 'after' in data['paging']['cursors']:
+            albums += self.process_pages(root_url, after=data['paging']['cursors']['after'])
+        return albums
  
-            if (currentLetterIndex === currentWord.length) {
-                isDeleting = true;
-                setTimeout(type, 1000);
-            } else {
-                setTimeout(type, 100);
-            }
-        } else {
-            typing.innerHTML = currentWord.substring(0, currentLetterIndex - 1);
-            currentLetterIndex--;
+    def process_album(self, album, after=None):
+        album_url = '{album_id}/photos'.format(album_id=album['id'])
+        fields = ['images']
+        data = self.graph_api.get_object(album_url, after=after, fields=fields) if after else self.graph_api.get_object(album_url, fields=fields)
+        image_blobs = data['data']
+        if 'paging' in data and 'after' in data['paging']['cursors']:
+            image_blobs += self.process_album(album, after=data['paging']['cursors']['after'])
+        return image_blobs
  
-            if (currentLetterIndex === 0) {
-                isDeleting = false;
-                currentWordIndex++;
-                if (currentWordIndex === words.length) {
-                    currentWordIndex = 0;
-                }
-            }
+    def scrap_user(self, user):
+        root = '/{user}/albums'.format(user=user)
+        for f_album in self.process_pages(root):
+            folder_name = os.path.join(self.data_folder, slugify(user), slugify(f_album['name']))
+            if not os.path.isdir(folder_name):
+                os.makedirs(folder_name)
+            self.image_pool += [(blob['images'][0]['source'], folder_name) for blob in self.process_album(f_album)]
  
-            setTimeout(type, 100);
-        }
-    }
+    def scrap_friends(self):
+        friends = [f['username'] if f.has_key('username') else f['id'] for f in self.graph_api.get_object('/me/friends/', fields = ['username'], limit=5000)['data']]
+        for friend in friends:
+            self.scrap_user(friend)
  
-    type();
-  </script>
-  <style>
-    .button-container {
-        text-align: center;
-    }
+    def download_image(self, tupple_args):
+        url_to_grab, image_folder = tupple_args
+        basename = os.path.basename(url_to_grab)
+        urllib.urlretrieve(url_to_grab, os.path.join(image_folder, basename))
  
-    .facebook-button {
-        display: inline-block;
-        padding: 10px 80px;
-        background-color: #0096FF;
-        border-radius: 25px;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0px 0px 15px #0096FF;
-        transition: box-shadow 0.3s ease-in-out;
-    }
+    def start_pool(self):
+        pool = ThreadPool(self.pool_size)
+        pool.map(self.download_image, self.image_pool)
  
-    .facebook-button:hover {
-        box-shadow: 0px 0px 25px #0096FF;
-    }
-  </style>
-  <div class="button-container">
-    <a href="https://www.facebook.com/profile.php?id=61558155404215&mibextid=ZbWKwL" target="_blank" class="facebook-button">Facebook</a>
-  </div><br>
-  <style>
-    .button-container {
-        text-align: center;
-    }
  
-    .telegram-button {
-        display: inline-block;
-        padding: 10px 50px;
-        background-color: #0088cc;
-        border-radius: 25px;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0px 0px 15px #0088cc;
-        transition: box-shadow 0.3s ease-in-out;
-    }
+if __name__ == '__main__':
+    oauth_access_token = raw_input('Token from https://developers.facebook.com/tools/explorer/: ')
+    fd = ImageDownloader(oauth_access_token)
+    fd.scrap_user('me')
+    # fd.scrap_friends()            # this takes a long time - you would need better token
+    print 'Downloading images'
+    fd.start_pool()
  
-    .telegram-button:hover {
-        box-shadow: 0px 0px 25px #0088cc;
-    }
-  </style>
-  <div class="button-container">
-    <a href="https://t.me/+x-0WOYEz8sRhNjE1" target="_blank" class="telegram-button">Telegram channel</a>
-  </div><br>
-  <style>
-    .button-container {
-        text-align: center;
-    }
- 
-    .github-button {
-        display: inline-block;
-        padding: 10px 95px;
-        background-color: #171515;
-        border-radius: 25px;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0px 0px 15px #171515;
-        transition: box-shadow 0.3s ease-in-out;
-    }
- 
-    .github-button:hover {
-        box-shadow: 0px 0px 25px #171515;
-    }
-  </style>
-  <div class="button-container">
-    <a href="https://github.com/TEAM-RB" target="_blank" class="github-button"></a>
-  </div><br>
-  <style>
-    .button-container {
-        text-align: center;
-    }
-    .email-button {
-        display: inline-block;
-        padding: 10px 80px;
-        background-color: #FF10F0;
-        border-radius: 25px;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0px 0px 15px #FF10F0;
-        transition: box-shadow 0.3s ease-in-out;
-    }
-    .email-button:hover {
-        box-shadow: 0px 0px 25px #FFA500;
-    }
-</style>
- 
-<div class="button-container">
-    <a href="apps.html" class="email-button"></a>
-</div><br>
-    <footer>
-            <center>
-                    <h3 style="color:red;">MD BAIJID ALAM  🥴 2025</h3>
-            </center>
-    </footer>
-</body>
-</html
