@@ -1,10 +1,4 @@
-import random
-import os
-import tkinter as tk
-from tkinter import messagebox, ttk
-from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet, BayesianRidge
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-from sklearn.svm import SVR
+
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from statsmodels.tsa.arima.model import ARIMA
