@@ -13,15 +13,6 @@
         content: "";
         clear: both;
         display: table;
-      }
-      
-      h3 {
-  p {
-  font-size: 15px;
-      }
-        
-      }
- 
       .column {
         float: left;
         width: 100%;
