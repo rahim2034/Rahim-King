@@ -16,7 +16,9 @@
       }
       
       h3 {
-  font-size: 15px;   
+  p {
+  font-size: 15px;
+      }
         
       }
  
