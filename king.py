@@ -1,4 +1,3 @@
-import pandas as pd
 import random
 import os
 import tkinter as tk
