@@ -71,10 +71,6 @@ writer.writerow(headers)
 #initial values
 
 print ('Betting bot has been initialized with the following values===')
-print ('Betting Sequence:',sequence')
-print ('Initial Bet:', betInitial, '$')
-print ('Bet limit:', betUpperLimit, '$')
-
 def placeInitialBet(xpathSubmit):
 	for i in range(betInitial):
 		browser.find_elements_by_xpath(xpathSubmit)[0].click()
