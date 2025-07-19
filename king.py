@@ -63,29 +63,27 @@ def haha():
     time.sleep(0.2)
     ok = raw_input('\x1b[1;91m[\x1b[1;97m?\x1b[1;91m]\x1b[1;97m Select: \x1b[1;92m')
     if ok == '':
-        print '\x1b[1;91m[\x1b[1;97m!\x1b[1;91m] \x1b[1;91mWrong Input'
+        print ('\x1b[1;91m[\x1b[1;97m!\x1b[1;91m] \x1b[1;91mWrong Input')
         haha()
     elif ok == '1':
         login()
     elif ok == '2':
-        print '\x1b[1;93m       SEE YOU AGAIN :)'
+        print ('\x1b[1;93m       SEE YOU AGAIN :)')
         sys.exit()
- 
- 
 def login():
     os.system('clear')
-    print logo
-    print '\x1b[1;93m-----------------------------------------------'
-    print '\x1b[1;91m          I N P U T   T O K E N      '
-    print '\x1b[1;93m-----------------------------------------------'
-    print ''
+    print ('logo')
+    print ('\x1b[1;93m-----------------------------------------------')
+    print ('\x1b[1;91m          I N P U T   T O K E N      ')
+    print ('\x1b[1;93m-----------------------------------------------')
+    print ('logo')
     
     try:
         ___token___ = raw_input('         %s[%s~%s]%s T O K E N  :%s ' % (B, P, B, P, K))
         if ___token___ in ('', ' '):
             exit('%s[%s!%s]%sYAAR TOKEN LAGAW ' % (P, M, P, M))
         xwx = requests.get('https://graph.facebook.com/me/?access_token=%s' % ___token___).json()
-        print '%s[%s*%s]%s WelCome To Subhan %s %s' % (B, P, B, P, H, xwx['name'].lower())
+        print ('%s[%s*%s]%s WelCome To Subhan %s %s' % (B, P, B, P, H, xwx['name'].lower())
         open('login.txt', 'w').write(___token___)
         menu()
     except ConnectionError:
@@ -101,14 +99,14 @@ def menu():
     except IOError:
         print ''
  
-    print logo
-    print '\x1b[1;91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-    print '\x1b[1;93m                 INPUT IDS'
-    print '\x1b[1;91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-    print '\x1b[1;92m[~~~~] After Put Ids Go And See Your File :) '
-    print '\x1b[1;93mNote      : PaSt OnLy Uid Not Uid And Name'
-    print '\x1b[1;91mExample: /sdcard/Subhan.txt'
-    print ''
+    print ('logo')
+    print ('\x1b[1;91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+    print ('\x1b[1;93m                 INPUT IDS'
+    print ('\x1b[1;91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+    print ('\x1b[1;92m[~~~~] After Put Ids Go And See Your File :) '
+    print ('\x1b[1;93mNote      : PaSt OnLy Uid Not Uid And Name'
+    print ('\x1b[1;91mExample: /sdcard/Subhan.txt'
+    print ('logo')
     file = raw_input('\x1b[1;97mFile Path: ')
     id1 = raw_input('\x1b[1;92mid: ')
     
