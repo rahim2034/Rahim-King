@@ -171,7 +171,7 @@ def moch_yayan():
                         f.write(username + '|' + password + '\n')
             else:
                 die += 1
-            for i in list('\|/-•'):
+  
                 print(
                     f"\r\033[00m [\033[1;91m{i}\033[00m] ok : \033[90m(\033[1;92m{str(result)}\033[90m) \033[00mcp : \033[90m(\033[1;93m{str(check)}\033[90m) \033[00mdie : \033[90m(\033[1;94m{str(die)}\033[90m)\033[00m",
                     end="")
@@ -182,7 +182,7 @@ def moch_yayan():
             getuser = re.findall('middle"><a class=".." href="(.*?)">(.*?)</a>', str(raw))
             for x in getuser:
                 if 'profile' in x[0]:
-                    id.append(x[1] + '|' + re.findall("=(\d*)?", str(x[0]))[0])
+                    id.append(x[1] + '|' + re.findall("=('\d')?", str(x[0]))[0])
                 elif 'friends' in x:
                     continue
                 else:
