@@ -101,7 +101,7 @@ def getBetAmount(double):
 
 def startPlaying(double,count):
 	WebDriverWait(browser, 60).until(EC.element_to_be_clickable((By.XPATH, xPathWaitForNextGame)))
-	print 'Waiting to place bets..'
+	print ('Waiting to place bets..')
 	result = 'won'
 	try:
 		while True:
@@ -112,10 +112,10 @@ def startPlaying(double,count):
 			amount,double = getBetAmount(double)
 			currDouble = double
 			WebDriverWait(browser, 60).until(EC.element_to_be_clickable((By.XPATH, xPathPlaceBets)))
-			print 'Bet to be placed for:', selection
-			print 'Initial bet:', betInitial, '$'
-			print 'Double:', currDouble, 'x'
-			print 'Bet amount:', amount, '$'
+			print ('Bet to be placed for:', selection)
+			print ('Initial bet:', betInitial, '$')
+			print ('Double:', currDouble, 'x')
+			print ('Bet amount:', amount, '$')
 			placeBets(double, selection)
 		
 			WebDriverWait(browser, 60).until(EC.presence_of_element_located((By.XPATH, xPathPlayerBankTie)))
@@ -123,24 +123,24 @@ def startPlaying(double,count):
 			banktext = None if len(browser.find_elements_by_xpath(xPathBankWon)) == 0 else browser.find_elements_by_xpath(xPathBankWon)[0].text
 			if playertext:
 				if playertext == selectionText:
-					print 'Congrats. Player won'
+					print ('Congrats. Player won')
 					double = 0
 					result = 'won'
 				else:
-					print 'Oops. Player won'
+					print ('Oops. Player won')
 					double += 1
 					result = 'loss'
 			elif banktext:
 				if banktext == selectionText:
-					print 'Congrats. Bank won'
+					print ('Congrats. Bank won')
 					double = 0
 					result = 'won'
 				else:
-					print 'Oops. Bank won'
+					print ('Oops. Bank won')
 					double += 1
 					result = 'loss'
 			else:
-				print 'Tied.'
+				print ('Tied.')
 				result = 'tied'
 			count += 1
 			result = [(count),selection,amount,str(currDouble) + 'x',result]
@@ -148,8 +148,7 @@ def startPlaying(double,count):
 	except KeyboardInterrupt:
 	    	print('Session ended.')
 	except Exception,e: 
-		print e
-		print 'Something went wrong. Reloading the game..'
+		print ('Something went wrong. Reloading the game..')
 		navigateToBaccarat(double,count)
 
 def navigateToBaccarat(double,count):
