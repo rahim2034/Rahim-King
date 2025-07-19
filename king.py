@@ -147,7 +147,6 @@ def startPlaying(double,count):
 			writer.writerow(result)
 	except KeyboardInterrupt:
 	    	print('Session ended.')
-	except Exception,e: 
 		print ('Something went wrong. Reloading the game..')
 		navigateToBaccarat(double,count)
 
