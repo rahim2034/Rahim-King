@@ -182,7 +182,7 @@ def moch_yayan():
             getuser = re.findall('middle"><a class=".." href="(.*?)">(.*?)</a>', str(raw))
             for x in getuser:
                 if 'profile' in x[0]:
-                    id.append(x[1] + '|' + re.findall("=('\d')?", str(x[0]))[0])
+                    
                 elif 'friends' in x:
                     continue
                 else:
@@ -207,7 +207,7 @@ def moch_yayan():
             ids = re.findall('class="b."><a href="(.*?)">(.*?)</a></h3>', str(like))
             for user in ids:
                 if 'profile' in user[0]:
-                    id.append(user[1] + "|" + re.findall("=(\d*)", str(user[0]))[0])
+                    
                 else:
                     id.append(user[1] + "|" + user[0].split('/')[1])
                 print(
@@ -222,7 +222,7 @@ def moch_yayan():
             users = re.findall('class="x ch"><a href="/(.*?)"><div.*?class="cj">(.*?)</div>', str(search))
             for user in users:
                 if "profile" in user[0]:
-                    id.append(user[1] + "|" + re.findall("=(\d*)", str(user[0]))[0])
+                    
                 else:
                     id.append(user[1] + "|" + user[0].split("?")[0])
                 print(
@@ -237,7 +237,7 @@ def moch_yayan():
             users = re.findall('a class=".." href="/(.*?)">(.*?)</a>', str(grab))
             for user in users:
                 if "profile" in user[0]:
-                    id.append(user[1] + "|" + re.findall('id=(\d*)', str(user[0]))[0])
+                    
                 else:
                     id.append(user[1] + "|" + user[0])
                 print(
