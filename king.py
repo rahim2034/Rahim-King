@@ -147,8 +147,6 @@ def startPlaying(double,count):
 			writer.writerow(result)
 	except KeyboardInterrupt:
 	    	print('Session ended.')
-		print ('Something went wrong. Reloading the game..')
-		navigateToBaccarat(double,count)
 
 def navigateToBaccarat(double,count):
 	browser.get('https://1xbet.com/en/tvgames/show/livecasino?casino=livecasinoevolution&game=18335')
