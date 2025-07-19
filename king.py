@@ -60,7 +60,6 @@ def haha():
     time.sleep(0.2)
     print ('\x1b[1;91m[\x1b[1;97m2\x1b[1;91m]\x1b[1;97m Exit')
     time.sleep(0.2)
-    print ''
     time.sleep(0.2)
     ok = raw_input('\x1b[1;91m[\x1b[1;97m?\x1b[1;91m]\x1b[1;97m Select: \x1b[1;92m')
     if ok == '':
