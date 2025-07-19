@@ -15,7 +15,7 @@ from time import sleep
 reload(sys)
 sys.setdefaultencoding('utf-8')
 H = '\x1b[1;90m'
-M = '\x1b[1;91m'
+M = '\x1b[1;91m
 H = '\x1b[1;92m'
 K = '\x1b[1;93m'
 T = '\x1b[1;94m'
