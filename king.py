@@ -53,12 +53,12 @@ logo = "\n\x1b[1;93m'##:::'##:'##::::'##::::'###::::'##::: ##:\n ##::'##:: ##:::
  
 def haha():
     os.system('clear')
-    print logo
-    print '\x1b[1;93m-----------------------------------------------'
+    print ('logo')
+    print ('\x1b[1;93m-----------------------------------------------')
     time.sleep(0.2)
-    print '\x1b[1;91m[\x1b[1;97m1\x1b[1;91m]\x1b[1;91m Make File'
+    print ('\x1b[1;91m[\x1b[1;97m1\x1b[1;91m]\x1b[1;91m Make File')
     time.sleep(0.2)
-    print '\x1b[1;91m[\x1b[1;97m2\x1b[1;91m]\x1b[1;97m Exit'
+    print ('\x1b[1;91m[\x1b[1;97m2\x1b[1;91m]\x1b[1;97m Exit')
     time.sleep(0.2)
     print ''
     time.sleep(0.2)
