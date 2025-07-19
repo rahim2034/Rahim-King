@@ -88,7 +88,7 @@ def placeBets(d, selection):
 	placeInitialBet(xpathSubmit)
 	WebDriverWait(browser, 60).until(EC.element_to_be_clickable((By.XPATH, xPathDouble)))
 	doubleBets(d)
-	print 'Bet submitted'
+	print ('Bet submitted')
 
 def getBetAmount(double):
 	currentBet = betInitial
@@ -105,7 +105,7 @@ def startPlaying(double,count):
 	result = 'won'
 	try:
 		while True:
-			print '===================Round ' + str(count+1) + '==================='
+			print ('Round')
 			index = count%length
 			selection = sequence[index].strip()
 			selectionText = 'PLAYER WINS' if selection == 'P' else 'BANKER WINS'
