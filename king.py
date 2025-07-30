@@ -523,9 +523,7 @@ def login2(uid):
                 break
             else:continue
         loop+=1
-        def login3(uid):
-    global oks,loop,cps
-    Session=requests.session()
+        
     try:
         sys.stdout.write(f'\r\r\33[38;5;37m[\x1b[38;5;46mROOT JAHID\33[38;5;37m-\x1b[38;5;46mB3\33[38;5;37m]\033[1;97m-\33[38;5;37m[\033[1;97m{loop}\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46mOK\33[38;5;160m/\x1b[38;5;208mCP\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46m{len(oks)}\33[38;5;160m/\x1b[38;5;208m{len(cps)}\33[38;5;37m]')
         sys.stdout.flush()
