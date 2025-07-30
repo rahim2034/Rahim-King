@@ -72,7 +72,7 @@ for ua in range(10000):
       ugen.append(aalhaj)
 for ua in range(5000):
       a='Mozilla/5.0 (Linux; Android'
-      b=random.choice(['5.1.1','6.0.1','7.1.1','11','12','13','14','15'])
+
       y=random.choice(['SM-J320H','SM-J3109','J320FN','SM-J320P','SM-J320F','SM-J320G','SM-J320Y'])
       c='Build/LMY47X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/'
       d=random.randrange(40,115)
@@ -269,7 +269,7 @@ for xd in range(10000):
   j=random.randrange(4200,4900)
   k=random.randrange(40,150)
   l='Mobile Safari/537.36 OPR/63.0.2254.62069'
-   i='0'
+   
    j=random.randrange(4200,4900)
    k=random.randrange(40,150)
    l='Chrome/63.0.3239.111 Mobile Safari/537.36'
