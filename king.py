@@ -258,38 +258,7 @@ for xd in range(10000):
   ugen.append(uakuh)
 for xd in range(10000): 
   aa='Mozilla/5.0 (Linux; U; Android'
-  b=random.choice(['5.0','6.0','7.0','8.1.0','9','10','11','12'])
-  c=random.choice(['801SO'])
-  d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-  e=random.randrange(1, 999)
-  f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-  g='AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/'
-  h=random.randrange(80,103)
-  i='0'
-  j=random.randrange(4200,4900)
-  k=random.randrange(40,150)
-  l='Mobile Safari/537.36 OPR/63.0.2254.62069'
-   
-   j=random.randrange(4200,4900)
-   k=random.randrange(40,150)
-   l='Chrome/63.0.3239.111 Mobile Safari/537.36'
-   uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-   ugen.append(uaku2)
-for xd in range(10000): 	
-   aa='Mozilla/5.0 (Linux; Android 11;'
-   b=random.choice(['7.0','8.1.0','9','10','11','12'])
-   c=random.choice(['Redmi Note 9 Pro'])
-   d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-   e=random.randrange(1, 999)
-   f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-   g='Build/RKQ1.200826.002) AppleWebKit/537.36 (KHTML, like Gecko)'
-   h=random.randrange(80,103)
-   i='0'
-   j=random.randrange(4200,4900)
-   k=random.randrange(40,150)
-   l='Version/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36'
-   uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-   ugen.append(uaku2)
+  
 for xd in range(10000): 	
    aa='Mozilla/5.0 (Linux; Android 11;'
    b=random.choice(['7.0','8.1.0','9','10','11','12'])
