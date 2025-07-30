@@ -390,14 +390,7 @@ def __Old1__():
             uid=year_code+mal
             jihad.submit(login3,uid)
     line();print(f'\r\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mYOUR CRACKED HAS BEEN COMPLETED...\33[38;5;160m!');linex();print(f'\r\r\r\r\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mTOTAL OK \33[38;5;160mтЦ╢ \x1b[38;5;46m{len(oks)}');linex();input(f'\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mINTER TO BACK RAN AGAIN...\33[38;5;160m!\033[1;37m');main()
-
-def __Old3__():
-	user=[]
-    
-    print(f'\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mEXAMPLE \33[38;5;160m  тЦ╢\033[1;97m 10000\33[38;5;37m|\033[1;97m20000\33[38;5;37m|\033[1;97m30000\33[38;5;37m|\033[1;97m40000')
-    linex()
-    limit=input(f'\33[38;5;160m[\033[1;97mспд\33[38;5;160m] \033[1;97mSELECTION \33[38;5;160mтЦ╢ \033[1;97m')
-    linex()
+	
     year_code = '10000'
     for i in range(int(limit)):
     	data=str(random.choice(range(1000000000,1999999999)));user.append(data)
