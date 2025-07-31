@@ -248,9 +248,6 @@ try:
     pepek = input(' Select : ')
     if pepek in['1','01']:
         __bsn__().bilo(id)
-         
-
-class __bsn__:
 
     def __init__(self):
         self.id = []
