@@ -182,7 +182,7 @@ while attemps < 12345677901:
         attemps += 1
         continue
 os.system('clear')
-os.system(')
+
 #-------------------mylover-------------------#
 logo= """\033[1;92m
 
