@@ -230,7 +230,6 @@ try:
         input(f"\n\033[1;97m Press Enter To Go Back ")
         bsn_menu()
 
-def bsn_menu():
     os.system('clear')
     logo()
     ipm = requests.get(url_ip).json() 
