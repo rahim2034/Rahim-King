@@ -219,12 +219,7 @@ try:
     if str(v) in update:
         os.system('clear')
     else:pass
-        print('\n %s[%sÃ—%s] cookies invalid'%(O,O,O));time.sleep(1);chigozie()
-    except UnboundLocalError:
-        print('\n %s[%sÃ—%s] cookies invalid'%(O,O,O));time.sleep(1);chigozie()
-    except requests.exceptions.ConnectionError:
-        exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(O,O,O))
-def hasil(OK,cp):
+        
     if len(OK) != 0 or len(cp) != 0:
         print('\n----------------------------------------------')
         print(' Your Process Complete...')
