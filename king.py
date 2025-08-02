@@ -182,6 +182,50 @@ def approval():
     x = input(f'''{xd} PRESS ENTER TO ADMIN FB ID ''')
     os.system('xdg-open https://t.me/rahimking2034')
     exit()
+	os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
+os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
+logo = '\n ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\n ║\x1b[0;96m●▬▬▬▬▬๑👨‍💻Chor Kishoreganj Black het Hacker👨‍💻AK-SAED HASAN ๑▬▬▬▬▬▬●\x1b[0;91m║\n ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\n   \n ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓████████▓▒░▒▓███████▓▒░  \n░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \n░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \n ░▒▓██████▓▒░░▒▓████████▓▒░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░ \n       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \n       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \n░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓███████▓▒░  \n                                                      \n ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\n ║\x1b[0;95m[<🕌Assalamualaikum"Mind It,\'KAlyan king fuck you>]\x1b[0;95m║\n ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\n\x1b[1;31m==================================================\n[\x7f] SC SEND BY       :      KALYAN KING\n[\x7f] TOOLS        :     𝐅𝐈𝐋𝐄-𝐂𝐋𝐎𝐍𝐈𝐍𝐆\n[\x7f] TYPE         :      𝗣𝗔𝗜𝗗(𝐔𝐬𝐞𝐫 𝐎𝐧𝐥𝐲)\n[\x7f] FACEBOOK     :      SAED HASAN\n[\x7f] VERSION      :      7.3\n[\x7f] MESSENGER    :     Chor Kishoreganj Black het Hacker👨‍💻AK-SAED HASAN\n=================================================="\x1b[1;23m'
+balpakna = '\x1b[38;5;50m══════════════════════════════════════════════════'
+meyermarexudi = ' \x1b[0;97m============================================='
+alltimexudi = ' \x1b[32;1m[-] ONLY APPROVAL SYSTEM 15 DEYS 6 Dollars  30 10 Dollars FOR    APPROVAL'
+xudartimenai = ' \x1b[32;1m[+] CONTACT ADMIN PLZ ENTAR'
+fuckyoursali = ' \x1b[32;1m[𝟷] 𝚈𝙾𝚄𝚁 𝚃𝙾𝙺𝙴𝙽 𝙸𝚂 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙰𝙿𝙿𝚁𝙾𝚅𝙴𝙳'
+xudinaministar = ' \x1b[38;1m[-] Importent Note '
+hedaborakarent = ' \x1b[35;1m[𝟸] 𝙵𝚄𝙲𝙺 𝙱𝚈𝙿𝙰𝚂𝙰𝚁 𝙲𝙷𝙰𝙺𝙴 𝚈𝙾𝚄𝚁 𝙳𝙰𝚃𝙰 ABAL😎 '
+
+def meyexudi():
+    os.system('clear')
+    print(logo)
+    uuid = str(os.geteuid()) + str(os.getlogin())
+    id = '-'.join(uuid)
+    try:
+        httpCaht = requests.get('https://github.com/saedhasan7840/AK-FILE/blob/main/approval.txt').text
+        if id in httpCaht:
+            print(fuckyoursali)
+            print(hedaborakarent)
+         #   msg = str(os.geteuid())
+            # CON.print(msg)
+            print()
+            return
+        else:
+            print(meyermarexudi)
+            # print(" \x1b[32;1m[+] YOUR KEY : "+id)
+            print(' \x1b[38;5;208m╔══[𝟷]💥  FREE-FIRE-TIK-TOK- ID CLONING')
+            print(' \x1b[1;98m║══[𝟸]💥  ONLY ACTIVE ID CLONE 100%')
+            print(' \x1b[1;93m║══[𝟸]💥  CP ID WILL BE LOGIN 80%')
+            print(' \x1b[1;97m║══[𝟸]💥  WI-FI  AND DATA BOTH WORKING 100%')
+            print(' \x1b[1;95m║══[𝟸]💥  15 DAY 6 Dollar')
+            print(' \x1b[38;5;50m║══[𝟸]💥  30 DAY 10 Dollar')
+            os.system('espeak -a 300 " Hello,   Sir,  Assalamualaikum,   I,   Am,    Robot,   of,   AK,   SAED,    Please,   Send,   Your,   Key,"')
+            print(' \x1b[0m║══[𝟸] YOUR KEY : ' + id)
+            input(' \x1b[1;30m╚══[𝟹] IF U WANT TO BUY THEN PRESS ENTER ')
+            tks = 'Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20' + id
+            os.system('am start https://wa.me/+966537468224?text=' + tks)
+            time.sleep(1)
+            meyexudi()
+    except Exception:
+        # print("  Bypasser Are Not Allow Bro So Bye Bye ")
+        sys.exit()
 
 def Fuck_SWAG():
     clear()
