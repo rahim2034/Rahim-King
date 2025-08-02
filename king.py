@@ -796,7 +796,3 @@ def __S2__(ids, passlist):
         loop += 1
     except Exception as e:
         pass
-    
-AR_Rahim()
-
-
