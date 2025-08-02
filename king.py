@@ -135,23 +135,7 @@ Facebook_version = f'{random.randint(100, 450)}.{random.randint(0, 0)}.{random.r
 print(Facebook_version)
 
     
-    density = random.choice(['1.0','1.7','2.0','2.25','2.5','3.0','3.5'])
-    width = random.randint(720, 1440)
-    height = random.randint(1080, 2560)
-    fblc = random.choice(['en_US','en_GB'])
-    sim_name = random.choice(['Banglalink','Robi','MTN-CG','Grameenphone','Artel','Teletalk'])
-    fbpn = random.choice(['com.facebook.katana'])
-    fbmf = 'vivo'
-    fbbd = 'vivo'
-    mobile_model = f'''{random.randint(4, 13)}.{random.randint(0, 5)}.{random.randint(1, 5)}'''
-    modelx = random.choice(['vivo 1906','V2029','V2027','V2111','V2310','vivo 1902','vivo 1904','V2036','vivo 1820','vivo 1901','V2036','vivo 1920','V1911A','vivo 1820','V2168A','V2140A','vivo 1901','V2120','V2322','V2249','vivo Y23L','V1938T'])
-    last = f'''[FBAN/{fban};FBAV/{facebook_version};FBBV/{fb_ver_code};FBDM/{{density={density},width={width},height={height}}};FBLC/{fblc};FBCR/{sim_name};FBMF/{fbmf};FBBD/{fbbd};FBPN/{fbpn};FBDV/{modelx};FBSV/{mobile_model};FBOP/1;FBCA/armeabi-v7a:armeabi;]'''
-    last = f'''[FBAN/{fban};FBAV/{facebook_version};FBBV/{fb_ver_code};FBDM/{{density={density},width={width},height={height}}};FBLC/{fblc};FBCR/{sim_name};FBMF/{fbmf};FBBD/{fbbd};FBPN/{fbpn};FBDV/{modelx};FBSV/{mobile_model};FBOP/1;FBCA/arm64-v8a:;]'''
-    ua = f'''Dalvik/2.1.0 (Linux; U; Android {random.randint(4, 13)}; {mix} Build/QP1A.{random.randint(111111, 999999)}.{random.randint(111, 999)}) ''' + last
-    return ua
-
-
-"""
+    
 def approval():
     kns = str(os.geteuid())
     ki = str(uuid.uuid4()).replace('-', '').upper()
