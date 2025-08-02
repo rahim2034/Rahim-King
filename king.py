@@ -134,7 +134,7 @@ Facebook_version = f'{random.randint(100, 450)}.{random.randint(0, 0)}.{random.r
 
 print(Facebook_version)
 
-    fb_ver_code = str(random.randint(10000000, 66666666))
+    
     density = random.choice(['1.0','1.7','2.0','2.25','2.5','3.0','3.5'])
     width = random.randint(720, 1440)
     height = random.randint(1080, 2560)
