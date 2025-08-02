@@ -244,7 +244,7 @@ def Fuck_SWAG():
     
     if ppp in ('1', '01'):
         plist.extend([
-            'firstlast',"Love you123","1234567","87654321","@rahim00","rahim2034,"01754325676", 'first last', 'first12', 'first123', 'first1234', 
+            'firstlast', 'first last', 'first12', 'first123', 'first1234', 
             'first12345', 'first@', 'first@@', 'first@@@', 'first@@@@', 
             'first@#', 'first##', 'first111', '@first@', '@@first@@', 
             'First123', 'i love you'
