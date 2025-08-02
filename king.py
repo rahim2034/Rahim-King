@@ -205,8 +205,8 @@ def Fuck_SWAG():
         time.sleep(1)
         print(f'''{xd} Salar BOINERE XUDI''')
         time.sleep(1)
-        Fuck_SWAG()
-	    def ___filex___():
+        AR_Rahim()
+	
     clear()
     print(f'''{xd} EXAMPLE {xdxx} /sdcard/AR.txt''')
     linex()
