@@ -611,7 +611,6 @@ def __gmail__():
         total = str(len(fo))
         print(f'''{G}➤{W}➤{W} UID{G}|{W}NAME{G}|{W}SERVER {xdxx} {W}{total}{G}|{W}{first} {last}{G}|{W}S{methdx} ''')
         linex()
-	for user in fo:
         (ids, names) = user.split('|')
         first_name = names.rsplit(' ')[0]
         try:
