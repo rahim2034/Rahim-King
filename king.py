@@ -182,17 +182,6 @@ def approval():
     x = input(f'''{xd} PRESS ENTER TO ADMIN FB ID ''')
     os.system('xdg-open https://t.me/rahimking2034')
     exit()
-"""
-
-logo = f"""
-       
-       {W} _______ _  _  _ _______  ______
-       {W} |______ |  |  | |_____| |  ____
-       {W} ______| |__|__| |     | |_____| {G}12.8.0
-{W}──────────────────────────────────────────────────
-       {xd} DEVELOPER {xdxx} AR{G}RA{W}HI-M [Captain-Amerika]
-       {xd} TOOLS     {xdxx} FILE{G}|{W}RANDOM{G}|{W}GMAIL{G}|{W}CLONING
-       {xd} STATUS    {xdxx} XUDE DICI🥴"""
 
 def Fuck_SWAG():
     clear()
