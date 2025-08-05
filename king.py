@@ -1,8 +1,4 @@
-#========SEND======kalyan KING
-#TG====== https://t.me/+LRlET_sIrUcxMTk1
-#=======____FREE______=======
-#========______GIVE==========
-#------------------[ MODULE ]-----------------#
+
 import os,time,random,string,re
 import sys,requests,json,uuid,mechanize
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
@@ -29,8 +25,6 @@ fbks = ('com.facebook.adsmanager', 'com.facebook.lite', 'com.facebook.orca', 'co
 #------------------[ INSTALL ]-----------------#
 os.system('pkg install sox -y')
 os.system('pkg install espeak')
-os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
-os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
 os.system('clear');os.system('espeak -a 300 "well,come to,kalyan, King send script free open tool"')
 #------------------[ DATE ]-----------------#
 dateti = str(datetime.now()).split(' ')[0]
@@ -128,11 +122,13 @@ nflp = f'''[{R}!{W}] FILE LOCATION NOT FOUND '''
 #------------------[ LOGO ]-----------------#
 logo = f'''\r\r\x1b[0;92m
 ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
-║\x1b[10;91m ████████\x1b[0;92m ██    ██\x1b[10;91m ████████\x1b[0;92m ██    ██\x1b[10;91m ██ \x1b[0;92m     ║
-║\x1b[10;91m    ██ \x1b[0;92m   ██    ██\x1b[10;91m    ██\x1b[0;92m    ██    ██\x1b[10;91m ██  \x1b[0;92m    ║
-║\x1b[10;91m    ██ \x1b[0;92m   ██    ██\x1b[10;91m    ██\x1b[0;92m    ██    ██\x1b[10;91m ██  \x1b[0;92m    ║
-║\x1b[10;91m    ██ \x1b[0;92m   ██    ██\x1b[10;91m    ██\x1b[0;92m    ██    ██\x1b[10;91m ██   \x1b[0;92m   ║
-║\x1b[10;91m    ██ \x1b[0;92m    ██████\x1b[10;91m     ██\x1b[0;92m     ██████\x1b[10;91m  ███████\x1b[0;92m ║
+║                              
+     /\          |  __ \     | |   (_)
+    /  \   _ __  | |__) |__ _| |__  _ _ __ ___
+   / /\ \ | '__| |  _  // _` | '_ \| | '_ ` _ \
+  / ____ \| |    | | \ \ (_| | | | | | | | | | |
+ /_/    \_\_|    |_|  \_\__,_|_| |_|_|_| |_| |_|
+
 \x1b[0;92m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝               \x1b[0;92m
 ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
 ║\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•>\x1b[0;41m[ WORKING WIFI+MOBILE DATA ]\x1b[0;92m\x1b[10;91m<•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[0;92m\x1b[10;92m║
