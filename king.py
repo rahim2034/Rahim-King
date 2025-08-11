@@ -37,13 +37,13 @@ proxsi = open('socksku.txt', 'r').read().splitlines()
 #------------------[ DATE-CHECKER ]-----------------#
 def tutulx(fx):
     if len(fx) == 15:
-        if fx[:10] in ['1000000000']:
+        if fx[:10] in ['50000000']:
             tutulxz = '2009'
             return tutulxz
-        if fx[:9] in ['100000000']:
+        if fx[:9] in ['50000000']:
             tutulxz = '2009'
             return tutulxz
-        if fx[:8] in ['10000000']:
+        if fx[:8] in ['5000000']:
             tutulxz = '2009'
             return tutulxz
         if fx[:7] in ['1000000', '1000001', '1000002', '1000003', '1000004', '1000005']:
