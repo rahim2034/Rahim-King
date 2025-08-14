@@ -25,7 +25,7 @@ fbks = ('com.facebook.adsmanager', 'com.facebook.lite', 'com.facebook.orca', 'co
 #------------------[ INSTALL ]-----------------#
 os.system('pkg install sox -y')
 os.system('pkg install espeak')
-os.system('clear');os.system('espeak -a 300 "ওকে,কিং চোদাবক্স টুল ব্যবহার করার জন্য আপনাকে ধন্যবাদ"')
+os.system('clear');os.system('espeak -a 300 "ওকে,,কিং,,চোদাবক্স,,টুল,,ব্যবহার,,করার,,জন্য,,আপনাকে,,ধন্যবাদ"')
 #------------------[ DATE ]-----------------#
 dateti = str(datetime.now()).split(' ')[0]
 #------------------[ PROXY ]-----------------#
