@@ -25,7 +25,7 @@ fbks = ('com.facebook.adsmanager', 'com.facebook.lite', 'com.facebook.orca', 'co
 #------------------[ INSTALL ]-----------------#
 os.system('pkg install sox -y')
 os.system('pkg install espeak')
-os.system('clear');os.system('espeak -a 300 "well,come to,AR,Rahim King Use Fucking free tool"')
+os.system('clear');os.system('espeak -a 300 "ওকে,come to,Rahim King Use Fucking free tool"')
 #------------------[ DATE ]-----------------#
 dateti = str(datetime.now()).split(' ')[0]
 #------------------[ PROXY ]-----------------#
@@ -37,10 +37,10 @@ proxsi = open('socksku.txt', 'r').read().splitlines()
 #------------------[ DATE-CHECKER ]-----------------#
 def tutulx(fx):
     if len(fx) == 15:
-        if fx[:10] in ['50000000']:
+        if fx[:10] in ['10000000']:
             tutulxz = '2009'
             return tutulxz
-        if fx[:9] in ['50000000']:
+        if fx[:9] in ['10000000']:
             tutulxz = '2009'
             return tutulxz
         if fx[:8] in ['5000000']:
@@ -134,11 +134,11 @@ logo = f'''\r\r\x1b[0;92m
 ║\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•>\x1b[0;41m[ WORKING WIFI+MOBILE DATA ]\x1b[0;92m\x1b[10;91m<•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[0;92m\x1b[10;92m║
 ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
 \x1b[0;94m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\x1b[1;33m 
-\x1b[10;93m╠══[SEND BY                    • \x1b[1;38mAR RAHIM KING]     ║ 
-\x1b[10;91m╠══[TELIGERM                  • king Cloning Family]   ║    
-\x1b[10;97m╠══[Github                   • AR Rahim-King ]   ║   
-\x1b[10;94m╠══[All X GF                  •Rotna,Bithi,Sadia,Soma ║ 
-\x1b[10;95m╠══[TOOLS                    • FREE ]         ║    
+\x1b[10;93m╠══[SEND BY                    • \x1b[1;38mAR RAHIM KING ║ 
+\x1b[10;91m╠══[TELIGERM                  • king fuck Family ║    
+\x1b[10;92m╠══[Github                   • AR Rahim-King ]  ║   
+\x1b[10;94m╠══[All X GF                  •Rotna,Bithi,Sadia,💕 ║ 
+\x1b[10;95m╠══[TOOLS                    • FREE ] ║    
 \x1b[10;93m╠══[VERSION                  • 11.2.1 ]          ║ \x1b[10;92m
 \x1b[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\x1b[1;31m'''
 #------------------[ NAME ]-----------------#
