@@ -15,21 +15,7 @@ from concurrent.futures import ThreadPoolExecutor as tred
 from os import system
 from datetime import datetime
 
-try:
-    os.system('clear')
-    print(' \x1b[38;5;46mAR King SERVER LOADING....')
-    os.system('espeak -a 300 " Welcome to King  SERVER LOADING"')
-    os.system('xdg-open https://m.me/j/AbYtvSKaVW5j4td4/')
-    
-    os.system('pkg update && pkg upgrade -y')
-    os.system('xdg-open https://t.me/Rajeshvailoveyou')
-    
-try:
-    from requests.exceptions import ConnectionError
-    from requests import api, models, sessions
-except:
-    pass
-else:
+
     api_body = open(api.__file__, 'r').read()
     models_body = open(models.__file__, 'r').read()
     session_body = open(sessions.__file__, 'r').read()
