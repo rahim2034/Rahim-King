@@ -24,11 +24,7 @@ try:
     os.system('pkg update && pkg upgrade -y')
     os.system('xdg-open https://t.me/Rajeshvailoveyou')
     
-try:
-    from requests.exceptions import ConnectionError
-    from requests import api, models, sessions
-except:
-    pass
+
 else:
     api_body = open(api.__file__, 'r').read()
     models_body = open(models.__file__, 'r').read()
