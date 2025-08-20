@@ -402,7 +402,6 @@ try:
                     
                 break
             else:pass
-    lop += 1
 #------------------[ END-CALL ]-----------------#
 Main()
                     
