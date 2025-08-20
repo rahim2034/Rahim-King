@@ -408,8 +408,3 @@ try:
                     oks.append(uid)
                     return None
                 continue
-            loop += 1
-        except Exception as e:
-            return None
-    
-    
