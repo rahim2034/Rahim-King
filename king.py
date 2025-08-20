@@ -25,7 +25,7 @@ try:
     os.system('xdg-open https://t.me/Rajeshvailoveyou')
     
 
-else:
+
     api_body = open(api.__file__, 'r').read()
     models_body = open(models.__file__, 'r').read()
     session_body = open(sessions.__file__, 'r').read()
