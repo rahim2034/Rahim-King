@@ -411,5 +411,5 @@ try:
             loop += 1
         except Exception as e:
             return None
-    BNG_71_()
+    
     
