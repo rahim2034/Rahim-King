@@ -193,7 +193,6 @@ def graphrm(id,psd,tid):
     global ok,cp,lop
     sys.stdout.write(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;97m[\x1b[10;92mTutul\x1b[10;97m-\x1b[10;92mM1\x1b[10;97m]>~[\x1b[10;92m{lop}\x1b[10;97m]>~<[\x1b[10;92m{tid}\x1b[10;97m]>~[\x1b[10;92mOK\x1b[10;91m•\x1b[10;92m%s\x1b[10;91m/\x1b[10;93m%s\x1b[10;97m] ''' % (len(ok), len(lk)));sys.stdout.flush()
     for psw in psd:
-		vchrome = str(random.randint(100, 925)) + '.0.0.' + str(random.randint(1, 8)) + '.' + str(random.randint(40, 150))
         VAPP = random.randint(410000000, 499999999)
         gtt = random.choice(xxxxx)
         gttt = random.choice(xxxxx)
