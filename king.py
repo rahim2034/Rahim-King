@@ -27,22 +27,21 @@ os.system('pkg install sox -y')
 os.system('pkg install espeak')
 os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
 os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
-os.system('clear');os.system('espeak -a 300 "well,come to,kalyan, King send script free open tool"')
+os.system('clear');os.system('espeak -a 300 "well,come to,Rahim, King script free tool"')
 #------------------[ DATE ]-----------------#
 dateti = str(datetime.now()).split(' ')[0]
 #------------------[ PROXY ]-----------------#
-proxylist = requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
-open('socksku.txt', 'w').write(proxylist)
+
 proxsi = open('socksku.txt', 'r').read().splitlines()
 #------------------[ KEY ]-----------------#
 
 #------------------[ DATE-CHECKER ]-----------------#
 def tutulx(fx):
     if len(fx) == 15:
-        if fx[:10] in ['1000000000']:
+        if fx[:10] in ['5000000000']:
             tutulxz = '2009'
             return tutulxz
-        if fx[:9] in ['100000000']:
+        if fx[:9] in ['500000000']:
             tutulxz = '2009'
             return tutulxz
         if fx[:8] in ['10000000']:
@@ -72,7 +71,7 @@ def tutulx(fx):
         if fx[:6] in ['100009']:
             tutulxz = '2015'
             return tutulxz
-        if fx[:5] in ['10001']:
+        if fx[:5] in ['1000010']:
             tutulxz = '2015/2016'
             return tutulxz
         if fx[:5] in ['10002']:
@@ -133,14 +132,14 @@ logo = f'''\r\r\x1b[0;92m
 ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
 ║\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•>\x1b[0;41m[ WORKING WIFI+MOBILE DATA ]\x1b[0;92m\x1b[10;91m<•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[0;92m\x1b[10;92m║
 ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
-\x1b[0;94m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\x1b[1;33m 
-\x1b[10;93m╠══[SEND BY                    • \x1b[1;38mKALYAN KING]     ║ 
-\x1b[10;91m╠══[TELIGERM                  • OX CYBER TEAM ]   ║    
-\x1b[10;97m╠══[Github                   • Tutul-King ]   ║   
-\x1b[10;94m╠══[Teligerm                  • https://t.me/+LRlET_sIrUcxMTk1 ]  ║ 
-\x1b[10;95m╠══[TOOLS                    • FREE ]         ║    
-\x1b[10;93m╠══[VERSION                  • 2.1 ]          ║ \x1b[10;92m
-\x1b[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\x1b[1;31m'''
+\x1b[0;55m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\x1b[1;33m 
+\x1b[10;55m╠══[SEND BY                    • \x1b[1;38mKALYAN KING]     ║ 
+\x1b[10;55m╠══[TELIGERM                  • OX CYBER TEAM ]   ║    
+\x1b[10;55m╠══[Github                   • Tutul-King ]   ║   
+\x1b[10;55m╠══[Teligerm                  • https://t.me/+LRlET_sIrUcxMTk1 ]  ║ 
+\x1b[10;55m╠══[TOOLS                    • FREE ]         ║    
+\x1b[10;55m╠══[VERSION                  • 2.1 ]          ║ \x1b[10;92m
+\x1b[0;55m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\x1b[1;31m'''
 #------------------[ NAME ]-----------------#
 #------------------[ MENU ]-----------------#
 def Main():
