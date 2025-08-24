@@ -219,9 +219,7 @@ def rmenu1():
 	if ckiv in ['n','N','no','NO','2']:cokix.append(f'n')
 	else:cokix.append(f'y')
 	for number in range(limit):
-		if "1" in rcd:numberx = ''.join(random.choice(string.digits) for _ in range(8));xode.append(numberx)
-        if "2" in rcd:numberx = ''.join(random.choice(string.digits) for _ in range(7));xode.append(numberx)
-		if "3" in rcd:numberx = ''.join(random.choice(string.digits) for _ in range(6));xode.append(numberx)
+	
 	with ThreadPool(max_workers=60) as tonxoys:
 		tid= str(len(xode))
 		logo()
