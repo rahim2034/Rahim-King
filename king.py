@@ -218,11 +218,6 @@ def rmenu1():
 	ckiv=input(f'{chc}')
 	if ckiv in ['n','N','no','NO','2']:cokix.append(f'n')
 	else:cokix.append(f'y')
-	for number in range(limit):
-	
-	with ThreadPool(max_workers=60) as tonxoys:
-		tid= str(len(xode))
-		logo()
 		print(f'\033[10;92m┏━\033[10;97m=============================================')
 		print("\033[10;92m┣━\033[10;97m[\033[10;92m+\033[10;97m]\x1b[38;5;208m USER NAME\033[10;91m :\033[10;96m "+NameX)
 		print(f'\033[10;92m┣━{W}[{G}+{W}] \033[10;91mYOUR TOTAL ID :\033[1;92m '+tid)
