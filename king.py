@@ -31,8 +31,6 @@ os.system('clear');os.system('espeak -a 300 "well,come to,Rahim, King script fre
 #------------------[ DATE ]-----------------#
 dateti = str(datetime.now()).split(' ')[0]
 #------------------[ PROXY ]-----------------#
-
-proxsi = open('socksku.txt', 'r').read().splitlines()
 #------------------[ KEY ]-----------------#
 
 #------------------[ DATE-CHECKER ]-----------------#
