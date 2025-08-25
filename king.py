@@ -134,10 +134,10 @@ logo = f'''\r\r\x1b[0;92m
 ║\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•>\x1b[0;41m[ WORKING WIFI+MOBILE DATA ]\x1b[0;92m\x1b[10;91m<•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[0;92m\x1b[10;92m║
 ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
 \x1b[0;94m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\x1b[1;33m 
-\x1b[10;93m╠══[SEND BY                    • \x1b[1;38mKALYAN KING]     ║ 
-\x1b[10;91m╠══[TELIGERM                  • OX CYBER TEAM ]   ║    
-\x1b[10;97m╠══[Github                   • Tutul-King ]   ║   
-\x1b[10;94m╠══[Teligerm                  • https://t.me/+LRlET_sIrUcxMTk1 ]  ║ 
+\x1b[10;93m╠══[SEND BY             Hacker & Report group║ 
+\x1b[10;91m╠══[Bash                CYBER security TEAM  ║    
+\x1b[10;97m╠══[owner                Man Force Condom    ║   
+\x1b[10;94m╠══[work                Reporting,Disable,suspend 
 \x1b[10;95m╠══[TOOLS                    • FREE ]         ║    
 \x1b[10;93m╠══[VERSION                  • 2.1 ]          ║ \x1b[10;92m
 \x1b[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\x1b[1;31m'''
