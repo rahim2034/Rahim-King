@@ -1,9 +1,48 @@
+from os import path
+import requests,random,uuid,string,hashlib,json
+from os import path
+import os,uuid,base64,requests,zlib,httpx,time,platform,datetime
+from time import localtime as lt
+from urllib.request import urlopen
+import os,base64,zlib,pip,urllib,urllib3
+import platform,math,smtplib
+import platform
+import smtplib
+import math
+
 
 import os,time,random,string,re
 import sys,requests,json,uuid,mechanize
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from datetime import datetime
 from string import *
+
+
+ua = []
+ua.append('Mozilla/5.0 (Linux; Android 11; 2107113SI) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.88 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 11; RMX2193 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/385.0.0.32.114')
+ua.append('Mozilla/5.0 (Linux; Android 11; 2107113SI) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.88 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 10; SM-A405FN Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/117.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/432.0.0.29.102')
+ua.append('Mozilla/5.0 (Linux; Android 11; SM-A127F Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/431.0.0.30.108')
+ua.append('Mozilla/5.0 (Linux; Android 13; SM-S918B Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/117.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/433.0.0.31.111')
+ua.append('Mozilla/5.0 (Linux; Android 12; SM-A115F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/432.0.0.29.102')
+ua.append('Mozilla/5.0 (Linux; Android 8; CRT-LX2 Build/HONORCRT-L32; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/117.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/432.0.0.29.102')
+ua.append('Mozilla/5.0 (Linux; Android 12; ANG-AN00 Build/HUAWEIANG-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.1.0.28.104')
+ua.append('Mozilla/5.0 (Linux; Android 14; SM-J320Y Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.5669.73 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 10; SM-J3109 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.5326.82 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 8; SM-J320Y Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5479.49 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 13; SM-J3109 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.5903.48 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 14; SM-J320P Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/50.0.4777.63 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 14; SM-J320Y Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.3011.34 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 10; SM-J3109 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4336.91 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 10; SM-J320G Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.5565.86 Mobile Safari/537.36')
+ua.append('Mozilla/5.0 (Linux; Android 11; SM-J320H Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.5508.92 Mobile Safari/537.36')
+
+
+
+
+
 #------------------[ COLOR ]-----------------#
 B = '\x1b[10;90m';R = '\x1b[10;91m';G = '\x1b[10;92m';H = '\x1b[10;93m';BL = '\x1b[10;94m';BG = '\x1b[10;95m';S = '\x1b[10;96m';W = '\x1b[10;97m';EX = '\x1b[0m';E = '\x1b[m'
 #------------------[ SYTLE ]-----------------#
@@ -39,17 +78,17 @@ proxsi = open('socksku.txt', 'r').read().splitlines()
 #------------------[ DATE-CHECKER ]-----------------#
 def tutulx(fx):
     if len(fx) == 15:
-        if fx[:10] in ['1000000000']:
-            tutulxz = '2009'
+        if fx[:10] in ['900000000']:
+            tutulxz = '2011'
             return tutulxz
-        if fx[:9] in ['100000000']:
-            tutulxz = '2009'
+        if fx[:9] in ['9000000000']:
+            tutulxz = '2012'
             return tutulxz
-        if fx[:8] in ['10000000']:
-            tutulxz = '2009'
+        if fx[:8] in ['9000000000']:
+            tutulxz = '2014'
             return tutulxz
         if fx[:7] in ['1000000', '1000001', '1000002', '1000003', '1000004', '1000005']:
-            tutulxz = '2009'
+            tutulxz = '2013'
             return tutulxz
         if fx[:7] in ['1000006', '1000007', '1000008', '1000009']:
             tutulxz = '2010'
@@ -70,38 +109,38 @@ def tutulx(fx):
             tutulxz = '2014/2015'
             return tutulxz
         if fx[:6] in ['100009']:
-            tutulxz = '2015'
+            tutulxz = '2012'
             return tutulxz
         if fx[:5] in ['10001']:
-            tutulxz = '2015/2016'
+            tutulxz = '2013'
             return tutulxz
         if fx[:5] in ['10002']:
-            tutulxz = '2016/2017'
+            tutulxz = '2014'
             return tutulxz
         if fx[:5] in ['10003']:
-            tutulxz = '2018/2019'
+            tutulxz = '2011'
             return tutulxz
         if fx[:5] in ['10004']:
-            tutulxz = '2019'
+            tutulxz = '2010'
             return tutulxz
         if fx[:5] in ['10005']:
-            tutulxz = '2020'
+            tutulxz = '2012'
             return tutulxz
         if fx[:5] in ['10006', '10007', '10008']:
-            tutulxz = '2021/2022'
+            tutulxz = '2011/2012'
             return tutulxz
-        tutulxz = '2023'
+        tutulxz = '2012'
         return tutulxz
-    if len(fx) in [9, 10]:
-        tutulxz = '2008/2009'
+    if len(fx) in [11, 12]:
+        tutulxz = '2011/2012'
         return tutulxz
-    if len(fx) == 8:
-        tutulxz = '2007/2008'
+    if len(fx) == 14:
+        tutulxz = '2014'
         return tutulxz
-    if len(fx) == 7:
-        tutulxz = '2006/2007'
+    if len(fx) == 15:
+        tutulxz = '2015'
         return tutulxz
-    tutulxz = '2023/2024'
+    tutulxz = '2014/2015'
     return tutulxz
 #------------------[ SIM-CODE ]-----------------#
 BDX = f'''\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[10;92mBD SIM CODE \x1b[10;91m• {G}013 014 015 016 017 018 019{E}{W}'''
