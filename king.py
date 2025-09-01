@@ -1,161 +1,197 @@
-import os,sys,time,json,random,re,string,platform,base64,uuid
-from bs4 import BeautifulSoup as sop
-from bs4 import BeautifulSoup
-import requests as ress
-from datetime import date
-from datetime import datetime
-from time import sleep
-from time import sleep as waktu
-import requests
-#------------------[ USER-AGENT ]-------------------#
-os.system('espeak -a 300 " WELCOME TO BLACK HACK TOOLS FREE TOOL"')
-from time import localtime as lt
-#-----------------[ IMPORT-MODULE ]-------------------#
 
-import requests,bs4,json,os,sys,random,datetime,time,re
-import urllib3,rich,base64
-from rich.table import Table as me
-from rich.console import Console as sol
-from bs4 import BeautifulSoup as sop
-from concurrent.futures import ThreadPoolExecutor as tred
-from rich.console import Group as gp
-from rich.panel import Panel as nel
-from rich.markdown import Markdown as mark
-from rich.columns import Columns as col
-from rich import pretty
-from rich.text import Text as tekz
+#----------------------------[IMPORT/MODULE]-----------------------------------#
 import os
-#------------------[ USER-AGENT ]-------------------#
-user_agent=['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/96.0.4664.45 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/345.0.0.34.118;]', 'Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/198.0.0.53.101;]', 'Mozilla/5.0 (Linux; Android 12; SM-A205U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-A102U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-G960U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-N960U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-Q720) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-X420) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.135 Safari/537.36 (KHTML like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Build/RQ2A.210305.006; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/109.0.5414.117 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/110.0.5481.65 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/109.0.5414.118 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 10; en-us; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 10; zh-cn; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 9; en-US; Redmi 8A Pro Build/PKQ1.190319.001) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.12.9.1226 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 9; Redmi 8A Pro Build/PKQ1.190319.001; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36 OPR/50.0.2254.149183', 'Mozilla/5.0 (Linux; U; Android 9; en-us; Redmi Note 8 Build/PKQ1.190616.001) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/16.7.27 swan-mibrowser', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/96.0.4664.45 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/345.0.0.34.118;]', 'Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/198.0.0.53.101;]', 'Mozilla/5.0 (Linux; Android 12; SM-A205U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-A102U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-G960U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; SM-N960U) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-Q720) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-X420) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.135 Safari/537.36 (KHTML like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 12; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Build/RQ2A.210305.006; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/109.0.5414.117 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/110.0.5481.65 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/109.0.5414.118 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 10; en-us; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 10; zh-cn; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 9; en-US; Redmi 8A Pro Build/PKQ1.190319.001) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.12.9.1226 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 9; Redmi 8A Pro Build/PKQ1.190319.001; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36 OPR/50.0.2254.149183', 'Mozilla/5.0 (Linux; U; Android 9; en-us; Redmi Note 8 Build/PKQ1.190616.001) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/16.7.27 swan-mibrowser]', 'uas_bawaan = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML like Gecko) Chrome/86.0.4240.78 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]', 'uas_nokiac2 = NokiaC2-00/2.0 (03.45) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 (Java; U; kau; nokiac2-00) UCBrowser8.3.0.154/70/352/UCWEB Mobile', 'uas_nokiax20 = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.111 Safari/537.36 (KHTML seperti Gecko) Versi/4.0 Chrome/98.0.4758.87 Mobile Safari/537.36', 'uas_nokiax = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML like Gecko) Chrome/83.0.4103.101 Safari/537.36 (KHTML like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0gzip(gfe)', 'uas_samsungse = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.135 Safari/537.36 (KHTML like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36', 'uas_redmi9a = Mozilla/5.0 (Linux; U; Android 10; id-id; Redmi 9A Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36', 'uas_nokiaxl = Mozilla/5.0 (Linux; Android 4.1.2; Nokia_XL Build/JZO54K) AppleWebKit/537.36 (KHTML like Gecko) Chrome/30.0.1599.82 Mobile Safari/537.36 NokiaBrowser/1.2.0.12', 'uas_chromelinux = Mozilla/5.0 (Linux; Android 4; OPPO A57 Build/MMB29M; wv) AppleWebKit/537.36 (KHTML like Gecko) Chrome/97.0.4692.71 Safari/537.36', 'uas_j7prime = Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F Build/M1AJQ) AppleWebKit/537.36 (KHTML like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36 OPR/51.1.2461.137501', 'uas_tes = Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4X Build/MiUI MS; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 Instagram 38.0.0.13.95 Android (24/7.0; 480dpi; 1080x1920; Xiaomi/xiaomi; Redmi Note 4X; mido; qcom; ru_RU; 99640911)', 'Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36', 'NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML like Gecko) Safari/420+', 'Mozilla/5.0 (Linux; Android 10; Nokia 5.1 Plus Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML seperti Gecko) Versi/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/84.0.4147.135 Safari/537.36 (KHTML like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36])', 'uas_nokiac3 = NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML like Gecko) Safari/420+', 'uas_nokia5plus = Mozilla/5.0 (Linux; Android 10; Nokia 5.1 Plus Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML seperti Gecko) Versi/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML like Gecko) Chrome/86.0.4240.78 Safari/537.36 (KHTML like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]', 'Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML like Gecko) Chrome/83.0.4103.101 Safari/537.36 (KHTML like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0gzip(gfe)', 'Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36])', 'a = Mozilla/5.0 (Linux; Android', 'f = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = Build/SKQ1.210908.001; wv) AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 13;', 'g = Build/TP1A.220905.001; wv) AppleWebKit/537.36 (KHTML like Gecko)', 'a = Mozilla/5.0 (Linux; Android 12;', 'g = Build/SP1A.210812.003; wv) AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 12;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (iPhone;', 'g = AppleWebKit/605.1.15 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 11;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'aa = Mozilla/5.0 (Linux; Android 10;', 'g = AppleWebKit/537.36 (KHTML like Gecko)', 'user-agent: Mozilla/5.0 (Linux; Android 11; vivo 1904 Build/RP1A.200720.012;) AppleWebKit/537.36 (KHTML like Gecko) Version/4.0 Chrome/104.0.5112.97 Mobile Safari/537.36 })', 'user-agent: Mozilla/5.0 (X11; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0 ', 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/80.0.3987.99 Safari/537.36 }', 'user-agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML like Gecko) Chrome/86.0.4240.114 Safari/537.36 }', 'user-agent: NokiaX2-01/5.0 (08.35) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML like Gecko) Safari/420+ }']
-header_grup_op = {'user-agent':'[FBAN/FB4A;FBAV/;FBBV/[FBAN/FB4A;FBAV/61.0.0.15.69;FBBV/20748125;FBDM({density=1.0,width=600,height=976};FBLC/es_LA;FBCR/MOVISTAR;FBMF/Rockchip;FBBD/K5-3G;FBPN/com.facebook.katana;FBDV/K5-3G;FBSV/5.1.1;nullFBCA/x86:armeabi-v7a;]'}
-head_sam = {'User Agent : Davik/2.1.0 (Linux; U; Android 4.0.0; Infinix X682B Build/Build/QP1A.190711.020; wv) [FBAN/AndroidSampleApp;FBAV/348.719.618.179;FBLC/en_US;FBBV/709835163;FBCR/Zong;FBMF/Infinix;FBBD/Infinix;FBDV/Infinix X682B;FBSV/12.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.3312501,width=800,height=1216};FB_FW/1'}
-head_sams = {"user-agent": "Davik/2.1.0 (Linux; U; Android 10; TECNO LC8 Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/317.0.0.3.45;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/796703265;FBCR/Telenor;FBMF/TECNO MOBILE LIMITED;FBBD/TECNO;FBDV/TECNO LC8;FBSV/10;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
-header_grup_asp = {"user-agent": "Mozilla/5.0 (Linux; Android 12; SM-E225F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/388.0.0.32.105;]"}
-ua_zs = {"user-agent": "Davik/2.1.0 (Linux; U; Android 11; V2043_21 Build/RP1A.200720.012) [FBAN/MessengerLite;FBAV/306.0.0.4.53;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/207672721;FBCR/Telenor;FBMF/vivo;FBBD/vivo;FBDV/V2043_21;FBSV/11;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
-useragent_xxx = {"user-agent": "Davik/2.1.0 (Linux; U; Android 11; Infinix X688B Build/RP1A.200720.011) [FBAN/MessengerLite;FBAV/325.0.0.4.67;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/683135857;FBCR/Telenor;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X688B;FBSV/11;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
-header_grup_gop = {"Dalvik/2.1.0 (Linux; U; Android 8.0.0; SM-A720F Build/R16NW) [FBAN/Orca-Android;FBAV/196.0.0.29.99;FBPN/com.facebook.orca;FBLC/th_TH;FBBV/135374479;FBCR/AIS;FBMF/samsung;FBBD/samsung;FBDV/SM-A720F;FBSV/8.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=1080,height=1920};FB_FW/1;]"}
-head_f = {"user-agent": "Davik/2.1.0 (Linux; U; Android 10; TECNO LC8 Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/317.0.0.3.45;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/796703265;FBCR/Telenor;FBMF/TECNO MOBILE LIMITED;FBBD/TECNO;FBDV/TECNO LC8;FBSV/10;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
-ua_z = {"user-agent": "Davik/2.1.0 (Linux; U; Android 12; V2111 Build/SP1A.210812.003_NONFC) [FBAN/MessengerLite;FBAV/316.0.0.2.130;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/733896687;FBCR/No service;FBMF/vivo;FBBD/vivo;FBDV/V2111;FBSV/12;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
-ua_x = {"user-agent": "Davik/2.1.0 (Linux; U; Android 12; M2101K7AG Build/SKQ1.210908.001) [FBAN/MessengerLite;FBAV/311.0.0.5.119;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/190069654;FBCR/;FBMF/Xiaomi;FBBD/Redmi;FBDV/M2101K7AG;FBSV/12;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=1024,width=2048};]"}
-ua_x = {"user-agent": "Davik/2.1.0 (Linux; U; Android 10; RMX1821 Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/324.0.0.6.49;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/994696613;FBCR/Jazz;FBMF/Realme;FBBD/Realme;FBDV/RMX1821;FBSV/10;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
-ua_x = {"user-agent": "Davik/2.1.0 (Linux; U; Android 8.1.0; CPH1909 Build/O11019) [FBAN/MessengerLite;FBAV/302.0.0.1.80;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/862362285;FBCR/AIRTEL;FBMF/OPPO;FBBD/OPPO;FBDV/CPH1909;FBSV/8.1.0;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=,width=};]"}
-ua_x = {"user-agent": "Dalvik/1.6.0 (Linux; U; Android 5; SM-G3518 Build/JLS36C) [FBAN/FB4A;FBAV/251.0.0.31.111;FBPN/com.facebook.katana;FBLC/en_US;FBBV/188827991;FBCR/T-Mobile;FBMF/samsung;FBBD/samsung;FBDV/SM-G3518;FBSV/4.4.2;FBCA/x86:armeabi-v7a;FBDM/{density=1.5,width=720,height=1244};FB_FW/1;FBRV/190301973;]"}
-uas_random2 = random.choice(["Mozilla/5.0 (Linux; Android 13; V2036 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 [FB_IAB/Orca-Android;FBAV/403.1.0.17.106;]","Mozilla/5.0 (Linux; Android 5.1.1; vivo Y31L Build/LMY47V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.4638.74 Mobile Safari/537.36[FBAN/EMA;FBLC/en_US;FBAV/335.0.0.15.96;]","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)","Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36"])
-ua = ["Mozilla/5.0 (Linux; Android 6.0.1; SM-G935S Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36",]
+import random
+import sys
+import subprocess
+import time, uuid
+from io import BytesIO
 
-ugen2=[]
-ugen=[]
-cokbrut=[]
-ses=requests.Session()
-princp=[]
 try:
-    prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
-    open('.prox.txt','w').write(prox)
-except Exception as e:
-    pass
-prox=open('.prox.txt','r').read().splitlines()
-for xd in range(10000):
-    a='Mozilla/5.0 (Symbian/3; Series60/'
-    b=random.randrange(1, 9)
-    c=random.randrange(1, 9)
-    d='Nokia'
-    e=random.randrange(100, 9999)
-    f='/110.021.0028; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/'
-    g=random.randrange(1, 9)
-    h=random.randrange(1, 4)
-    i=random.randrange(1, 4)
-    j=random.randrange(1, 4)
-    k='Mobile Safari/535.1'
-    uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
-    ugen2.append(uaku)
-    aa='Mozilla/5.0 (Linux; U; Android'
-    b=random.choice(['6','7','8','9','10','11','12'])
-    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
-    h=random.randrange(73,100)
-    i='0'
-    j=random.randrange(4200,4900)
-    k=random.randrange(40,150)
-    l='Mobile Safari/537.36'
-    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-    ugen.append(uaku2)
-for x in range(10):
-    a='Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S'
-    b=random.randrange(100, 9999)
-    c=random.randrange(100, 9999)
-    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    e=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    g=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    h=random.randrange(1, 9)
-    i='; U; Bada/1.2; en-us) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/'
-    j=random.randrange(1, 9)
-    k=random.randrange(1, 9)
-    l='Mobile WVGA SMM-MMS/1.2.0 OPN-B'
-    uak=f'{a}{b}/{c}{d}{e}{f}{g}{h}{i}{j}.{k} {l}'
-def uaku():
-    try:
-        ua=open('user-agents.txt','r').read().splitlines()
-        for ub in ua:
-            ugen.append(ub)
-    except:
-        a=requests.get('https://github.com/cvandeplas/pystemon/blob/master/user-agents.txt').text
-        ua=open('user-agents.txt','w')
-        aa=re.findall('line">(.*?)<',str(a))
-        for un in aa:
-            ua.write(un+'\n')
-        ua=open('user-agents.txt','r').read().splitlines()
-        #--------------------[ CONVERTER-BULAN ]--------------#
+    import requests
+except ModuleNotFoundError:
+    os.system("pip install requests")
+    
+#-----------------------------[LINE]-----------------------------------#
+def lin():
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+#-----------------------------[COLOR CODE]-----------------------------------#
+r = "\x1b[1;31m"
+g = "\x1b[1;32m"
+b = "\x1b[1;34m"
+p = "\x1b[1;35m"
+m = "\x1b[1;36m"
+w = "\x1b[1;37m"
+loop = 0
+oks = []
 
-dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
-dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
-tgl = datetime.datetime.now().day
-bln = dic[(str(datetime.datetime.now().month))]
-thn = datetime.datetime.now().year
-okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-date = str(tgl)+'/'+str(bln)+'/'+str(thn)
-ltx = int(lt()[3])
-if ltx > 12:
-    a = ltx-12
-    tag = "PM"
-else:
-    a = ltx
-    tag = "AM"
+#----------------------------[USER/AGENT]-----------------------------------#
+import random
 
-#------------------[ MACHINE-SUPPORT ]---------------#
+def arnold_1(count=100):
+    """
+    Generate unique User-Agent strings (2009–2016 era).
+    Includes Android, iOS, and Windows/Mac desktop.
+    """
+    android_versions = [
+        '2.1','2.2.1','2.3.6','4.0.4','4.1.2',
+        '4.2.2','4.3.1','4.4.2','5.0.1','5.1.1','6.0.1'
+    ]
+    ios_versions = [
+        'iPhone OS 4_2_1','iPhone OS 5_1_1','iPhone OS 6_1_3',
+        'iPhone OS 7_1_2','iPhone OS 8_4','iPhone OS 9_3_5'
+    ]
+    win_versions = ['Windows NT 5.1','Windows NT 6.0','Windows NT 6.1']
+    mac_versions = [
+        'Macintosh; Intel Mac OS X 10_6_8','Macintosh; Intel Mac OS X 10_7_5',
+        'Macintosh; Intel Mac OS X 10_8_5','Macintosh; Intel Mac OS X 10_9_5',
+        'Macintosh; Intel Mac OS X 10_10_5'
+    ]
 
-def alvino_xy(u):
-        for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.005)
-def clear():
-    os.system('clear')
-def back():
-    login()
-def contact():
-   # os.system('xdg-open ')
-    back()
-def linex():
-    print('\033[1;91m----------------------------------------------')
-def animation(u):
-    for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.01)
-#------------------[ LOGO-LAKNAT ]-----------------#
+    android_models = [
+        'GT-I9000','GT-I9100','GT-S5830','GT-N7000',
+        'HTC Desire','Nexus One','Xperia X10i','LG-P500',
+        'GT-N7100','SM-J500H','SM-G355H','SM-G610F',
+        'SM-G900H','SM-G7102','MotoG2','Redmi Note 3'
+    ]
 
+    iphone_models = [
+        'iPhone','iPhone3,1','iPhone4,1','iPhone5,2',
+        'iPhone6,1','iPhone7,2'
+    ]
+
+    user_agents = set()  # unique store
+
+    while len(user_agents) < count:
+        ua_type = random.choice(['android','ios','desktop'])
+
+        if ua_type == 'android':
+            ua = (
+                f'Dalvik/1.6.0 (Linux; U; Android {random.choice(android_versions)}; '
+                f'{random.choice(android_models)} Build/{random.choice(["FRF91","GRJ90","IMM76D","JZO54K","KOT49H","LRX21V","MMB29K"])}) '
+                f'[FBAN/FB4A;FBAV/{random.randint(10,120)}.0.0.{random.randint(1,40)}.{random.randint(10,400)};'
+                f'FBPN/com.facebook.katana;FBLC/en_US;FBBV/{random.randint(1000000,1500000)};'
+                f'FBCR/{random.choice(["Airtel","Vodafone","Jio","Idea","Telenor"])};'
+                f'FBMF/{random.choice(["samsung","HTC","LGE","Sony","Xiaomi","Motorola"])};'
+                f'FBBD/{random.choice(["samsung","HTC","LGE","Sony","Xiaomi","Motorola"])};'
+                f'FBDV/{random.choice(android_models)};FBSV/{random.choice(android_versions)};'
+                f'FBCA/armeabi-v7a;FBDM{{density=1.5,width=480,height=800}};FB_FW/1;]'
+            )
+
+        elif ua_type == 'ios':
+            ua = (
+                f'Mozilla/5.0 ({random.choice(iphone_models)}; CPU {random.choice(ios_versions)} like Mac OS X) '
+                f'AppleWebKit/534.{random.randint(30,60)} (KHTML, like Gecko) '
+                f'Version/{random.choice(["5.1","6.0","7.0","8.0","9.0"])} Mobile/{random.randint(8,9)}A{random.randint(100,999)} '
+                f'Safari/7534.{random.randint(10,60)} [FBAN/FBIOS;FBAV/{random.randint(10,110)}.0.0.{random.randint(1,30)}.{random.randint(10,300)};FBPN/com.facebook.Facebook;FBLC/en_US]'
+            )
+
+        else:  # desktop
+            ua = random.choice([
+                f'Mozilla/5.0 ({random.choice(win_versions)}; rv:{random.randint(3,48)}.0) Gecko/20100101 Firefox/{random.randint(3,48)}.0',
+                f'Mozilla/5.0 ({random.choice(win_versions)}) AppleWebKit/537.{random.randint(1,36)} (KHTML, like Gecko) Chrome/{random.randint(7,49)}.0.{random.randint(500,1999)}.0 Safari/537.{random.randint(1,36)}',
+                f'Mozilla/5.0 ({random.choice(mac_versions)}) AppleWebKit/534.{random.randint(1,60)} (KHTML, like Gecko) Version/{random.choice(["5.1","6.0","7.0","8.0","9.0"])} Safari/534.{random.randint(1,60)}'
+            ])
+
+        user_agents.add(ua)
+
+    return list(user_agents)
+##========ua2=================
+def arnold_1():
+    """
+    Generates random Windows User-Agent strings (2009–2014 era).
+    """
+    # Chrome (2009–2014 builds → v5–39)
+    chrome_ver = f"{random.randint(5, 39)}.0.{random.randint(200, 2000)}.{random.randint(0, 150)}"
+    A = f"Mozilla/5.0 (Windows NT {random.choice(['5.1','6.0','6.1'])}; en-US) " \
+        f"AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_ver} Safari/537.36"
+
+    # Firefox (2009–2014 → v3.5 – v34)
+    ff_major = random.randint(3, 34)
+    B = f"Mozilla/5.0 (Windows NT {random.choice(['5.1','6.1'])}; rv:{ff_major}.0) " \
+        f"Gecko/20100101 Firefox/{ff_major}.0"
+
+    # Internet Explorer (IE8–IE11)
+    ie_ver = random.choice(["8.0", "9.0", "10.0", "11.0"])
+    trident_map = {"8.0": "4.0", "9.0": "5.0", "10.0": "6.0", "11.0": "7.0"}
+    C = f"Mozilla/5.0 (compatible; MSIE {ie_ver}; Windows NT {random.choice(['5.1','6.1'])}; Trident/{trident_map[ie_ver]})"
+
+    return random.choice([A, B, C])
+
+
+def arnold_2():
+    """
+    Generates random Android User-Agent strings (2010–2014 era).
+    """
+    android_ver = random.choice(["2.3.6","4.0.4","4.1.2","4.2.2","4.3","4.4.2"])
+    devices = [
+        "GT-I9100", "GT-I9300", "GT-N7100", "Nexus 4", "Nexus 5", 
+        "HTC One X", "LG-P990", "Sony Xperia Z", "Micromax A110"
+    ]
+    device = random.choice(devices)
+    chrome_ver = f"{random.randint(18, 39)}.0.{random.randint(800, 2000)}.{random.randint(0, 150)}"
+    
+    A = f"Mozilla/5.0 (Linux; Android {android_ver}; {device}) " \
+        f"AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_ver} Mobile Safari/537.36"
+
+    return A
+
+
+def arnold_3():
+    """
+    Generates random iOS User-Agent strings (2010–2014 era).
+    """
+    ios_ver = random.choice(["4_3_5","5_1_1","6_1_6","7_1_2"])
+    devices = ["iPhone", "iPad", "iPod touch"]
+    device = random.choice(devices)
+
+    # Safari builds (2009–2014)
+    safari_map = {
+        "4_3_5": ("533.17.9","5.0"),
+        "5_1_1": ("534.46","5.1"),
+        "6_1_6": ("536.26","6.0"),
+        "7_1_2": ("537.51.2","7.0"),
+    }
+    safari_ver, version_str = safari_map[ios_ver]
+
+    A = f"Mozilla/5.0 ({device}; CPU {device} OS {ios_ver} like Mac OS X) " \
+        f"AppleWebKit/{safari_ver} (KHTML, like Gecko) Version/{version_str} Mobile/10A5376e Safari/{safari_ver}"
+
+    return A
+
+
+def arnold_all():
+    """
+    Returns a random UA from Windows, Android, or iOS (2009–2014 pools).
+    """
+    return random.choice([arnold_1(), arnold_2(), arnold_3()])
+
+#-_-_-_-_-_-_-_-<-LOGO->-_-_-_-_-_-_-_-#
+from datetime import datetime
+
+# Get current date & time
+now = datetime.now()
+formatted_date = now.strftime("%d/%B/%Y")
+formatted_time = now.strftime("%I:%M:%S %p")
+
+# Your updated logo block with date & time at bottom
 logo = (f"""\x1b[1;97m
 \x1b[1;92m▶𝗫𝗗
-\x1b[1;97m  
-__  __  _____  ___    ___    _
-|  \/  || ____|/ _ \  ( _ )  | |
-| |\/| ||  _| | | | | / _ \  | |
-| |  | || |___| |_| || (_) | |_|
-|_|  |_||_____|\___/  \___/  (_)
+\x1b[1;97m      ░█████╗░██████╗░███╗░░██╗░█████╗░██╗░░░░░██████╗░ 
+      ██╔══██╗██╔══██╗████╗░██║██╔══██╗██║░░░░░██╔══██╗ 
+      ███████║██████╔╝██╔██╗██║██║░░██║██║░░░░░██║░░██║ 
+      ██╔══██║██╔══██╗██║╚████║██║░░██║██║░░░░░██║░░██║ 
+      ██║░░██║██║░░██║██║░╚███║╚█████╔╝███████╗██████╔╝ 
+     ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚════╝░╚══════╝╚═════╝░ 
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-AUTHOR   : AR RAHIM 
-GITHUB   : Rahim2034/Rahim-King
-Ex GF    : Bithi 🐥 Rotna❤️      
-VERSION  : 11.5.8
+AUTHOR   : RIZWAN & ARNOLD HARDY xd-ISHAN TURK 🌝
+GITHUB   : Rizwanali444
+BESTU    : ITZ CHUZA 🐥 RIZWAN ❤️      
+VERSION  : Gitft
+DATE     : {formatted_date}
+TIME     : {formatted_time}
 \x1b[1;92mLOGO KA KYA H UNKA TO KAM H HI JALNA
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """)
 #----------------------------[MAIN/DEF]-----------------------------------#
 def main(): 
@@ -344,5 +380,5 @@ def login1(uid, tl):
         loop += 1
     except requests.exceptions.ConnectionError:
         time.sleep(30)
-    except:pass
-    menu()
+    except Exception as e:
+        pass
